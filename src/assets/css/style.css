@@ -38,16 +38,16 @@ Version      : 1.0
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Manrope:wght@200..800&display=swap');
 
 :root {
-    --main-color: #101010;
+    --main-color: #fff6ec;
     --heading-color: #000000;
-    --primary-color: #ff4f01;
-    --lighter-color: #1F1F1F;
+    --primary-color: #9343d7;
+    --lighter-color: #fff6ec;
     --subtitle-color: rgb(119, 119, 125);
-    --black-color: #070707;
-    --border-color: #ff4f01;
-    --button-border: #ff4f01;
-    --body-background: #fff6ec;
-    --white-color: #fff;
+    --black-color: #fff6ec;
+    --border-color: #9343d7;
+    --button-border: #9343d7;
+    --body-background: #000000;
+    --white-color: #000000;
 }
 
 * {
@@ -1161,7 +1161,7 @@ nav.main-menu {
 .main-hero-area {
     padding-top: 200px;
     padding-bottom: 20px;
-    background-color: #fff6ec;
+    background-color: #000000;
 }
 
 .hero-content {
@@ -2537,7 +2537,7 @@ ul.extra-skills li i {
 
 .call-to-action-area {
     padding-top: 15px;
-    background: #FFF6EC;
+    background: #000000;
 }
 
 .call-to-action-part h2 {
