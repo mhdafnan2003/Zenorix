@@ -3,7 +3,7 @@ import { portfolioData } from "../../utils/fackData/portfolioData"
 const RecentProjects = () => {
     return (
         <div className="recent-projects-area" id="portfolio">
-            <div className="custom-icon"><img src="/images/shapes/work-scribble.png" alt="custom" /></div>
+            <div className="custom-icon"><img src="/images/shapes/work-scribble.png" alt="custom" style={{ filter: "invert(1)" }} /></div>
             <div className="container-fluid">
                 <div className="row">
                     {

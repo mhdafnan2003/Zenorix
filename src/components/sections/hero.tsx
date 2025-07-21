@@ -16,8 +16,8 @@ const Hero = () => {
                                 <Link to="pricing" smooth={true}  className="theme-btn">See Pricing Plans</Link>
                                 <Link to="book" smooth={true}  className="theme-btn differenct-color">Book a free call</Link>
                             </div>
-                            <div className="dot-shape"><img src="/images/shapes/shape1.png" alt="Shape" /></div>
-                            <div className="dot-shape2"><img src="/images/shapes/shape2.png" alt="Shape" /></div>
+                            <div className="dot-shape"><img src="/images/shapes/shape1.png" alt="Shape" style={{ filter: "invert(1)" }} /></div>
+                            {/* <div className="dot-shape2"><img src="/images/shapes/shape2.png" alt="Shape" /></div> */}
                         </SlideUp>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import SectionTitle from "@components/ui/sectionTitle"
 import { faqData } from "@utils/fackData/faqData"
+import { color } from "framer-motion"
 
 const Faqs = () => {
     return (
@@ -37,7 +38,7 @@ const Faqs = () => {
                                             </h2>
                                             <div id={`${id}`} className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                                 <div className="accordion-body">
-                                                    <p>{ans}</p>
+                                                   <p style={{ color: "#fff" }}>{ans}</p>
                                                 </div>
                                             </div>
                                         </div>
