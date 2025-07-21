@@ -7,15 +7,15 @@ const Booking = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <SlideUp className="call-to-action-part text-center">
-                            <h2>See if DesignPro is right for you. (It totally is.)</h2>
-                            <p>Get a guided tour through DesignPro, and find out how you and your team can change the way
-                                you source design, forever.</p>
+                            <h2>Let’s Build Something Great Together</h2>
+                            <p>Have a project in mind or need assistance? Reach out to us, and our team will get back to you shortly.</p>
                             <div className="hero-btns">
-                                <a href="#" className="theme-btn">Book a free call</a>
+                                <a href="tel:+916282878105" className="theme-btn">Book a free call</a>
+
                             </div>
-                            <a href="#">
+                            {/* <a href="#">
                                 <img src="/images/logos/logo.png" alt="Logo" title="Logo" />
-                            </a>
+                            </a> */}
                         </SlideUp>
                     </div>
                 </div>
