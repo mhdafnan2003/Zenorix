@@ -32,9 +32,9 @@ export const featuresData: DataType = [
     },
     {
         id: 5,
-        title: "Complete Digital Solutions",
+        title: "Smart Digital Services",
         icon: "ri-apps-fill", // 🌐 Represents a complete digital suite
-        description: "Complete solutions from POS to branding."
+        description: "From POS software to branding, everything you need under one roof."
     },
     {
         id: 6,
