@@ -9,10 +9,11 @@ const WorkingProcess = () => {
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
                         <SectionTitle>
-                            <SectionTitle.Name>Work Process</SectionTitle.Name>
-                            <SectionTitle.Title>We design. You grow</SectionTitle.Title>
-                            <SectionTitle.Description>Our process is as simple as possible.</SectionTitle.Description>
-                        </SectionTitle>
+  <SectionTitle.Name>Our Approach</SectionTitle.Name>
+  <SectionTitle.Title>Design. Build. Deploy.</SectionTitle.Title>
+  <SectionTitle.Description>We keep it simple, fast, and focused on results.</SectionTitle.Description>
+</SectionTitle>
+
                     </div>
                 </div>
                 <div className="row work-process-list">
