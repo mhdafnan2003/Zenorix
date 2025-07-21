@@ -8,38 +8,38 @@ type DataType = {
 export const featuresData: DataType = [
     {
         id: 1,
-        title: "Unlimited requests",
-        icon: "ri-global-fill",
-        description: "Unlimited desgin requests, prioritized by your needs"
+        title: "Expert Team",
+        icon: "ri-team-fill", // 👥 Team icon for experts
+        description: "Skilled professionals with years of experience in web, software, and branding solutions."
     },
     {
         id: 2,
-        title: "Lightning fast",
-        icon: "ri-quill-pen-line",
-        description: "Tasks delivered in just 1-2 working business days."
+        title: "Affordable Plans",
+        icon: "ri-money-dollar-circle-fill", // 💰 Represents budget-friendly plans
+        description: "High-quality services tailored to fit every budget."
     },
     {
         id: 3,
-        title: "No contracts",
-        icon: "ri-pantone-fill",
-        description: "No contracts. Cancel your subscription at any time."
+        title: "Fast & Reliable Delivery",
+        icon: "ri-timer-flash-fill", // ⏱️ Speed and reliability
+        description: "We value your time and deliver projects on schedule."
     },
     {
         id: 4,
-        title: "No extra Charges",
-        icon: "ri-global-fill",
-        description: "Just fixed monthly subscription; No extra charges or fees."
+        title: "Customized Solutions",
+        icon: "ri-tools-fill", // 🛠️ Represents customization
+        description: "Tailor-made services to meet your business needs."
     },
     {
         id: 5,
-        title: "Top-notch quality",
-        icon: "ri-pantone-fill",
-        description: "Access incredible design quality whenever you need it."
+        title: "Complete Digital Solutions",
+        icon: "ri-apps-fill", // 🌐 Represents a complete digital suite
+        description: "From POS software to branding, everything you need under one roof."
     },
     {
         id: 6,
-        title: "Risk-free Revisions",
-        icon: "ri-pantone-fill",
-        description: "Revise until 100% satisfied without any extra cost."
+        title: "Secure & Reliable",
+        icon: "ri-shield-check-fill", // 🔒 Security and reliability
+        description: "We prioritize data security and system reliability."
     }
-]
+];

@@ -9,9 +9,9 @@ const Features = () => {
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
                         <SectionTitle>
-                            <SectionTitle.Name>Features</SectionTitle.Name>
-                            <SectionTitle.Title>Membership benefits</SectionTitle.Title>
-                            <SectionTitle.Description>Perks so good you'll never need to go anywhere else for your design. Seriously.</SectionTitle.Description>
+                            <SectionTitle.Name>Why Us?</SectionTitle.Name>
+                            <SectionTitle.Title>Why Businesses Trust Us ?</SectionTitle.Title>
+                            <SectionTitle.Description>We deliver smart, reliable, and affordable digital solutions to help your business grow. Here’s why clients love working with us:</SectionTitle.Description>
                         </SectionTitle>
                     </div>
                 </div>
