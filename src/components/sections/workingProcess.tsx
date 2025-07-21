@@ -9,23 +9,29 @@ const WorkingProcess = () => {
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
                         <SectionTitle>
-  <SectionTitle.Name>Our Approach</SectionTitle.Name>
-  <SectionTitle.Title>Design. Build. Deploy.</SectionTitle.Title>
-  <SectionTitle.Description>We keep it simple, fast, and focused on results.</SectionTitle.Description>
-</SectionTitle>
-
+                            <SectionTitle.Name>Our Approach</SectionTitle.Name>
+                            <SectionTitle.Title>Design. Build. Deploy.</SectionTitle.Title>
+                            <SectionTitle.Description>We keep it simple, fast, and focused on results.</SectionTitle.Description>
+                        </SectionTitle>
                     </div>
                 </div>
                 <div className="row work-process-list">
                     {
                         workProcessData.map(({ description, id, img, title, icon }, index) =>
-                            <Card key={id} description={description} id={id} img={img} title={title} icon={icon} index={index} />
+                            <Card
+                                key={id}
+                                description={description}
+                                id={id}
+                                img={img}
+                                title={title}
+                                icon={icon}
+                                index={index}
+                            />
                         )
                     }
                 </div>
             </div>
         </section>
-
     )
 }
 
@@ -39,6 +45,7 @@ type PropsType = {
     index: number,
     icon: string
 }
+
 const Card = ({ img, id, title, description, index, icon }: PropsType) => {
     return (
         <SlideUp delay={id} className="col-xl-4 col-lg-4">
@@ -46,11 +53,16 @@ const Card = ({ img, id, title, description, index, icon }: PropsType) => {
                 {
                     index !== 0 &&
                     <div className="working-process-one__shape4">
-                        <img src={img} alt="shapes" />
+                        <img
+                            src={img}
+                            alt="shapes"
+                            style={{ filter: "invert(1)" }} // ✅ Inverted here
+                        />
                     </div>
                 }
 
-                <div className="icon-box"><i className={icon} />
+                <div className="icon-box">
+                    <i className={icon} />
                     <div className="overlay-list"><span>0{id}</span></div>
                 </div>
                 <div className="content-box">

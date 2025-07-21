@@ -444,7 +444,7 @@ html {
 
 .theme-btn {
     background: var(--primary-color);
-    color: #000;
+    color: #fff;
     cursor: pointer;
     display: inline-block;
     border: 1px solid var(--button-border);
@@ -464,7 +464,7 @@ html {
 
 .differenct-color {
     background: var(--black-color);
-    color: #fff;
+    color: #000;
     border: 1px solid #000;
 }
 
@@ -1619,7 +1619,7 @@ nav.main-menu {
     height: 65px;
     border-radius: 50%;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.399);
     color: var(--thm-white);
     font-size: 25px;
 }
