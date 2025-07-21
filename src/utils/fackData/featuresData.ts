@@ -10,7 +10,7 @@ export const featuresData: DataType = [
         id: 1,
         title: "Expert Team",
         icon: "ri-team-fill", // 👥 Team icon for experts
-        description: "Skilled professionals with years of experience in web, software, and branding solutions."
+        description: "Skilled experts in web, software, and branding.."
     },
     {
         id: 2,
@@ -32,7 +32,7 @@ export const featuresData: DataType = [
     },
     {
         id: 5,
-        title: "Complete Digital Solutions",
+        title: "Smart Digital Services",
         icon: "ri-apps-fill", // 🌐 Represents a complete digital suite
         description: "From POS software to branding, everything you need under one roof."
     },
