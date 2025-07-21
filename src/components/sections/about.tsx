@@ -7,20 +7,24 @@ const About = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <SlideUp className="founder-say-part text-center">
-                            <h3>Designpro took my billion-dollar baby idea, slapped their design magic on it, and boom
-                                –<span>branding so good it makes my other ventures look like lemonade stands.</span>Twist
-                                isn't just a design agency; they're your ticket to the big leagues.</h3>
+                            <h3>
+                                We’re <span>Zenorix</span> — a team of passionate Computer Science friends chasing a shared dream. 
+                                From day one, we knew we were building more than just code or designs — we’re building a legacy. 
+                                Each team member is a powerhouse — design, development, branding, or UI/UX. 
+                                We’re not just good — we’re <em>at our prime</em> and hungry to prove it. 
+                                This isn’t just a company. It’s a dream forged through sleepless nights and side hustles. 
+                                We don’t chase trends — we set them. Welcome to Zenorix.
+                            </h3>
                             <div className="founder-name-part">
-                                <img src="/images/about/founder.png" alt="founder" title="founder" />
-                                <h2>Tanvir Hossain</h2>
-                                <p>Founder of Designpro</p>
+                                {/* <img src="/images/about/team.png" alt="team" title="Zenorix Team" /> */}
+                                {/* <h2>Team Zenorix</h2> */}
+                                {/* <p>Designers • Developers • Dreamers</p> */}
                             </div>
                         </SlideUp>
                     </div>
                 </div>
             </div>
         </section>
-
     )
 }
 
