@@ -10,8 +10,8 @@ export const testimonilasData: DataType = [
     {
         id: 1,
         img: "/images/testimonials/author1.jpg",
-        name: "Jamshad",
-        position: "Mr Fon",
+        name: "Shinas",
+        position: "Mr Fone",
         review: `"Zenorix created a modern, responsive site that fits our brand and audience perfectly. Highly reliable team."`
     },
     {
@@ -31,7 +31,7 @@ export const testimonilasData: DataType = [
     {
         id: 4,
         img: "/images/testimonials/author2.jpg",
-        name: "Yaseen K T",
+        name: "Yaseen",
         position: "Sagey",
         review: `"Zenorix built us a stylish, fast-loading website that truly reflects our fashion-forward identity. "`
     },

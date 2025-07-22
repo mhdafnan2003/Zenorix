@@ -3411,3 +3411,10 @@ ul.blog_pagination li a:hover {
     margin: 0px 40px;
     width: 120px;
 }
+
+@media (max-width: 768px) {
+  .navbar-collapse .navigation li a,
+  .navbar-collapse .navigation li .nav-link-click {
+    color: black !important;
+  }
+}
