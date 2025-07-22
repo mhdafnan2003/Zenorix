@@ -15,11 +15,6 @@ const About = () => {
                                 This isn’t just a company. It’s a dream forged through sleepless nights and side hustles. 
                                 We don’t chase trends — we set them. Welcome to Zenorix.
                             </h3>
-                            <div className="founder-name-part">
-                                {/* <img src="/images/about/team.png" alt="team" title="Zenorix Team" /> */}
-                                {/* <h2>Team Zenorix</h2> */}
-                                {/* <p>Designers • Developers • Dreamers</p> */}
-                            </div>
                         </SlideUp>
                     </div>
                 </div>
