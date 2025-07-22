@@ -12,7 +12,7 @@ const Hero = () => {
 <h2>Zenorix — Designing Digital Experiences That Stand Out</h2>
 <p>We craft powerful websites, intuitive software, and compelling visuals that drive results. Whether you’re a startup or a brand in growth mode — we’re your creative tech partner.</p>
 <div className="hero-btns">
-  <Link to="pricing" smooth={true} className="theme-btn">Explore Our Work</Link>
+  <Link to="service" smooth={true} className="theme-btn">Explore Our Work</Link>
   <Link to="book" smooth={true} className="theme-btn differenct-color">Book a Free Discovery Call</Link>
 </div>
 
