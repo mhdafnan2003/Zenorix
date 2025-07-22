@@ -20,10 +20,10 @@ const Hero = () => {
 
                             <div className="hero-btns">
                                 <Link to="service" smooth={true} className="theme-btn">
-                                    Explore Our Work
+                                    View Our Work
                                 </Link>
                                 <Link to="book" smooth={true} className="theme-btn differenct-color">
-                                    Book a Free Discovery Call
+                                    Schedule a Call
                                 </Link>
                             </div>
 

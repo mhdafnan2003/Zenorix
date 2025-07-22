@@ -1,3 +1,4 @@
+
 const Footer = () => {
     return (
         <footer className="main-footer">
@@ -16,7 +17,7 @@ const Footer = () => {
                                     <li><a href="#about">About Us</a></li>
                                     <li><a href="#service">Service</a></li>
                                     <li><a href="#book">Contact</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="">Privacy Policy</a></li>
                                     <li><a href="#">Terms &amp; conditions</a></li>
                                 </ul>
                             </div>

@@ -321,8 +321,20 @@ Version      : 1.0
     }
 
     .hero-content h3 {
-        font-size: 14px;
+        font-size: 8px;
     }
+    .hero-content h2 {
+        font-size: 8px;
+    }
+    .hero-content p {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .theme-btn differenct-color{
+        font-size: 8px;
+    }
+    
 
     .comment-form-area {
         margin-left: 0px;
@@ -472,7 +484,7 @@ Version      : 1.0
     .hero-content h2 {
         line-height: 50px;
         font-size: 40px;
-        padding: 20px 0px;
+        padding: 0px 0px;
     }
 
     .hero-content .dot-shape {
@@ -513,6 +525,11 @@ Version      : 1.0
         width: 100%;
         padding: 40px 40px;
     }
+    .founder-say-part h3 {
+        font-size: 16px;
+        line-height: 32px;
+    }
+   
 
     .work-process-list {
         margin-top: 0px;
