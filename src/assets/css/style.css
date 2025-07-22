@@ -1460,7 +1460,7 @@ nav.main-menu {
 
 .info-item img {
     margin-top: 40px;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px 10px 15px 10px;
 }
 
 .info-item h4 {
