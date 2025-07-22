@@ -13,9 +13,9 @@ const Footer = () => {
                             <div className="footer-bottom-menu">
                                 <ul>
                                     <li><a href="#">Home</a></li>
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Service</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#about">About Us</a></li>
+                                    <li><a href="#service">Service</a></li>
+                                    <li><a href="#book">Contact</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
                                     <li><a href="#">Terms &amp; conditions</a></li>
                                 </ul>

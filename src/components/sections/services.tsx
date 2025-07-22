@@ -44,7 +44,7 @@ const Card = ({ id, title, description, img }: PropsType) => {
                 <div className="info-content">
                     <h4>{title}</h4>
                     <p>{description}</p>
-                </div><img src={img} alt="img" />
+                </div><img src={img} alt="img"/>
             </SlideUp>
         </div>
     )
