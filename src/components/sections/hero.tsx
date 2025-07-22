@@ -34,12 +34,12 @@ const Hero = () => {
                                     style={{ filter: "invert(1)" }} 
                                 />
                             </div>
-                            <div className="dot-shape2">
+                            {/* <div className="dot-shape2">
                                 <img 
                                     src="/images/shapes/shape2.png" 
                                     alt="Shape" 
                                 />
-                            </div>
+                            </div> */}
                         </SlideUp>
                     </div>
                 </div>
