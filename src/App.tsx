@@ -22,12 +22,12 @@ const App = () => {
       <Header />
       <main>
         <Hero />
-        <RecentProjects />
+        {/* <RecentProjects /> */}
         <Partners />
         <About />
         <WorkingProcess />
         <Services />
-        <Projects />
+        {/* <Projects /> */}
         <Testimonials />
         <Features />
         {/* <Pricing /> */}

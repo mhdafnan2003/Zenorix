@@ -7,21 +7,21 @@ type DataType = {
 export const servicesData: DataType = [
     {
         id: 1,
-        title: "Product Design",
+        title: "Website Development",
         img: "/images/services/service1.jpg",
-        description: "Our subscription-based design service gives you access to a dedicated team."
+        description: "We craft modern, responsive websites that work beautifully across all devices. From business sites to eCommerce platforms, we build to match your goals."
     },
     {
         id: 2,
-        title: "Graphic Design",
+        title: "Custom Software",
         img: "/images/services/service2.jpg",
-        description: "Why settle for one designer when you can have a dedicated team"
+        description: "We develop tailored digital tools and internal systems that improve your workflow. From dashboards to custom platforms — we build what you need."
     },
     {
         id: 3,
-        title: "Marketing Design",
+        title: " Branding & Design",
         img: "/images/services/service3.jpg",
-        description: "How our subscription-based design service with a team"
+        description: "From logos and posters to full brand identities, we create visuals that communicate clearly and make your brand stand out across every medium."
     },
 
 ]

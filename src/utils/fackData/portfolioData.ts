@@ -1,21 +1,21 @@
 export const portfolioData = [
     {
         id:1,
-        title:"Mobile Application Design",
-        img:"/images/projects/work7.jpg",
-        category:"Branding"
+        title:"Trendkart",
+        img:"/images/projects/trendkart.png",
+        category:"E-commerce"
     },
     {
         id:2,
-        title:"Website Makeup Design",
-        img:"/images/projects/work1.jpg",
-        category:"Design"
+        title:"E-mahal",
+        img:"/images/projects/e-mahal.png",
+        category:"Softwares"
     },
     {
         id:3,
-        title:"Brand Identity and Motion Design",
-        img:"/images/projects/work6.jpg",
-        category:"Graphics"
+        title:"Wordpress",
+        img:"/images/projects/deon.png",
+        category:"Wordpress"
     },
     {
         id:4,
