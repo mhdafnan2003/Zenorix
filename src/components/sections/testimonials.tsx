@@ -35,9 +35,9 @@ const Testimonials = () => {
                                             <div className="testimonials-wrap">
                                                 <div className="testimonial-item">
                                                     <div className="text">{review}</div>
-                                                    <div className="author">
+                                                    {/* <div className="author">
                                                         <img src={img} alt="Author" />
-                                                    </div>
+                                                    </div> */}
                                                     <div className="testi-des">
                                                         <h5>{name}</h5>
                                                         <span>{position}</span>
