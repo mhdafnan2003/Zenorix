@@ -2,7 +2,7 @@ import SlideUp from "@utils/animations/slideUp"
 
 const About = () => {
     return (
-        <section className="funder-says-area">
+        <section className="funder-says-area" id="about">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">
