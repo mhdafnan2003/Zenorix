@@ -3412,14 +3412,13 @@ ul.blog_pagination li a:hover {
     width: 120px;
 }
 
-<<<<<<< HEAD
 @media (max-width: 768px) {
   .navbar-collapse .navigation li a,
   .navbar-collapse .navigation li .nav-link-click {
     color: black !important;
   }
 }
-=======
+
 .footer-social a {
     color: #ffffff;
     font-size: 18px;
@@ -3436,4 +3435,4 @@ ul.blog_pagination li a:hover {
 .footer-bottom-menu a:hover {
     color: #9343d7;
 }
->>>>>>> 4f5bdcdba10c92e9f518ab6d476ad1b051f90c33
+
