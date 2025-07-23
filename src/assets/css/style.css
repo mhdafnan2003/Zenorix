@@ -3411,3 +3411,20 @@ ul.blog_pagination li a:hover {
     margin: 0px 40px;
     width: 120px;
 }
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.footer-social a:hover {
+    color: #9343d7;
+}
+.footer-bottom-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-bottom-menu a:hover {
+    color: #9343d7;
+}
