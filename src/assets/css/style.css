@@ -3436,3 +3436,20 @@ ul.blog_pagination li a:hover {
     color: #9343d7;
 }
 
+
+@media (max-width: 1200px) {
+  .footer-bottom-menu a {
+    font-size: 14px;
+  }
+}
+.footer-bottom-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap; /* Force single row */
+}
+
+.footer-bottom-menu li {
+    flex-shrink: 1; /* Allows items to shrink if space is tight */
+    white-space: nowrap;
+}
+

@@ -1,6 +1,7 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiFiverr } from "react-icons/si";
+
 const Footer = () => {
     return (
         <footer className="main-footer">
@@ -9,7 +10,7 @@ const Footer = () => {
 
                     {/* Row 1 - Social Icons */}
                     <div className="row mb-3">
-                        <div className="col-12 d-flex justify-content-center justify-content-lg-start mb-lg-0">
+                        <div className="col-12 d-flex justify-content-center ">
                             <div className="footer-social d-flex gap-3 flex-wrap justify-content-center">
                                 <a href="#"><FaFacebookF /></a>
                                 <a href="https://x.com/zenorix_group?s=11"><FaXTwitter /></a>
@@ -30,7 +31,7 @@ const Footer = () => {
                                     <li><a href="#service">Service</a></li>
                                     <li><a href="#book">Contact</a></li>
                                     <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Terms &amp; conditions</a></li>
+                                    <li><a href="#">Terms &amp; Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
