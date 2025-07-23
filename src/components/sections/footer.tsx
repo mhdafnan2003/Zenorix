@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="row mb-3">
                         <div className="col-12 d-flex justify-content-center ">
                             <div className="footer-social d-flex gap-3 flex-wrap justify-content-center">
-                                <a href="#"><FaFacebookF /></a>
+                                <a href="https://www.facebook.com/profile.php?id=61578273194668"><FaFacebookF /></a>
                                 <a href="https://x.com/zenorix_group?s=11"><FaXTwitter /></a>
                                 <a href="https://www.instagram.com/zenorix.in?igsh=bDVzNGNjbG5xMGp1&utm_source=qr"><FaInstagram /></a>
                                 <a href="https://www.linkedin.com/company/zenorixgroup/"><FaLinkedinIn /></a>
