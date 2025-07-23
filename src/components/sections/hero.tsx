@@ -30,7 +30,7 @@ const Hero = () => {
                                     className="theme-btn differenct-color"
                                     style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
                                 >
-                                    Chat Us <FaWhatsapp size={18} />
+                                    Chat With Us <FaWhatsapp size={18} />
                                 </a>
                             </div>
 
