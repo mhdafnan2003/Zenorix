@@ -42,7 +42,7 @@ const Footer = () => {
                         <div className="col-12 text-center">
                             <div className="copyright-text">
                                 <p>
-                                    Copyright <a href="#">zenorix.in</a> All Rights Reserved.
+                                  Copyright <a href="#">zenorix.in</a> All Rights Reserved.
                                 </p>
                             </div>
                         </div>
