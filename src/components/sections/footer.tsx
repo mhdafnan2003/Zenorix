@@ -26,10 +26,10 @@ const Footer = () => {
                         <div className="col-12 d-flex justify-content-center">
                             <div className="footer-bottom-menu">
                                 <ul className="d-flex flex-wrap gap-3 justify-content-center list-unstyled mb-0 text-center">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#about">About Us</a></li>
-                                    <li><a href="#service">Service</a></li>
-                                    <li><a href="#book">Contact</a></li>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/#service">Service</a></li>
+                                    <li><a href="/#book">Contact</a></li>
                                     <li><a href="https://drive.google.com/file/d/11OrnRBHDaRJVYpH9S8tKf62Mj9IGihcW/view?usp=drive_link">Privacy Policy</a></li>
                                     <li><a href="#">Terms &amp; Conditions</a></li>
                                 </ul>

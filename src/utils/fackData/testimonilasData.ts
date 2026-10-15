@@ -1,6 +1,5 @@
 type DataType = {
     id: number,
-    img: string,
     name: string,
     review: string,
     position: string
@@ -9,30 +8,26 @@ type DataType = {
 export const testimonilasData: DataType = [
     {
         id: 1,
-        img: "/images/testimonials/author1.jpg",
-        name: "Shinas",
-        position: "Mr Fone",
-        review: `"Zenorix created a modern, responsive site that fits our brand and audience perfectly. Highly reliable team."`
+        name: "Edwin Sajeev",
+        position: "Google review",
+        review: "If you are someone running a business one thing you need the most is efficiency and getting things on time! These guys gets it done on time and beautifully 🙌"
     },
     {
         id: 2,
-        img: "/images/testimonials/author2.jpg",
-        name: "Abdul Mufeed",
-        position: "Soldron Energy",
-        review: `"The site they built for our solar business is clean, clear, and impactful. Great job by the Zenorix crew!"`
+        name: "Rajab Navunda",
+        position: "Google review",
+        review: "We are extremely happy with the website development service provided by Zenorix Group, especially the excellent work done by Mohammed Afnan. They understood our requirements perfectly and transformed our ideas into a professional, modern, and user-friendly website. The attention to detail, creative approach, and extraordinary finishing quality exceeded our expectations. The entire process was smooth, and their dedication to delivering exactly what we needed was truly impressive. We highly appreciate their commitment, professionalism, and support throughout the project. Thank you for creating a website that represents our brand in the best way possible. Highly recommended!"
     },
     {
         id: 3,
-        img: "/images/testimonials/author1.jpg",
-        name: "Sinas Abdulla",
-        position: "Rubisco Tour Planners",
-        review: `"Zenorix gave our tour business a digital face we’re proud of. It’s elegant, fast, and future-ready."`
+        name: "Mr. Velocity",
+        position: "Google review",
+        review: "Loved how the website came out. They really understood what we were trying to build and kept everything clean, minimal, and professional without overdoing it."
     },
     {
         id: 4,
-        img: "/images/testimonials/author2.jpg",
-        name: "Yaseen",
-        position: "Sagey",
-        review: `"Zenorix built us a stylish, fast-loading website that truly reflects our fashion-forward identity. "`
+        name: "Selbert George",
+        position: "Google review",
+        review: "Had an excellent experience working with Zenorix Group, especially with Afnan and the team. They were highly professional, responsive, and very supportive throughout the entire process. The website development for Pulse Creative and the Water Meter/Bluegrid project was handled with great attention to detail and creativity. Communication was smooth, updates were always provided on time, and they genuinely understood the vision behind the business. The final result looked modern, professional, and exactly how we wanted it. I would highly recommend Zenorix Group to anyone looking for reliable website development, branding, and digital solutions. Looking forward to working together on more projects in the future."
     },
 ]

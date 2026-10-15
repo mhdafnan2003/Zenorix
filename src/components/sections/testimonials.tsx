@@ -1,64 +1,57 @@
+import Marquee from "react-fast-marquee"
 import { testimonilasData } from "@utils/fackData/testimonilasData"
-import { Swiper, SwiperSlide } from "swiper/react"
-import 'swiper/css';
-import { Autoplay, Navigation } from "swiper/modules";
-import SlideUp from "@utils/animations/slideUp";
+import { clientLogoData } from "../../utils/fackData/clientLogoData"
+
+const initials = (name: string) =>
+  name
+    .split(" ")
+    .map((part) => part[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase()
 
 const Testimonials = () => {
-    return (
-        <section className="testimonials-area">
-            <div className="container">
-                <div className="row">
-                    <SlideUp className="col-lg-12">
-                        <Swiper
-                            navigation={{
-                                nextEl: ".testimonial-next",
-                                prevEl: ".testimonial-prev"
-                            }}
-                            loop
-                            autoplay={{
-                                delay:1500,
-                            }}
-                            speed={1000}
-                            breakpoints={{
-                                768:{
-                                    slidesPerView:2
-                                }
-                            }}
-                            spaceBetween={30}
-                            modules={[Navigation, Autoplay]}
-                        >
-                            {
-                                testimonilasData.map(({ id, img, name, position, review }) => {
-                                    return (
-                                        <SwiperSlide key={id}>
-                                            <div className="testimonials-wrap">
-                                                <div className="testimonial-item">
-                                                    <div className="text">{review}</div>
-                                                    {/* <div className="author">
-                                                        <img src={img} alt="Author" />
-                                                    </div> */}
-                                                    <div className="testi-des">
-                                                        <h5>{name}</h5>
-                                                        <span>{position}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </SwiperSlide>
-                                    )
-                                })
-                            }
-                        </Swiper>
-                        <div className="slider-arrows wow fadeInUp delay-0-6s text-center pt-40">
-                            <button className="testimonial-prev testimonial-arrow"><i className="ri-arrow-left-s-line" /></button>
-                            <button className="testimonial-next testimonial-arrow"><i className="ri-arrow-right-s-line" /></button>
-                        </div>
-                    </SlideUp>
-                </div>
-            </div>
-        </section>
+  return (
+    <section className="zenorix-reviews" id="clients" aria-labelledby="reviews-title">
+      <div className="zenorix-reviews__inner">
+        <div className="zenorix-reviews__top">
+          <p className="zenorix-about__label">
+            <i className="ri-arrow-right-up-line" aria-hidden="true" />Testimonials
+          </p>
+          <h2 id="reviews-title">What our clients say</h2>
+        </div>
 
-    )
+        <div className="zenorix-reviews__grid">
+          {testimonilasData.map(({ id, name, position, review }) => (
+            <div className="zenorix-reviews__col" key={id}>
+              <article className="zenorix-reviews__card">
+                <div className="zenorix-reviews__stars" aria-label="5 out of 5 stars">
+                  {"★★★★★"}
+                </div>
+                <p>{review}</p>
+              </article>
+              <div className="zenorix-reviews__profile">
+                <span className="zenorix-reviews__avatar" aria-hidden="true">{initials(name)}</span>
+                <div>
+                  <h3>{name}</h3>
+                  <span>{position}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="zenorix-reviews__clients">
+          <p>Real brands. Real trust. Real results.</p>
+          <Marquee gradient={false} speed={40}>
+            {clientLogoData.map(({ id, img }) => (
+              <img key={id} src={img} alt="Client logo" />
+            ))}
+          </Marquee>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Testimonials

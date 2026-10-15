@@ -8,38 +8,38 @@ type DataType = {
 export const featuresData: DataType = [
     {
         id: 1,
-        title: "Expert Team",
-        icon: "ri-team-fill", // 👥 Team icon for experts
-        description: "Skilled experts in web, software, and branding.."
+        title: "Built Around Your Business",
+        icon: "ri-building-line",
+        description: "We tailor websites, software, and digital experiences to your goals, workflows, and brand identity."
     },
     {
         id: 2,
-        title: "Affordable Plans",
-        icon: "ri-money-dollar-circle-fill", // 💰 Represents budget-friendly plans
-        description: "High-quality services tailored to fit every budget."
+        title: "Clear Communication",
+        icon: "ri-chat-3-line",
+        description: "Stay informed with clear discussions, regular progress updates, and opportunities to share feedback."
     },
     {
         id: 3,
-        title: "Fast & Reliable Delivery",
-        icon: "ri-timer-flash-fill", // ⏱️ Speed and reliability
-        description: "We value your time and deliver projects on schedule."
+        title: "Transparent Pricing",
+        icon: "ri-price-tag-3-line",
+        description: "Understand the project scope, deliverables, and costs before development begins."
     },
     {
         id: 4,
-        title: "Customized Solutions",
-        icon: "ri-tools-fill", // 🛠️ Represents customization
-        description: "Tailor-made services to meet your business needs."
+        title: "Responsive by Design",
+        icon: "ri-smartphone-line",
+        description: "We create mobile-friendly websites and digital experiences for smartphones, tablets, and desktops."
     },
     {
         id: 5,
-        title: "Smart Digital Services",
-        icon: "ri-apps-fill", // 🌐 Represents a complete digital suite
-        description: "From POS software to branding, everything you need under one roof."
+        title: "From Design to Deployment",
+        icon: "ri-rocket-line",
+        description: "Bring design, development, testing, and launch together through a structured project workflow."
     },
     {
         id: 6,
-        title: "Secure & Reliable",
-        icon: "ri-shield-check-fill", // 🔒 Security and reliability
-        description: "We prioritize data security and system reliability."
-    }
-];
+        title: "Ready to Grow With You",
+        icon: "ri-line-chart-line",
+        description: "Build digital solutions with room for new features, evolving requirements, and future business needs."
+    },
+]

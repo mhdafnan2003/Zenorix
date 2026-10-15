@@ -3,7 +3,7 @@ import { clientLogoData } from "../../utils/fackData/clientLogoData"
 
 const Partners = () => {
     return (
-        <div className="company-design-area partner">
+        <div className="company-design-area partner" id="clients">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

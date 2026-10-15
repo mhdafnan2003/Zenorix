@@ -5,7 +5,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 
 const Projects = () => {
     return (
-        <div className="projects-area" id="project">
+        <div className="projects-area" id="portfolio">
             <div className="container">
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
@@ -49,7 +49,7 @@ const Card = ({ img, title, category }: PropsType) => {
                     <img src={img} alt="img" data-rjs={2} />
                     <span className="portfolio-category">{category}</span>
                     <div className="portfolio-caption">
-                        <h1>{title}</h1>
+                                        <h3>{title}</h3>
                     </div>
                 </div>
             </PhotoView>

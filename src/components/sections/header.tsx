@@ -1,66 +1,119 @@
 import { useEffect, useState } from "react"
-import { menuList } from "@utils/fackData/menuList"
-import { Link } from 'react-scroll';
+import type { ComponentProps } from "react"
+import { Link as ScrollLink } from "react-scroll"
+import { Link as RouterLink, useLocation } from "react-router-dom"
+import { socialLinks } from "../../lib/social-links"
+
+const navigation = [
+  { label: "About", path: "about" },
+  { label: "Work", path: "portfolio" },
+  { label: "Products", path: "products" },
+  { label: "Clients", path: "clients" },
+  { label: "Blogs", path: "blogs" },
+]
+
+const services = [
+  { label: "Website", path: "service" },
+  { label: "E-commerce", path: "service" },
+  { label: "Custom softwares", path: "service" },
+  { label: "Mobile applications", path: "service" },
+]
+
+const products = [
+  { label: "Zellyo", href: "https://zellyo.in" },
+  { label: "Zenbrix", href: "https://zenbrix.in" },
+]
+
+// On the home page links scroll to a section; on other pages they go to /#section.
+const Link = ({ to, smooth: _smooth, offset: _offset, children, className, onClick }: ComponentProps<typeof ScrollLink>) => {
+  const { pathname } = useLocation()
+  if (pathname === "/") {
+    return <ScrollLink to={to} smooth offset={-88} className={className} onClick={onClick}>{children}</ScrollLink>
+  }
+  return <RouterLink to={`/#${to}`} className={className} onClick={onClick}>{children}</RouterLink>
+}
 
 const Header = () => {
-    const [isFixed, setIsFixed] = useState(false)
-    useEffect(() => {
-        const handleScroll = () => {
-            const windowPos = window.scrollY;
-            if (windowPos >= 100) {
-                setIsFixed(true);
-            } else {
-                setIsFixed(false);
-            }
-        }
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isProductsOpen, setIsProductsOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isFixed, setIsFixed] = useState(false)
 
-        document.addEventListener('scroll', handleScroll)
+  useEffect(() => {
+    const handleScroll = () => setIsFixed(window.scrollY >= 24)
+    document.addEventListener("scroll", handleScroll)
+    return () => document.removeEventListener("scroll", handleScroll)
+  }, [])
 
-        return () => document.removeEventListener('scroll', handleScroll)
-    }, [])
-    return (
-        <header className={`main-header ${isFixed ? "fixed-header" : ""}`}>
-            <div className="header-upper">
-                <div className="container">
-                    <div className="header-inner d-flex align-items-center">
-                        <div className="logo-outer">
-                            <div className="logo">
-                                <a href="#">
-                                    <img src="/images/logos/logo.png" alt="Logo" title="Logo" />
-                                </a>
-                            </div>
-                        </div>
-                        <div className="nav-outer clearfix">
-                            <nav className="main-menu navbar-expand-lg">
-                                <div className="navbar-header">
-                                    <div className="mobile-logo">
-                                        <a href="#">
-                                            <img src="/images/logos/logo.png" alt="Logo" title="Logo" /></a>
-                                    </div>
-                                    <button type="button" className="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
-                                        <span className="icon-bar" />
-                                        <span className="icon-bar" />
-                                        <span className="icon-bar" />
-                                    </button>
-                                </div>
-                                <div className="navbar-collapse collapse">
-                                    <ul className="navigation clearfix onepage">
-                                        {
-                                            menuList.map(({ id, label, path }) =>
-                                                <li key={id}>
-                                                    <Link className="nav-link-click" smooth={true} to={`${path}`}>{label}</Link>
-                                                </li>)
-                                        }
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+  useEffect(() => {
+    if (!isMenuOpen) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false)
+        setIsServicesOpen(false)
+        setIsProductsOpen(false)
+      }
+    }
+
+    document.body.classList.add("zenorix-menu-open")
+    document.addEventListener("keydown", handleKeyDown)
+    return () => {
+      document.body.classList.remove("zenorix-menu-open")
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isMenuOpen])
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+    setIsServicesOpen(false)
+    setIsProductsOpen(false)
+  }
+
+  return (
+    <header className={`zenorix-header ${isFixed ? "is-scrolled" : ""} ${isMenuOpen ? "is-menu-open" : ""}`}>
+      <a className="zenorix-header__brand" href="/" aria-label="Zenorix home"><img src="/images/logos/logo.png" alt="Zenorix — Design. Build. Deploy." /></a>
+      <nav id="site-navigation" className="zenorix-header__nav" aria-label="Main navigation">
+        <RouterLink to="/about" className="zenorix-header__link" onClick={closeMenu}>About</RouterLink>
+        <div className={`zenorix-header__dropdown ${isServicesOpen ? "is-open" : ""}`} onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)}>
+          <button type="button" className="zenorix-header__link zenorix-header__services-toggle" aria-expanded={isServicesOpen} aria-haspopup="true" onClick={() => setIsServicesOpen((open) => !open)} onKeyDown={(event) => { if (event.key === "Escape") setIsServicesOpen(false) }}>Services<i className="ri-arrow-down-s-line" aria-hidden="true" /></button>
+          <div className="zenorix-header__dropdown-menu">
+            {services.map(({ label, path }) => <Link key={label} to={path} smooth offset={-88} onClick={closeMenu} className="zenorix-header__dropdown-link">{label}</Link>)}
+          </div>
+        </div>
+        {navigation.slice(1).map(({ label, path }) => path === "products" ? (
+          <div key={path} className={`zenorix-header__dropdown ${isProductsOpen ? "is-open" : ""}`} onMouseEnter={() => setIsProductsOpen(true)} onMouseLeave={() => setIsProductsOpen(false)}>
+            <button type="button" className="zenorix-header__link zenorix-header__services-toggle" aria-expanded={isProductsOpen} aria-haspopup="true" onClick={() => setIsProductsOpen((open) => !open)} onKeyDown={(event) => { if (event.key === "Escape") setIsProductsOpen(false) }}>{label}<i className="ri-arrow-down-s-line" aria-hidden="true" /></button>
+            <div className="zenorix-header__dropdown-menu">
+              {products.map(({ label: productLabel, href }) => <a key={productLabel} href={href} target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="zenorix-header__dropdown-link">{productLabel}</a>)}
             </div>
-        </header>
-
-    )
+          </div>
+        ) : <Link key={path} to={path} smooth offset={-88} className="zenorix-header__link" onClick={closeMenu}>{label}</Link>)}
+        <Link to="book" smooth offset={-88} className="zenorix-header__talk zenorix-header__drawer-talk" onClick={closeMenu}>Let’s Talk</Link>
+        <div className="zenorix-header__mobile-extras">
+          <div className="zenorix-header__mobile-contact">
+            <a href="mailto:zenorix.group@gmail.com">zenorix.group@gmail.com</a>
+            <a href="tel:+916282878105">+91 62828 78105</a>
+          </div>
+          <div className="zenorix-header__mobile-social" role="group" aria-label="Social media">
+            {socialLinks.map(({ label, href, Icon }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Zenorix on ${label}`} title={label}>
+                <Icon aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+      <div className="zenorix-header__actions">
+        <Link to="book" smooth offset={-88} className="zenorix-header__talk">Let’s Talk</Link>
+      </div>
+      <button type="button" className="zenorix-header__menu-toggle" aria-controls="site-navigation" aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
+        <span>{isMenuOpen ? "Close" : "Menu"}</span>
+        <i className={isMenuOpen ? "ri-close-line" : "ri-menu-line"} aria-hidden="true" />
+      </button>
+      {isMenuOpen && <button type="button" className="zenorix-header__backdrop" aria-label="Close navigation menu" onClick={closeMenu} />}
+    </header>
+  )
 }
 
 export default Header
