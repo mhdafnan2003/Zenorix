@@ -1,4 +1,4 @@
-﻿/*
+/*
 * ----------------------------------------------------------------------------------------
 Author       : Syed Ekram
 Template Name: Designpro - Productized Design Agency website template
@@ -4794,43 +4794,70 @@ ul.blog_pagination li a:hover {
 }
 
 .zenorix-aboutpage__team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .zenorix-aboutpage__person {
-    width: min(100%, 280px);
-    padding: 20px;
-    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
     background: #fff;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.zenorix-aboutpage__person span {
-    display: grid;
-    place-items: center;
+.zenorix-aboutpage__person:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgb(0 0 0 / 10%);
+}
+
+.zenorix-aboutpage__person-photo {
     width: 100%;
-    aspect-ratio: 1;
-    margin-bottom: 18px;
-    border-radius: 12px;
-    background: #101010;
-    color: #fff;
-    font-size: 56px;
-    font-weight: 600;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #f3f3f0;
+}
+
+.zenorix-aboutpage__person-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.zenorix-aboutpage__person:hover .zenorix-aboutpage__person-photo img {
+    transform: scale(1.04);
 }
 
 .zenorix-aboutpage__person h3 {
     margin: 0 0 4px;
-    font-size: 20px;
-    font-weight: 500;
+    padding: 18px 20px 0;
+    font-size: clamp(16px, 1.4vw, 20px);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    color: #101010;
 }
 
 .zenorix-aboutpage__person p {
     margin: 0;
+    padding: 0 20px 18px;
     color: #6b6b67;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 13px;
     text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+@media (max-width: 900px) {
+    .zenorix-aboutpage__team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+    .zenorix-aboutpage__team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 }
 
 .zenorix-aboutpage__cta {
@@ -5205,3 +5232,608 @@ ul.blog_pagination li a:hover {
 .zenorix-aboutpage__timeline li:last-child {
     border-bottom: 1px solid rgb(16 16 16 / 12%);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   SERVICE PAGES  ( /services/:slug )
+═══════════════════════════════════════════════════════════════ */
+
+.zenorix-svcpage {
+    background: #fbfbf8;
+    color: #101010;
+}
+
+.zenorix-svcpage__inner {
+    width: min(100% - 48px, 1280px);
+    margin: 0 auto;
+}
+
+/* ── Pill label ── */
+.zenorix-svcpage__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.zenorix-svcpage__pill--dark {
+    border: 1px solid rgb(16 16 16 / 22%);
+    color: #101010;
+}
+
+.zenorix-svcpage__pill--light {
+    border: 1px solid rgb(255 255 255 / 35%);
+    color: #fff;
+}
+
+/* ── Hero ── */
+.zenorix-svcpage__hero {
+    padding: clamp(140px, 16vw, 220px) 0 clamp(72px, 9vw, 120px);
+    background: #000;
+    color: #fff;
+}
+
+.zenorix-svcpage__hero .zenorix-svcpage__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.zenorix-svcpage__hero h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(48px, 9vw, 128px);
+    font-weight: 600;
+    letter-spacing: -.05em;
+    line-height: .95;
+    max-width: 14ch;
+}
+
+.zenorix-svcpage__lead {
+    max-width: 760px;
+    margin: 0;
+    color: rgb(255 255 255 / 68%);
+    font-size: clamp(17px, 1.6vw, 22px);
+    line-height: 1.55;
+}
+
+.zenorix-svcpage__hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* ── Buttons ── */
+.zenorix-svcpage__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border: 1px solid rgb(255 255 255 / 40%);
+    border-radius: 999px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .22s ease, color .22s ease, border-color .22s ease;
+}
+
+.zenorix-svcpage__btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.zenorix-svcpage__btn--light {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.zenorix-svcpage__btn--light:hover {
+    background: transparent;
+    color: #fff;
+}
+
+/* ── Generic section ── */
+.zenorix-svcpage__section {
+    padding: clamp(56px, 7vw, 104px) 0;
+}
+
+.zenorix-svcpage__section--dark {
+    background: #000;
+    color: #fff;
+}
+
+.zenorix-svcpage__section--light {
+    background: #f4f4f0;
+}
+
+/* ── Section head ── */
+.zenorix-svcpage__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.zenorix-svcpage__head h2 {
+    margin: 0;
+    color: #101010;
+    font-size: clamp(30px, 4vw, 54px);
+    font-weight: 600;
+    letter-spacing: -.04em;
+    line-height: 1.05;
+    max-width: 820px;
+}
+
+.zenorix-svcpage__section--dark .zenorix-svcpage__head h2 {
+    color: #fff;
+}
+
+.zenorix-svcpage__head--row {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.zenorix-svcpage__all-works {
+    flex: none;
+    color: #101010;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    white-space: nowrap;
+    transition: opacity .2s ease;
+}
+
+.zenorix-svcpage__all-works:hover { opacity: .55; }
+
+/* ── Sub-services grid ── */
+.zenorix-svcpage__grid {
+    display: grid;
+    gap: 16px;
+}
+
+.zenorix-svcpage__grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.zenorix-svcpage__card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 32px 28px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid rgb(16 16 16 / 8%);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.zenorix-svcpage__card:hover {
+    border-color: #101010;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 8%);
+    transform: translateY(-4px);
+}
+
+.zenorix-svcpage__card-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #101010;
+    color: #fff;
+    font-size: 24px;
+}
+
+.zenorix-svcpage__card h3 {
+    margin: 0;
+    font-size: clamp(18px, 1.5vw, 22px);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    color: #101010;
+}
+
+.zenorix-svcpage__card p {
+    margin: 0;
+    color: #6b6b67;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ── Process ── */
+.zenorix-svcpage__process-sub {
+    max-width: 680px;
+    margin: 0;
+    color: rgb(255 255 255 / 60%);
+    font-size: clamp(16px, 1.35vw, 20px);
+    line-height: 1.55;
+}
+
+.zenorix-svcpage__process {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgb(255 255 255 / 12%);
+}
+
+.zenorix-svcpage__step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    align-items: start;
+    padding: clamp(24px, 3vw, 40px) 0;
+    border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.zenorix-svcpage__step-num {
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 700;
+    letter-spacing: -.05em;
+    color: rgb(255 255 255 / 25%);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.zenorix-svcpage__step-body h3 {
+    margin: 0 0 10px;
+    font-size: clamp(20px, 1.8vw, 26px);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.zenorix-svcpage__step-body p {
+    margin: 0;
+    color: rgb(255 255 255 / 62%);
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.6;
+}
+
+/* ── Stats ── */
+.zenorix-svcpage__stats-section {
+    background: #101010;
+}
+
+.zenorix-svcpage__stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+}
+
+.zenorix-svcpage__stat {
+    padding: clamp(32px, 4vw, 56px) clamp(20px, 3vw, 48px);
+    border-right: 1px solid rgb(255 255 255 / 10%);
+    color: #fff;
+}
+
+.zenorix-svcpage__stat:last-child {
+    border-right: none;
+}
+
+.zenorix-svcpage__stat-value {
+    display: block;
+    margin-bottom: 8px;
+    font-size: clamp(48px, 6.5vw, 96px);
+    font-weight: 700;
+    letter-spacing: -.06em;
+    line-height: 1;
+}
+
+.zenorix-svcpage__stat-label {
+    font-size: 15px;
+    color: rgb(255 255 255 / 55%);
+    line-height: 1.4;
+}
+
+/* ── Industries ── */
+.zenorix-svcpage__industries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.zenorix-svcpage__industry-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid rgb(16 16 16 / 18%);
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #101010;
+    transition: border-color .2s ease, background .2s ease;
+}
+
+.zenorix-svcpage__industry-tag:hover {
+    border-color: #101010;
+    background: #101010;
+    color: #fff;
+}
+
+.zenorix-svcpage__industry-tag i {
+    color: var(--primary-color, #6C63FF);
+    font-size: 16px;
+}
+
+/* ── Our Works ── */
+.zenorix-svcpage__works {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.zenorix-svcpage__work-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.zenorix-svcpage__work-thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #e8e8e4;
+    margin-bottom: 16px;
+}
+
+.zenorix-svcpage__work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.zenorix-svcpage__work-card:hover .zenorix-svcpage__work-thumb img {
+    transform: scale(1.05);
+}
+
+.zenorix-svcpage__work-arrow {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #fff;
+    color: #101010;
+    font-size: 18px;
+    opacity: 0;
+    transform: scale(.8);
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+.zenorix-svcpage__work-card:hover .zenorix-svcpage__work-arrow {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.zenorix-svcpage__work-info h3 {
+    margin: 0 0 4px;
+    font-size: clamp(18px, 1.5vw, 22px);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    color: #101010;
+}
+
+.zenorix-svcpage__work-info p {
+    margin: 0 0 6px;
+    color: #6b6b67;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.zenorix-svcpage__work-info span {
+    font-size: 13px;
+    color: #9a9a96;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+/* ── CTA ── */
+.zenorix-svcpage__cta {
+    background: #000;
+    padding: clamp(64px, 8vw, 112px) 0;
+}
+
+.zenorix-svcpage__cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.zenorix-svcpage__cta-text {
+    flex: 1;
+}
+
+.zenorix-svcpage__cta-text h2 {
+    margin: 0 0 14px;
+    color: #fff;
+    font-size: clamp(32px, 4.5vw, 64px);
+    font-weight: 600;
+    letter-spacing: -.04em;
+    line-height: 1.05;
+}
+
+.zenorix-svcpage__cta-text p {
+    margin: 0 0 30px;
+    color: rgb(255 255 255 / 62%);
+    font-size: clamp(16px, 1.4vw, 20px);
+    line-height: 1.55;
+    max-width: 620px;
+}
+
+.zenorix-svcpage__cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.zenorix-svcpage__cta-arrow {
+    flex: none;
+    font-size: clamp(80px, 12vw, 180px);
+    color: rgb(255 255 255 / 12%);
+    line-height: 1;
+    font-weight: 700;
+    user-select: none;
+}
+
+/* ── FAQ ── */
+.zenorix-svcpage__faq-section {
+    background: #fbfbf8;
+}
+
+.zenorix-svcpage__faq-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: clamp(40px, 6vw, 96px);
+    align-items: start;
+}
+
+.zenorix-svcpage__faq-left h2 {
+    margin: 16px 0 24px;
+    font-size: clamp(28px, 3.5vw, 48px);
+    font-weight: 600;
+    letter-spacing: -.04em;
+    line-height: 1.1;
+    color: #101010;
+}
+
+.zenorix-svcpage__faq-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #101010;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: opacity .2s ease;
+}
+
+.zenorix-svcpage__faq-contact:hover { opacity: .55; }
+
+.zenorix-svcpage__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgb(16 16 16 / 12%);
+}
+
+.zenorix-svcpage__faq-item {
+    border-bottom: 1px solid rgb(16 16 16 / 12%);
+}
+
+.zenorix-svcpage__faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: clamp(15px, 1.3vw, 18px);
+    font-weight: 500;
+    color: #101010;
+    line-height: 1.4;
+    transition: color .2s ease;
+}
+
+.zenorix-svcpage__faq-q:hover { color: #000; }
+
+.zenorix-svcpage__faq-toggle {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #f1f1ef;
+    font-size: 20px;
+    color: #101010;
+    line-height: 1;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.zenorix-svcpage__faq-item.is-open .zenorix-svcpage__faq-toggle {
+    background: #101010;
+    color: #fff;
+}
+
+.zenorix-svcpage__faq-a {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .35s ease, padding .35s ease;
+}
+
+.zenorix-svcpage__faq-item.is-open .zenorix-svcpage__faq-a {
+    max-height: 400px;
+}
+
+.zenorix-svcpage__faq-a[aria-hidden="true"] { max-height: 0; }
+.zenorix-svcpage__faq-a[aria-hidden="false"] { max-height: 400px; }
+
+.zenorix-svcpage__faq-a p {
+    margin: 0;
+    padding: 0 0 22px;
+    color: #6b6b67;
+    font-size: clamp(14px, 1.15vw, 17px);
+    line-height: 1.65;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+    .zenorix-svcpage__grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .zenorix-svcpage__works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .zenorix-svcpage__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .zenorix-svcpage__stat { border-bottom: 1px solid rgb(255 255 255 / 10%); }
+    .zenorix-svcpage__stat:nth-child(2n) { border-right: none; }
+}
+
+@media (max-width: 860px) {
+    .zenorix-svcpage__faq-layout { grid-template-columns: minmax(0, 1fr); }
+    .zenorix-svcpage__step { grid-template-columns: 56px 1fr; gap: 20px; }
+    .zenorix-svcpage__cta-inner { flex-direction: column; align-items: flex-start; }
+    .zenorix-svcpage__cta-arrow { display: none; }
+    .zenorix-svcpage__head--row { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+    .zenorix-svcpage__grid--3 { grid-template-columns: minmax(0, 1fr); }
+    .zenorix-svcpage__works { grid-template-columns: minmax(0, 1fr); }
+    .zenorix-svcpage__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .zenorix-svcpage__step { grid-template-columns: 48px 1fr; gap: 16px; }
+    .zenorix-svcpage__stat { padding: 28px 20px; }
+}
+

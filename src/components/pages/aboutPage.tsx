@@ -33,7 +33,10 @@ const journey = [
 ]
 
 const team = [
-  { name: "Mohammed Afnan", role: "Website Development", initials: "MA" },
+  { name: "Mohammed Afnan", role: "Website Development", photo: "/images/about/person1.png" },
+  { name: "Team Member", role: "Software Development", photo: "/images/about/person2.png" },
+  { name: "Team Member", role: "Mobile Development", photo: "/images/about/person3.png" },
+  { name: "Team Member", role: "UI / UX Design", photo: "/images/about/person4.png" },
 ]
 
 const AboutPage = () => {
@@ -179,9 +182,11 @@ const AboutPage = () => {
             <h2>The people behind Zenorix</h2>
           </div>
           <div className="zenorix-aboutpage__team">
-            {team.map(({ name, role, initials }) => (
-              <article className="zenorix-aboutpage__person" key={name}>
-                <span aria-hidden="true">{initials}</span>
+            {team.map(({ name, role, photo }) => (
+              <article className="zenorix-aboutpage__person" key={name + photo}>
+                <div className="zenorix-aboutpage__person-photo">
+                  <img src={photo} alt={name} loading="lazy" />
+                </div>
                 <h3>{name}</h3>
                 <p>{role}</p>
               </article>

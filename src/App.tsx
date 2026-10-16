@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import AboutPage from '@components/pages/aboutPage'
+import ServicePage from '@components/pages/servicePage'
 import Header from '@components/sections/header'
 import About from '@components/sections/about'
 import Hero from '@components/sections/hero'
@@ -59,6 +60,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/services/:slug" element={<ServicePage />} />
       </Routes>
       <Footer />
       <ScrollToTop />

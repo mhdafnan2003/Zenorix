@@ -13,10 +13,10 @@ const navigation = [
 ]
 
 const services = [
-  { label: "Website", path: "service" },
-  { label: "E-commerce", path: "service" },
-  { label: "Custom softwares", path: "service" },
-  { label: "Mobile applications", path: "service" },
+  { label: "Website Development", slug: "/services/website-development" },
+  { label: "E-commerce", slug: "/services/ecommerce-development" },
+  { label: "Custom Software", slug: "/services/custom-software-development" },
+  { label: "Mobile Applications", slug: "/services/mobile-app-development" },
 ]
 
 const products = [
@@ -78,7 +78,7 @@ const Header = () => {
         <div className={`zenorix-header__dropdown ${isServicesOpen ? "is-open" : ""}`} onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)}>
           <button type="button" className="zenorix-header__link zenorix-header__services-toggle" aria-expanded={isServicesOpen} aria-haspopup="true" onClick={() => setIsServicesOpen((open) => !open)} onKeyDown={(event) => { if (event.key === "Escape") setIsServicesOpen(false) }}>Services<i className="ri-arrow-down-s-line" aria-hidden="true" /></button>
           <div className="zenorix-header__dropdown-menu">
-            {services.map(({ label, path }) => <Link key={label} to={path} smooth offset={-88} onClick={closeMenu} className="zenorix-header__dropdown-link">{label}</Link>)}
+            {services.map(({ label, slug }) => <RouterLink key={label} to={slug} onClick={closeMenu} className="zenorix-header__dropdown-link">{label}</RouterLink>)}
           </div>
         </div>
         {navigation.slice(1).map(({ label, path }) => path === "products" ? (
