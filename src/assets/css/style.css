@@ -5235,11 +5235,15 @@ ul.blog_pagination li a:hover {
 
 /* ═══════════════════════════════════════════════════════════════
    SERVICE PAGES  ( /services/:slug )
+   Theme: Sleek Dark (matching Home & Zenorix Brand)
+   Fonts: Heading "Bricolage Grotesque", Body "Manrope"
 ═══════════════════════════════════════════════════════════════ */
 
 .zenorix-svcpage {
-    background: #fbfbf8;
-    color: #101010;
+    background: #000000;
+    color: #fff6ec;
+    font-family: "Manrope", sans-serif;
+    min-height: 100vh;
 }
 
 .zenorix-svcpage__inner {
@@ -5247,34 +5251,43 @@ ul.blog_pagination li a:hover {
     margin: 0 auto;
 }
 
-/* ── Pill label ── */
+/* ── Pill label (matching Home SectionTitle.Name & zenorix-about__label) ── */
 .zenorix-svcpage__pill {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
+    gap: 8px;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 999px;
-    font-size: 13px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 14px;
     font-weight: 500;
-    letter-spacing: .04em;
-    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    line-height: 1.2;
 }
 
-.zenorix-svcpage__pill--dark {
-    border: 1px solid rgb(16 16 16 / 22%);
-    color: #101010;
+.zenorix-svcpage__pill i {
+    color: var(--primary-color, #9343d7);
+    font-size: 15px;
 }
 
+.zenorix-svcpage__pill--dark,
 .zenorix-svcpage__pill--light {
-    border: 1px solid rgb(255 255 255 / 35%);
-    color: #fff;
+    border-color: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
 }
 
 /* ── Hero ── */
 .zenorix-svcpage__hero {
+    position: relative;
     padding: clamp(140px, 16vw, 220px) 0 clamp(72px, 9vw, 120px);
-    background: #000;
-    color: #fff;
+    background: #000000;
+    overflow: hidden;
 }
 
 .zenorix-svcpage__hero .zenorix-svcpage__inner {
@@ -5282,77 +5295,104 @@ ul.blog_pagination li a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
+    position: relative;
+    z-index: 10;
 }
 
 .zenorix-svcpage__hero h1 {
     margin: 0;
-    color: #fff;
-    font-size: clamp(48px, 9vw, 128px);
-    font-weight: 600;
-    letter-spacing: -.05em;
+    color: #ffffff;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(44px, 8vw, 104px);
+    font-weight: 700;
+    letter-spacing: -.055em;
     line-height: .95;
-    max-width: 14ch;
+    max-width: 16ch;
 }
 
 .zenorix-svcpage__lead {
     max-width: 760px;
     margin: 0;
-    color: rgb(255 255 255 / 68%);
-    font-size: clamp(17px, 1.6vw, 22px);
-    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.6;
 }
 
 .zenorix-svcpage__hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
     margin-top: 8px;
 }
 
-/* ── Buttons ── */
+/* ── Buttons (Home hero button styling) ── */
 .zenorix-svcpage__btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 14px 24px;
-    border: 1px solid rgb(255 255 255 / 40%);
+    gap: 10px;
+    padding: 14px 26px;
     border-radius: 999px;
-    color: #fff;
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
-    transition: background .22s ease, color .22s ease, border-color .22s ease;
+    transition: all .25s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(8px);
 }
 
 .zenorix-svcpage__btn:hover {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
+.zenorix-svcpage__btn--primary,
 .zenorix-svcpage__btn--light {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #ffffff;
 }
 
+.zenorix-svcpage__btn--primary:hover,
 .zenorix-svcpage__btn--light:hover {
-    background: transparent;
-    color: #fff;
+    background: #eaff83;
+    border-color: #eaff83;
+    color: #111111;
+    box-shadow: 0 0 25px rgba(234, 255, 131, 0.35);
 }
 
-/* ── Generic section ── */
+.zenorix-svcpage__btn--secondary {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(8px);
+}
+
+.zenorix-svcpage__btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* ── Section general ── */
 .zenorix-svcpage__section {
-    padding: clamp(56px, 7vw, 104px) 0;
+    padding: clamp(64px, 8vw, 112px) 0;
+    background: #000000;
 }
 
 .zenorix-svcpage__section--dark {
-    background: #000;
-    color: #fff;
+    background: #06040a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .zenorix-svcpage__section--light {
-    background: #f4f4f0;
+    background: #000000;
 }
 
 /* ── Section head ── */
@@ -5360,22 +5400,23 @@ ul.blog_pagination li a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 16px;
     margin-bottom: clamp(32px, 4vw, 56px);
 }
 
 .zenorix-svcpage__head h2 {
     margin: 0;
-    color: #101010;
-    font-size: clamp(30px, 4vw, 54px);
-    font-weight: 600;
+    color: #ffffff;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(32px, 4.2vw, 56px);
+    font-weight: 700;
     letter-spacing: -.04em;
-    line-height: 1.05;
+    line-height: 1.08;
     max-width: 820px;
 }
 
 .zenorix-svcpage__section--dark .zenorix-svcpage__head h2 {
-    color: #fff;
+    color: #ffffff;
 }
 
 .zenorix-svcpage__head--row {
@@ -5386,22 +5427,27 @@ ul.blog_pagination li a:hover {
 
 .zenorix-svcpage__all-works {
     flex: none;
-    color: #101010;
+    color: #dfbdff;
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(223, 189, 255, 0.4);
+    padding-bottom: 3px;
     white-space: nowrap;
-    transition: opacity .2s ease;
+    transition: all .2s ease;
 }
 
-.zenorix-svcpage__all-works:hover { opacity: .55; }
+.zenorix-svcpage__all-works:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    opacity: 1;
+}
 
-/* ── Sub-services grid ── */
+/* ── Sub-services cards ── */
 .zenorix-svcpage__grid {
     display: grid;
-    gap: 16px;
+    gap: 20px;
 }
 
 .zenorix-svcpage__grid--3 {
@@ -5411,104 +5457,122 @@ ul.blog_pagination li a:hover {
 .zenorix-svcpage__card {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    padding: 32px 28px;
-    border-radius: 20px;
-    background: #fff;
-    border: 1px solid rgb(16 16 16 / 8%);
-    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+    gap: 16px;
+    padding: 34px 30px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease, background .3s ease;
 }
 
 .zenorix-svcpage__card:hover {
-    border-color: #101010;
-    box-shadow: 0 12px 40px rgb(0 0 0 / 8%);
-    transform: translateY(-4px);
+    border-color: rgba(147, 67, 215, 0.65);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 16px 40px -12px rgba(147, 67, 215, 0.28);
+    transform: translateY(-5px);
 }
 
 .zenorix-svcpage__card-icon {
     display: grid;
     place-items: center;
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: #101010;
-    color: #fff;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: rgba(147, 67, 215, 0.14);
+    border: 1px solid rgba(147, 67, 215, 0.32);
+    color: #dfbdff;
     font-size: 24px;
+    transition: all .3s ease;
+}
+
+.zenorix-svcpage__card:hover .zenorix-svcpage__card-icon {
+    background: var(--primary-color, #9343d7);
+    border-color: var(--primary-color, #9343d7);
+    color: #ffffff;
+    transform: scale(1.06);
 }
 
 .zenorix-svcpage__card h3 {
     margin: 0;
-    font-size: clamp(18px, 1.5vw, 22px);
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(20px, 1.6vw, 24px);
     font-weight: 600;
     letter-spacing: -.02em;
     line-height: 1.2;
-    color: #101010;
+    color: #ffffff;
 }
 
 .zenorix-svcpage__card p {
     margin: 0;
-    color: #6b6b67;
+    color: rgba(255, 255, 255, 0.62);
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
 /* ── Process ── */
 .zenorix-svcpage__process-sub {
     max-width: 680px;
     margin: 0;
-    color: rgb(255 255 255 / 60%);
-    font-size: clamp(16px, 1.35vw, 20px);
-    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(16px, 1.35vw, 19px);
+    line-height: 1.6;
 }
 
 .zenorix-svcpage__process {
     list-style: none;
     margin: 0;
     padding: 0;
-    counter-reset: none;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    border-top: 1px solid rgb(255 255 255 / 12%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .zenorix-svcpage__step {
     display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 32px;
+    grid-template-columns: 88px 1fr;
+    gap: 36px;
     align-items: start;
-    padding: clamp(24px, 3vw, 40px) 0;
-    border-bottom: 1px solid rgb(255 255 255 / 12%);
+    padding: clamp(28px, 3.5vw, 44px) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background .25s ease;
 }
 
 .zenorix-svcpage__step-num {
-    font-size: clamp(36px, 4vw, 56px);
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(38px, 4.5vw, 60px);
     font-weight: 700;
     letter-spacing: -.05em;
-    color: rgb(255 255 255 / 25%);
+    color: rgba(147, 67, 215, 0.65);
     line-height: 1;
     font-variant-numeric: tabular-nums;
 }
 
 .zenorix-svcpage__step-body h3 {
     margin: 0 0 10px;
-    font-size: clamp(20px, 1.8vw, 26px);
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(22px, 1.9vw, 28px);
     font-weight: 600;
     letter-spacing: -.02em;
-    color: #fff;
-    line-height: 1.2;
+    color: #ffffff;
+    line-height: 1.25;
 }
 
 .zenorix-svcpage__step-body p {
     margin: 0;
-    color: rgb(255 255 255 / 62%);
-    font-size: clamp(15px, 1.2vw, 18px);
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(15px, 1.2vw, 17px);
+    line-height: 1.65;
 }
 
 /* ── Stats ── */
 .zenorix-svcpage__stats-section {
-    background: #101010;
+    background: #080510;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: clamp(48px, 6vw, 84px) 0;
 }
 
 .zenorix-svcpage__stats {
@@ -5518,9 +5582,9 @@ ul.blog_pagination li a:hover {
 }
 
 .zenorix-svcpage__stat {
-    padding: clamp(32px, 4vw, 56px) clamp(20px, 3vw, 48px);
-    border-right: 1px solid rgb(255 255 255 / 10%);
-    color: #fff;
+    padding: clamp(24px, 3vw, 40px) clamp(20px, 3vw, 48px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
 .zenorix-svcpage__stat:last-child {
@@ -5530,15 +5594,18 @@ ul.blog_pagination li a:hover {
 .zenorix-svcpage__stat-value {
     display: block;
     margin-bottom: 8px;
-    font-size: clamp(48px, 6.5vw, 96px);
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(48px, 6.5vw, 92px);
     font-weight: 700;
     letter-spacing: -.06em;
     line-height: 1;
+    color: #f7f2ff;
 }
 
 .zenorix-svcpage__stat-label {
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
-    color: rgb(255 255 255 / 55%);
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.4;
 }
 
@@ -5555,32 +5622,35 @@ ul.blog_pagination li a:hover {
 .zenorix-svcpage__industry-tag {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    border: 1px solid rgb(16 16 16 / 18%);
+    gap: 10px;
+    padding: 12px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
     font-weight: 500;
-    color: #101010;
-    transition: border-color .2s ease, background .2s ease;
+    color: #ffffff;
+    transition: all .25s ease;
 }
 
 .zenorix-svcpage__industry-tag:hover {
-    border-color: #101010;
-    background: #101010;
-    color: #fff;
+    border-color: var(--primary-color, #9343d7);
+    background: rgba(147, 67, 215, 0.18);
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 .zenorix-svcpage__industry-tag i {
-    color: var(--primary-color, #6C63FF);
-    font-size: 16px;
+    color: var(--primary-color, #9343d7);
+    font-size: 17px;
 }
 
 /* ── Our Works ── */
 .zenorix-svcpage__works {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: 20px;
 }
 
 .zenorix-svcpage__work-card a {
@@ -5593,9 +5663,10 @@ ul.blog_pagination li a:hover {
     position: relative;
     width: 100%;
     aspect-ratio: 4 / 3;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    background: #e8e8e4;
+    background: #0d0a14;
+    border: 1px solid rgba(255, 255, 255, 0.09);
     margin-bottom: 16px;
 }
 
@@ -5604,7 +5675,7 @@ ul.blog_pagination li a:hover {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform .4s ease;
+    transition: transform .45s ease;
 }
 
 .zenorix-svcpage__work-card:hover .zenorix-svcpage__work-thumb img {
@@ -5617,89 +5688,105 @@ ul.blog_pagination li a:hover {
     right: 14px;
     display: grid;
     place-items: center;
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: #fff;
-    color: #101010;
+    background: #ffffff;
+    color: #111111;
     font-size: 18px;
+    font-weight: 700;
     opacity: 0;
     transform: scale(.8);
-    transition: opacity .25s ease, transform .25s ease;
+    transition: all .25s ease;
 }
 
 .zenorix-svcpage__work-card:hover .zenorix-svcpage__work-arrow {
     opacity: 1;
     transform: scale(1);
+    background: var(--primary-color, #9343d7);
+    color: #ffffff;
 }
 
 .zenorix-svcpage__work-info h3 {
-    margin: 0 0 4px;
-    font-size: clamp(18px, 1.5vw, 22px);
+    margin: 0 0 6px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(19px, 1.5vw, 23px);
     font-weight: 600;
     letter-spacing: -.02em;
-    color: #101010;
+    color: #ffffff;
 }
 
 .zenorix-svcpage__work-info p {
-    margin: 0 0 6px;
-    color: #6b6b67;
+    margin: 0 0 8px;
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
     line-height: 1.5;
 }
 
 .zenorix-svcpage__work-info span {
     font-size: 13px;
-    color: #9a9a96;
+    color: #dfbdff;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     text-transform: uppercase;
-    letter-spacing: .04em;
+    letter-spacing: .05em;
 }
 
 /* ── CTA ── */
 .zenorix-svcpage__cta {
-    background: #000;
-    padding: clamp(64px, 8vw, 112px) 0;
+    background: #000000;
+    padding: clamp(48px, 6vw, 96px) 0;
 }
 
 .zenorix-svcpage__cta-inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    padding: clamp(44px, 6vw, 72px) clamp(32px, 5vw, 64px);
+    border-radius: 32px;
+    background: radial-gradient(circle at 85% 50%, rgba(147, 67, 215, 0.28) 0%, rgba(18, 11, 28, 0.95) 60%), #080410;
+    border: 1px solid rgba(147, 67, 215, 0.35);
+    box-shadow: 0 24px 64px -20px rgba(147, 67, 215, 0.28);
+    overflow: hidden;
 }
 
 .zenorix-svcpage__cta-text {
     flex: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .zenorix-svcpage__cta-text h2 {
-    margin: 0 0 14px;
-    color: #fff;
-    font-size: clamp(32px, 4.5vw, 64px);
-    font-weight: 600;
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(34px, 4.5vw, 64px);
+    font-weight: 700;
     letter-spacing: -.04em;
     line-height: 1.05;
 }
 
 .zenorix-svcpage__cta-text p {
-    margin: 0 0 30px;
-    color: rgb(255 255 255 / 62%);
+    margin: 0 0 32px;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: "Manrope", sans-serif;
     font-size: clamp(16px, 1.4vw, 20px);
-    line-height: 1.55;
+    line-height: 1.6;
     max-width: 620px;
 }
 
 .zenorix-svcpage__cta-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
 }
 
 .zenorix-svcpage__cta-arrow {
     flex: none;
-    font-size: clamp(80px, 12vw, 180px);
-    color: rgb(255 255 255 / 12%);
+    font-size: clamp(90px, 14vw, 200px);
+    color: rgba(147, 67, 215, 0.18);
     line-height: 1;
     font-weight: 700;
     user-select: none;
@@ -5707,7 +5794,8 @@ ul.blog_pagination li a:hover {
 
 /* ── FAQ ── */
 .zenorix-svcpage__faq-section {
-    background: #fbfbf8;
+    background: #000000;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .zenorix-svcpage__faq-layout {
@@ -5719,37 +5807,52 @@ ul.blog_pagination li a:hover {
 
 .zenorix-svcpage__faq-left h2 {
     margin: 16px 0 24px;
-    font-size: clamp(28px, 3.5vw, 48px);
-    font-weight: 600;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(30px, 3.8vw, 50px);
+    font-weight: 700;
     letter-spacing: -.04em;
     line-height: 1.1;
-    color: #101010;
+    color: #ffffff;
 }
 
 .zenorix-svcpage__faq-contact {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    color: #101010;
+    gap: 6px;
+    color: #dfbdff;
+    font-family: "Manrope", sans-serif;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    transition: opacity .2s ease;
+    border-bottom: 1px solid rgba(223, 189, 255, 0.4);
+    padding-bottom: 3px;
+    transition: all .2s ease;
 }
 
-.zenorix-svcpage__faq-contact:hover { opacity: .55; }
+.zenorix-svcpage__faq-contact:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    opacity: 1;
+}
 
 .zenorix-svcpage__accordion {
     display: flex;
     flex-direction: column;
-    gap: 0;
-    border-top: 1px solid rgb(16 16 16 / 12%);
+    gap: 12px;
 }
 
 .zenorix-svcpage__faq-item {
-    border-bottom: 1px solid rgb(16 16 16 / 12%);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0 24px;
+    transition: border-color .25s ease, background .25s ease;
+}
+
+.zenorix-svcpage__faq-item:hover,
+.zenorix-svcpage__faq-item.is-open {
+    border-color: rgba(147, 67, 215, 0.5);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .zenorix-svcpage__faq-q {
@@ -5758,37 +5861,41 @@ ul.blog_pagination li a:hover {
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 22px 0;
+    padding: 24px 0;
     background: none;
     border: none;
     cursor: pointer;
     text-align: left;
-    font-size: clamp(15px, 1.3vw, 18px);
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(16px, 1.35vw, 19px);
     font-weight: 500;
-    color: #101010;
+    color: #ffffff;
     line-height: 1.4;
     transition: color .2s ease;
 }
 
-.zenorix-svcpage__faq-q:hover { color: #000; }
+.zenorix-svcpage__faq-q:hover {
+    color: #dfbdff;
+}
 
 .zenorix-svcpage__faq-toggle {
     flex: none;
     display: grid;
     place-items: center;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background: #f1f1ef;
+    background: rgba(255, 255, 255, 0.08);
+    font-family: monospace;
     font-size: 20px;
-    color: #101010;
+    color: #ffffff;
     line-height: 1;
-    transition: background .2s ease, transform .2s ease;
+    transition: background .2s ease, transform .2s ease, color .2s ease;
 }
 
 .zenorix-svcpage__faq-item.is-open .zenorix-svcpage__faq-toggle {
-    background: #101010;
-    color: #fff;
+    background: var(--primary-color, #9343d7);
+    color: #ffffff;
 }
 
 .zenorix-svcpage__faq-a {
@@ -5806,9 +5913,10 @@ ul.blog_pagination li a:hover {
 
 .zenorix-svcpage__faq-a p {
     margin: 0;
-    padding: 0 0 22px;
-    color: #6b6b67;
-    font-size: clamp(14px, 1.15vw, 17px);
+    padding: 0 0 24px;
+    color: rgba(255, 255, 255, 0.68);
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(15px, 1.15vw, 17px);
     line-height: 1.65;
 }
 
@@ -5817,7 +5925,7 @@ ul.blog_pagination li a:hover {
     .zenorix-svcpage__grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .zenorix-svcpage__works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .zenorix-svcpage__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .zenorix-svcpage__stat { border-bottom: 1px solid rgb(255 255 255 / 10%); }
+    .zenorix-svcpage__stat { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
     .zenorix-svcpage__stat:nth-child(2n) { border-right: none; }
 }
 
@@ -5836,4 +5944,5 @@ ul.blog_pagination li a:hover {
     .zenorix-svcpage__step { grid-template-columns: 48px 1fr; gap: 16px; }
     .zenorix-svcpage__stat { padding: 28px 20px; }
 }
+
 

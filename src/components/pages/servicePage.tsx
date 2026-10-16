@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams, Navigate } from "react-router-dom"
+import { MeshGradient } from "@paper-design/shaders-react"
 import { servicePages } from "./servicePageData"
 
 // Filtered project list reused across all service pages
@@ -35,29 +36,45 @@ const ServicePage = () => {
   const data = servicePages.find((p) => p.slug === slug)
   const [openFaq, setOpenFaq] = useState<string | null>(data?.faqs[0].id ?? null)
 
+  useEffect(() => {
+    if (data?.metaTitle) {
+      document.title = data.metaTitle
+    }
+  }, [data])
+
   if (!data) return <Navigate to="/" replace />
 
   return (
     <main className="zenorix-svcpage">
-      {/* ── SEO Meta (injected inline via effect would be ideal; for now we use the title) ── */}
-
       {/* 1. HERO */}
       <section className="zenorix-svcpage__hero" aria-labelledby="svc-hero-title">
+        <MeshGradient
+          className="absolute inset-0 h-full w-full pointer-events-none"
+          colors={["#07050d", "#160b25", "#2a183f", "#39234f", "#0d0718", "#241138", "#080510"]}
+          speed={0.35}
+        />
+        <MeshGradient
+          className="absolute inset-0 h-full w-full opacity-45 mix-blend-screen pointer-events-none"
+          colors={["#090510", "#201035", "#3b1e59", "#4d3067", "#11081d", "#562b73", "#170b29"]}
+          speed={0.28}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(5,3,10,.35)_0%,rgba(5,3,10,.25)_52%,rgba(4,2,8,.45)_100%)]" />
+
         <div className="zenorix-svcpage__inner">
-          <p className="zenorix-about__label zenorix-svcpage__pill">
+          <p className="zenorix-svcpage__pill">
             <i className="ri-arrow-right-up-line" aria-hidden="true" />Services
           </p>
           <h1 id="svc-hero-title">{data.heroTitle}</h1>
           <p className="zenorix-svcpage__lead">{data.heroSubtitle}</p>
           <div className="zenorix-svcpage__hero-actions">
-            <a href="tel:+916282878105" className="zenorix-svcpage__btn zenorix-svcpage__btn--light">
+            <a href="tel:+916282878105" className="zenorix-svcpage__btn zenorix-svcpage__btn--primary">
               <i className="ri-phone-line" aria-hidden="true" /> Book a Free Call
             </a>
             <a
               href="https://wa.me/916282878105?text=I%20want%20to%20know%20more%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="zenorix-svcpage__btn"
+              className="zenorix-svcpage__btn zenorix-svcpage__btn--secondary"
             >
               <i className="ri-whatsapp-line" aria-hidden="true" /> WhatsApp Us
             </a>
@@ -69,7 +86,7 @@ const ServicePage = () => {
       <section className="zenorix-svcpage__section" aria-labelledby="svc-offer-title">
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head">
-            <p className="zenorix-about__label zenorix-svcpage__pill zenorix-svcpage__pill--dark">
+            <p className="zenorix-svcpage__pill">
               <i className="ri-arrow-right-up-line" aria-hidden="true" />What We Offer
             </p>
             <h2 id="svc-offer-title">Services We Offer</h2>
@@ -92,7 +109,7 @@ const ServicePage = () => {
       <section className="zenorix-svcpage__section zenorix-svcpage__section--dark" aria-labelledby="svc-process-title">
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head">
-            <p className="zenorix-about__label zenorix-svcpage__pill zenorix-svcpage__pill--light">
+            <p className="zenorix-svcpage__pill">
               <i className="ri-arrow-right-up-line" aria-hidden="true" />Our Process
             </p>
             <h2 id="svc-process-title">{data.processTitle}</h2>
@@ -130,7 +147,7 @@ const ServicePage = () => {
       <section className="zenorix-svcpage__section zenorix-svcpage__section--light" aria-labelledby="svc-industries-title">
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head">
-            <p className="zenorix-about__label zenorix-svcpage__pill zenorix-svcpage__pill--dark">
+            <p className="zenorix-svcpage__pill">
               <i className="ri-arrow-right-up-line" aria-hidden="true" />Industries
             </p>
             <h2 id="svc-industries-title">{data.industriesTitle}</h2>
@@ -151,7 +168,7 @@ const ServicePage = () => {
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head zenorix-svcpage__head--row">
             <div>
-              <p className="zenorix-about__label zenorix-svcpage__pill zenorix-svcpage__pill--dark">
+              <p className="zenorix-svcpage__pill">
                 <i className="ri-arrow-right-up-line" aria-hidden="true" />Our Works
               </p>
               <h2 id="svc-work-title">Selected Projects</h2>
@@ -195,18 +212,18 @@ const ServicePage = () => {
               Share your idea with us and we'll get back to you with a clear plan, timeline, and quote — no obligation.
             </p>
             <div className="zenorix-svcpage__cta-actions">
-              <a href="tel:+916282878105" className="zenorix-svcpage__btn zenorix-svcpage__btn--light">
+              <a href="tel:+916282878105" className="zenorix-svcpage__btn zenorix-svcpage__btn--primary">
                 <i className="ri-phone-line" aria-hidden="true" /> Call +91 62828 78105
               </a>
               <a
                 href="https://wa.me/916282878105?text=I%20want%20to%20know%20more%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="zenorix-svcpage__btn"
+                className="zenorix-svcpage__btn zenorix-svcpage__btn--secondary"
               >
                 <i className="ri-whatsapp-line" aria-hidden="true" /> WhatsApp
               </a>
-              <a href="mailto:zenorix.group@gmail.com" className="zenorix-svcpage__btn">
+              <a href="mailto:zenorix.group@gmail.com" className="zenorix-svcpage__btn zenorix-svcpage__btn--secondary">
                 <i className="ri-mail-line" aria-hidden="true" /> Email Us
               </a>
             </div>
@@ -220,7 +237,7 @@ const ServicePage = () => {
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__faq-layout">
             <div className="zenorix-svcpage__faq-left">
-              <p className="zenorix-about__label zenorix-svcpage__pill zenorix-svcpage__pill--dark">
+              <p className="zenorix-svcpage__pill">
                 <i className="ri-arrow-right-up-line" aria-hidden="true" />FAQs
               </p>
               <h2 id="svc-faq-title">Have more questions?<br />We've got answers</h2>
