@@ -27,7 +27,7 @@ const ContactPage = () => {
             <a className="zenorix-contact__channel" href="tel:+916282878105"><i className="ri-phone-line" aria-hidden="true" /><span><small>Give us a call</small>+91 62828 78105</span><b aria-hidden="true">↗</b></a>
             <a className="zenorix-contact__channel" href="tel:+917012977575"><i className="ri-phone-line" aria-hidden="true" /><span><small>Make an enquiry</small>+91 70129 77575</span><b aria-hidden="true">↗</b></a>
             <a className="zenorix-contact__channel" href="mailto:zenorix.group@gmail.com"><i className="ri-mail-line" aria-hidden="true" /><span><small>Drop us an email</small>zenorix.group@gmail.com</span><b aria-hidden="true">↗</b></a>
-            <a className="zenorix-contact__channel" href="https://wa.me/917012977575" target="_blank" rel="noopener noreferrer"><i className="ri-whatsapp-line" aria-hidden="true" /><span><small>Prefer a quick chat?</small>Message on WhatsApp</span><b aria-hidden="true">↗</b></a>
+            <a className="zenorix-contact__channel" href="https://www.google.com/maps/search/?api=1&amp;query=First%20Floor%2C%20Space11%2C%20Koodathai%2C%20Calicut%2C%20Kerala%2C%20673573" target="_blank" rel="noopener noreferrer"><i className="ri-map-pin-line" aria-hidden="true" /><span><small>Our address</small>First Floor, Space11, Koodathai, Calicut, Kerala, 673573</span><b aria-hidden="true">↗</b></a>
           </div>
           <form className="zenorix-contact__form" onSubmit={composeWhatsApp}>
             <h2>Tell us about your project</h2>
@@ -41,7 +41,7 @@ const ContactPage = () => {
             </select>
             <label htmlFor="contact-message">Project details</label>
             <textarea id="contact-message" name="message" rows={4} placeholder="Tell us about your idea, goals, and timeline…" required maxLength={5000} />
-            <button type="submit">Send enquiry on WhatsApp <span aria-hidden="true">↗</span></button>
+            <button type="submit"><span className="zenorix-contact__submit-label"><i className="ri-whatsapp-line" aria-hidden="true" />Send enquiry on WhatsApp</span> <span aria-hidden="true">↗</span></button>
             <small>Opens WhatsApp with your enquiry ready to send to +91 70129 77575.</small>
           </form>
         </div>

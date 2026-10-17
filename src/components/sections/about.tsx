@@ -115,17 +115,9 @@ const About = () => {
         </div>
 
         <div className="zenorix-about__media">
-          <video
-            className="zenorix-about__brand-video"
-            src="/videos/zenorix-brand.mp4"
-            poster="/videos/zenorix-brand-poster.jpg"
-            autoPlay={!reduceMotion}
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            aria-label="Zenorix brand video — Design. Build. Deploy."
-          />
+          <div className="zenorix-about__glowing-mark" role="img" aria-label="Zenorix Z logo">
+            <img className="zenorix-about__neon-emblem" src="/images/about/purple-z-clean.png" alt="" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
