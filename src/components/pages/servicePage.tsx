@@ -3,34 +3,6 @@ import { useParams, Navigate } from "react-router-dom"
 import { MeshGradient } from "@paper-design/shaders-react"
 import { servicePages } from "./servicePageData"
 
-// Filtered project list reused across all service pages
-const works = [
-  {
-    title: "BM Aesthetique",
-    tagline: "Premium skin care, made simple to shop",
-    image: "/images/projects/bm-aesthetique.png",
-    year: "2026",
-    service: "E-commerce Development",
-    link: "https://www.bmaesthetique.com/",
-  },
-  {
-    title: "Nivo Concepts",
-    tagline: "Beyond walls, beyond expectations",
-    image: "/images/projects/nivo-concepts.png",
-    year: "2026",
-    service: "Web Design & Development",
-    link: "https://www.nivoconcepts.com/",
-  },
-  {
-    title: "3Dots Advertising",
-    tagline: "Printing press & branding solutions, Abu Dhabi",
-    image: "/images/projects/3dots-advertising.png",
-    year: "2026",
-    service: "Web Design & Development",
-    link: "https://www.3dotsadv.ae/",
-  },
-]
-
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>()
   const data = servicePages.find((p) => p.slug === slug)
@@ -152,46 +124,6 @@ const ServicePage = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* 6. OUR WORKS */}
-      <section className="zenorix-svcpage__section" aria-labelledby="svc-work-title">
-        <div className="zenorix-svcpage__inner">
-          <div className="zenorix-svcpage__head zenorix-svcpage__head--row">
-            <div>
-              <p className="zenorix-svcpage__pill">
-                <i className="ri-arrow-right-up-line" aria-hidden="true" />Our Works
-              </p>
-              <h2 id="svc-work-title">Selected Projects</h2>
-            </div>
-            <a
-              href="https://portfolio.zenorix.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="zenorix-svcpage__all-works"
-              aria-label="View all Zenorix projects"
-            >
-              View all projects ↗
-            </a>
-          </div>
-          <div className="zenorix-svcpage__works">
-            {works.map((w) => (
-              <article className="zenorix-svcpage__work-card" key={w.title}>
-                <a href={w.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${w.title}`}>
-                  <div className="zenorix-svcpage__work-thumb">
-                    <img src={w.image} alt={w.title} loading="lazy" />
-                    <span className="zenorix-svcpage__work-arrow" aria-hidden="true">↗</span>
-                  </div>
-                  <div className="zenorix-svcpage__work-info">
-                    <h3>{w.title}</h3>
-                    <p>{w.tagline}</p>
-                    <span>{w.service} · {w.year}</span>
-                  </div>
-                </a>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 

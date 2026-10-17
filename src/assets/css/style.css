@@ -6367,3 +6367,91 @@ ul.blog_pagination li a:hover {
     color: #8434c8;
     transform: none;
 }
+
+/* Responsive safeguards: preserve desktop styling and prevent narrow-screen clipping. */
+.zenorix-contact__layout > *,
+.zenorix-svcpage__faq-layout > *,
+.zenorix-aboutpage__vm-list > *,
+.zenorix-aboutpage__grid > * { min-width: 0; }
+.zenorix-contact__form label { color: #17121f; }
+.zenorix-contact__form input,
+.zenorix-contact__form select,
+.zenorix-contact__form textarea { min-width: 0; max-width: 100%; }
+.zenorix-svcpage__faq-contact,
+.zenorix-svcpage__card h3,
+.zenorix-aboutpage__card h3 { overflow-wrap: anywhere; }
+.zenorix-aboutpage__team-slider { min-width: 0; max-width: 100%; }
+.zenorix-aboutpage__team-slider .swiper-button-prev:focus-visible,
+.zenorix-aboutpage__team-slider .swiper-button-next:focus-visible { outline: 2px solid #9343d7; outline-offset: 2px; }
+@media (max-width: 1023px), (max-height: 740px) {
+    .hero-about-stack__hero {
+        height: auto;
+        min-height: 100svh;
+        overflow: visible;
+        position: relative;
+    }
+    .hero-about-stack__hero > section { min-height: 100svh; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .zenorix-contact__layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+    .zenorix-contact__hero h1,
+    .zenorix-svcpage__hero h1,
+    .zenorix-aboutpage__hero h1 { overflow-wrap: anywhere; }
+    .zenorix-aboutpage__vm > h2 br { display: none; }
+    .zenorix-svcpage__hero-actions,
+    .zenorix-aboutpage__cta-actions { gap: 12px; }
+    .zenorix-svcpage__hero-actions > a,
+    .zenorix-aboutpage__cta-actions > a { max-width: 100%; white-space: normal; text-align: center; }
+    .footer-bottom-menu ul li { margin-left: 0; }
+    .main-footer .footer-bottom { padding-top: 48px; }
+    .main-footer .container { padding-bottom: 52px; }
+    .call-to-action-part { width: 100%; padding: 32px 20px; }
+    .call-to-action-part h2 { font-size: clamp(32px, 7vw, 54px); line-height: 1.1; }
+    .call-to-action-part p { padding: 0; font-size: 16px; }
+}
+@media (max-width: 479px) {
+    .zenorix-svcpage__inner,
+    .zenorix-aboutpage__inner { width: calc(100% - 32px); }
+    #home-hero-title { font-size: clamp(30px, 8.8vw, 42px); }
+    .zenorix-svcpage__card { padding: 28px 22px; }
+    .zenorix-svcpage__faq-q { padding: 20px 16px; gap: 12px; }
+    .zenorix-aboutpage__why-card { padding: 28px 22px; min-height: 260px; }
+    .zenorix-contact__form { padding: 24px 18px; }
+    .zenorix-contact__form button { gap: 12px; text-align: left; }
+    .zenorix-aboutpage__btn { padding: 14px 18px; font-size: 14px; }
+}
+
+/* Looping brand animation for the home About media panel. */
+.zenorix-brand-film { position: relative; isolation: isolate; overflow: hidden; border-radius: 12px; min-height: 320px; height: 100%; background: #10091d; color: #fff; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(20px, 2.5vw, 40px); }
+.zenorix-brand-film__glow { position: absolute; z-index: -1; inset: -40%; background: radial-gradient(ellipse at 30% 30%, #9343d7aa, transparent 50%), radial-gradient(ellipse at 70% 70%, #6740a488, transparent 50%); animation: zenorix-brand-drift 12s ease-in-out infinite alternate; }
+.zenorix-brand-film__ring { position: absolute; z-index: -1; width: 90%; aspect-ratio: 1; border: 1px solid #dfbdff33; border-radius: 50%; left: 5%; top: 18%; animation: zenorix-brand-orbit 18s linear infinite; }
+.zenorix-brand-film__ring::before { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: #dfbdff; left: 15%; top: 12%; box-shadow: 0 0 24px #c087ff; }
+.zenorix-brand-film__top, .zenorix-brand-film__bottom { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 11px; line-height: 1.5; letter-spacing: .05em; color: #dfd1ee; }
+.zenorix-brand-film__top { letter-spacing: .15em; }
+.zenorix-brand-film__center { display: flex; flex-direction: column; align-items: center; padding: 32px 0; }
+.zenorix-brand-film__mark { display: grid; place-items: center; width: 68px; height: 68px; border-radius: 50%; background: #fff; color: #9343d7; font-size: 44px; font-style: italic; line-height: 1; animation: zenorix-brand-float 5s ease-in-out infinite; }
+.zenorix-brand-film__center strong { font-family: "Bricolage Grotesque", sans-serif; font-size: clamp(42px, 5vw, 72px); font-weight: 500; letter-spacing: -.06em; line-height: 1.1; margin: 22px 0 16px; }
+.zenorix-brand-film__center strong > span { color: #c99aef; }
+.zenorix-brand-film__words { display: flex; gap: 12px; font-size: 14px; }
+.zenorix-brand-film__words span { animation: zenorix-brand-word 6s ease-in-out infinite; }
+.zenorix-brand-film__words span:nth-child(2) { animation-delay: 2s; }
+.zenorix-brand-film__words span:nth-child(3) { animation-delay: 4s; }
+@keyframes zenorix-brand-drift { to { transform: translate(8%, -6%) rotate(20deg); } }
+@keyframes zenorix-brand-orbit { to { transform: rotate(360deg); } }
+@keyframes zenorix-brand-float { 50% { transform: translateY(-8px) rotate(-5deg); } }
+@keyframes zenorix-brand-word { 0%, 30%, 100% { color: #dfd1ee; } 15% { color: #fff; text-shadow: 0 0 12px #c99aef; } }
+@media (max-width: 900px) { .zenorix-brand-film { min-height: 0; } .zenorix-brand-film__center { padding: 16px 0; } .zenorix-brand-film__center strong { font-size: clamp(40px, 8vw, 64px); margin: 16px 0 12px; } }
+@media (max-width: 479px) { .zenorix-brand-film { padding: 18px; } .zenorix-brand-film__mark { width: 48px; height: 48px; font-size: 32px; } .zenorix-brand-film__center { padding: 10px 0; } .zenorix-brand-film__center strong { font-size: 40px; margin: 12px 0 8px; } .zenorix-brand-film__top, .zenorix-brand-film__bottom { font-size: 9px; } .zenorix-brand-film__words { font-size: 12px; } }
+@media (prefers-reduced-motion: reduce) { .zenorix-brand-film *, .zenorix-brand-film *::before { animation: none; } }
+
+.zenorix-about__brand-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #10091d;
+}
