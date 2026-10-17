@@ -51,10 +51,6 @@ const highlights = [
   { title: "Satisfied Clients", value: "70+", note: "Clients satisfied and repeating" },
 ]
 
-const aboutImages = [
-  { src: "/images/about/founder.png", alt: "Zenorix team at work" },
-]
-
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null)
   const headlineRef = useRef<HTMLDivElement>(null)
@@ -119,9 +115,17 @@ const About = () => {
         </div>
 
         <div className="zenorix-about__media">
-          {aboutImages.map((image) => (
-            <img key={image.src} src={image.src} alt={image.alt} loading="lazy" />
-          ))}
+          <video
+            className="zenorix-about__brand-video"
+            src="/videos/zenorix-brand.mp4"
+            poster="/videos/zenorix-brand-poster.jpg"
+            autoPlay={!reduceMotion}
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label="Zenorix brand video — Design. Build. Deploy."
+          />
         </div>
       </div>
     </section>

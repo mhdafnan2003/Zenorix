@@ -3,34 +3,6 @@ import { useParams, Navigate } from "react-router-dom"
 import { MeshGradient } from "@paper-design/shaders-react"
 import { servicePages } from "./servicePageData"
 
-// Filtered project list reused across all service pages
-const works = [
-  {
-    title: "BM Aesthetique",
-    tagline: "Premium skin care, made simple to shop",
-    image: "/images/projects/bm-aesthetique.png",
-    year: "2026",
-    service: "E-commerce Development",
-    link: "https://www.bmaesthetique.com/",
-  },
-  {
-    title: "Nivo Concepts",
-    tagline: "Beyond walls, beyond expectations",
-    image: "/images/projects/nivo-concepts.png",
-    year: "2026",
-    service: "Web Design & Development",
-    link: "https://www.nivoconcepts.com/",
-  },
-  {
-    title: "3Dots Advertising",
-    tagline: "Printing press & branding solutions, Abu Dhabi",
-    image: "/images/projects/3dots-advertising.png",
-    year: "2026",
-    service: "Web Design & Development",
-    link: "https://www.3dotsadv.ae/",
-  },
-]
-
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>()
   const data = servicePages.find((p) => p.slug === slug)
@@ -46,6 +18,8 @@ const ServicePage = () => {
 
   return (
     <main className="zenorix-svcpage">
+      <div className="hero-about-stack">
+      <div className="hero-about-stack__hero">
       {/* 1. HERO */}
       <section className="zenorix-svcpage__hero" aria-labelledby="svc-hero-title">
         <MeshGradient
@@ -82,8 +56,10 @@ const ServicePage = () => {
         </div>
       </section>
 
+      </div>
+
       {/* 2. SERVICES WE OFFER */}
-      <section className="zenorix-svcpage__section" aria-labelledby="svc-offer-title">
+      <section className="zenorix-svcpage__section zenorix-svcpage__offers" aria-labelledby="svc-offer-title">
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head">
             <p className="zenorix-svcpage__pill">
@@ -105,8 +81,10 @@ const ServicePage = () => {
         </div>
       </section>
 
+      </div>
+
       {/* 3. PROCESS */}
-      <section className="zenorix-svcpage__section zenorix-svcpage__section--dark" aria-labelledby="svc-process-title">
+      <section className="zenorix-svcpage__section zenorix-svcpage__section--dark zenorix-svcpage__timeline" aria-labelledby="svc-process-title">
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head">
             <p className="zenorix-svcpage__pill">
@@ -129,20 +107,6 @@ const ServicePage = () => {
         </div>
       </section>
 
-      {/* 4. STATS */}
-      <section className="zenorix-svcpage__section zenorix-svcpage__stats-section" aria-label="Service highlights">
-        <div className="zenorix-svcpage__inner">
-          <dl className="zenorix-svcpage__stats">
-            {data.stats.map(({ value, label }) => (
-              <div key={label} className="zenorix-svcpage__stat">
-                <dt className="zenorix-svcpage__stat-value">{value}</dt>
-                <dd className="zenorix-svcpage__stat-label">{label}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
       {/* 5. INDUSTRIES */}
       <section className="zenorix-svcpage__section zenorix-svcpage__section--light" aria-labelledby="svc-industries-title">
         <div className="zenorix-svcpage__inner">
@@ -160,75 +124,6 @@ const ServicePage = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* 6. OUR WORKS */}
-      <section className="zenorix-svcpage__section" aria-labelledby="svc-work-title">
-        <div className="zenorix-svcpage__inner">
-          <div className="zenorix-svcpage__head zenorix-svcpage__head--row">
-            <div>
-              <p className="zenorix-svcpage__pill">
-                <i className="ri-arrow-right-up-line" aria-hidden="true" />Our Works
-              </p>
-              <h2 id="svc-work-title">Selected Projects</h2>
-            </div>
-            <a
-              href="https://portfolio.zenorix.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="zenorix-svcpage__all-works"
-              aria-label="View all Zenorix projects"
-            >
-              View all projects ↗
-            </a>
-          </div>
-          <div className="zenorix-svcpage__works">
-            {works.map((w) => (
-              <article className="zenorix-svcpage__work-card" key={w.title}>
-                <a href={w.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${w.title}`}>
-                  <div className="zenorix-svcpage__work-thumb">
-                    <img src={w.image} alt={w.title} loading="lazy" />
-                    <span className="zenorix-svcpage__work-arrow" aria-hidden="true">↗</span>
-                  </div>
-                  <div className="zenorix-svcpage__work-info">
-                    <h3>{w.title}</h3>
-                    <p>{w.tagline}</p>
-                    <span>{w.service} · {w.year}</span>
-                  </div>
-                </a>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. READY TO CONNECT CTA */}
-      <section className="zenorix-svcpage__cta" aria-labelledby="svc-cta-title">
-        <div className="zenorix-svcpage__inner zenorix-svcpage__cta-inner">
-          <div className="zenorix-svcpage__cta-text">
-            <h2 id="svc-cta-title">Ready to Start Your Project?</h2>
-            <p>
-              Share your idea with us and we'll get back to you with a clear plan, timeline, and quote — no obligation.
-            </p>
-            <div className="zenorix-svcpage__cta-actions">
-              <a href="tel:+916282878105" className="zenorix-svcpage__btn zenorix-svcpage__btn--primary">
-                <i className="ri-phone-line" aria-hidden="true" /> Call +91 62828 78105
-              </a>
-              <a
-                href="https://wa.me/916282878105?text=I%20want%20to%20know%20more%20about%20your%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="zenorix-svcpage__btn zenorix-svcpage__btn--secondary"
-              >
-                <i className="ri-whatsapp-line" aria-hidden="true" /> WhatsApp
-              </a>
-              <a href="mailto:zenorix.group@gmail.com" className="zenorix-svcpage__btn zenorix-svcpage__btn--secondary">
-                <i className="ri-mail-line" aria-hidden="true" /> Email Us
-              </a>
-            </div>
-          </div>
-          <div className="zenorix-svcpage__cta-arrow" aria-hidden="true">↗</div>
         </div>
       </section>
 
@@ -279,6 +174,28 @@ const ServicePage = () => {
                 })}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="zenorix-aboutpage__cta">
+        <div className="zenorix-aboutpage__inner">
+          <h2>Ready to start your project?</h2>
+          <p>Call us or send a message and our team will get back to you shortly.</p>
+          <div className="zenorix-aboutpage__cta-actions">
+            <a href="tel:+916282878105" className="zenorix-aboutpage__btn zenorix-aboutpage__btn--light">
+              <i className="ri-phone-line" aria-hidden="true" /> Call +91 62828 78105
+            </a>
+            <a
+              href="https://wa.me/916282878105?text=I%20want%20to%20know%20more%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="zenorix-aboutpage__btn"
+            >
+              <i className="ri-whatsapp-line" aria-hidden="true" /> Message on WhatsApp
+            </a>
+            <a href="mailto:zenorix.group@gmail.com" className="zenorix-aboutpage__btn">
+              <i className="ri-mail-line" aria-hidden="true" /> Email us
+            </a>
           </div>
         </div>
       </section>

@@ -2,7 +2,8 @@ import SlideUp from "@utils/animations/slideUp"
 
 const Booking = () => {
     return (
-        <section id="book" className="call-to-action-area">
+        <section id="contact" className="call-to-action-area">
+            <div id="book" />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12">

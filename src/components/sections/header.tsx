@@ -6,10 +6,10 @@ import { socialLinks } from "../../lib/social-links"
 
 const navigation = [
   { label: "About", path: "about" },
-  { label: "Work", path: "portfolio" },
+  { label: "Work", path: "work" },
   { label: "Products", path: "products" },
-  { label: "Clients", path: "clients" },
   { label: "Blogs", path: "blogs" },
+  { label: "Contact Us", path: "contact" },
 ]
 
 const services = [
@@ -27,6 +27,9 @@ const products = [
 // On the home page links scroll to a section; on other pages they go to /#section.
 const Link = ({ to, smooth: _smooth, offset: _offset, children, className, onClick }: ComponentProps<typeof ScrollLink>) => {
   const { pathname } = useLocation()
+  if (to === "contact") {
+    return <RouterLink to="/contact" className={className} onClick={onClick}>{children}</RouterLink>
+  }
   if (pathname === "/") {
     return <ScrollLink to={to} smooth offset={-88} className={className} onClick={onClick}>{children}</ScrollLink>
   }

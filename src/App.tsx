@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
+import ContactPage from '@components/pages/contactPage'
 import AboutPage from '@components/pages/aboutPage'
 import ServicePage from '@components/pages/servicePage'
 import Header from '@components/sections/header'
@@ -15,7 +16,7 @@ import Features from '@components/sections/features'
 import Faqs from '@components/sections/faqs'
 import Booking from '@components/sections/booking'
 import Footer from '@components/sections/footer'
-import ScrollToTop from '@components/sections/scrollToTop'
+
 import Preloader from '@components/ui/preloader'
 
 const Home = () => (
@@ -60,10 +61,22 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/services/:slug" element={<ServicePage />} />
       </Routes>
       <Footer />
-      <ScrollToTop />
+      <a
+        className="zenorix-whatsapp-float"
+        href="https://wa.me/917012977575"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Zenorix on WhatsApp"
+        title="Message us on WhatsApp"
+      >
+        <span className="zenorix-whatsapp-float__label">Chat us</span>
+        <i className="ri-whatsapp-line" aria-hidden="true" />
+      </a>
+
     </>
   )
 }
