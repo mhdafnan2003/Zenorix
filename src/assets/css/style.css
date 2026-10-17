@@ -4317,11 +4317,11 @@ ul.blog_pagination li a:hover {
 
 .zenorix-reviews__clients img {
     width: auto;
-    height: 44px;
+    height: 72px;
     margin: 0 36px;
     object-fit: contain;
-    filter: brightness(0);
-    opacity: .55;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .65)) drop-shadow(0 0 1px rgba(0, 0, 0, .4));
+    opacity: 1;
 }
 
 /* columns: review card + profile card, profile alternates bottom / top */
@@ -5386,7 +5386,7 @@ ul.blog_pagination li a:hover {
 }
 
 .zenorix-svcpage__section--dark {
-    background: #06040a;
+    background: #000000;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -5946,3 +5946,424 @@ ul.blog_pagination li a:hover {
 }
 
 
+
+/* Service offers slide over the pinned hero, matching the home page. */
+.zenorix-svcpage__offers {
+    position: relative;
+    z-index: 20;
+    border-radius: 30px 30px 0 0;
+    background: #ffffff;
+    color: #101010;
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, .12);
+}
+
+.zenorix-svcpage__offers .zenorix-svcpage__head h2,
+.zenorix-svcpage__offers .zenorix-svcpage__card h3 {
+    color: #101010;
+}
+
+.zenorix-svcpage__offers .zenorix-svcpage__pill {
+    color: #343039;
+    border-color: rgba(20, 16, 26, .18);
+    background: #faf8fc;
+}
+
+.zenorix-svcpage__offers .zenorix-svcpage__card {
+    background: #faf9fc;
+    border-color: #e7e2ed;
+}
+
+.zenorix-svcpage__offers .zenorix-svcpage__card:hover {
+    background: #f5effb;
+    border-color: #9343d7;
+}
+
+.zenorix-svcpage__offers .zenorix-svcpage__card p {
+    color: #615969;
+}
+
+.zenorix-svcpage__offers .zenorix-svcpage__card-icon {
+    color: #8434c8;
+}
+
+.zenorix-svcpage__offers .zenorix-svcpage__card:hover .zenorix-svcpage__card-icon {
+    color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .zenorix-svcpage .hero-about-stack__hero {
+        position: relative;
+        height: auto;
+    }
+}
+
+/* Keep the footer compact below the copyright. */
+.main-footer .footer-bottom {
+    padding-bottom: 24px;
+}
+
+.main-footer .copyright-text p {
+    margin-bottom: 0;
+}
+
+/* Horizontal process timeline shared by service pages. */
+.zenorix-svcpage__timeline .zenorix-svcpage__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 48px;
+    align-items: center;
+    margin-bottom: 76px;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__pill {
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin: 0;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__head h2 {
+    font-size: clamp(32px, 3.3vw, 48px);
+    font-weight: 500;
+    line-height: 1.12;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__process {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    border: 0;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__step {
+    display: block;
+    position: relative;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,.65);
+    padding: 64px 24px 0 0;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__step::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary-color, #9343d7);
+    left: 0;
+    top: -8px;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__step-num {
+    display: none;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__step-body h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+.zenorix-svcpage__timeline .zenorix-svcpage__step-body p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+@media (max-width: 991px) {
+    .zenorix-svcpage__timeline .zenorix-svcpage__head {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 48px;
+    }
+    .zenorix-svcpage__timeline .zenorix-svcpage__process {
+        display: block;
+    }
+    .zenorix-svcpage__timeline .zenorix-svcpage__step {
+        border-top: 0;
+        border-left: 1px solid rgba(255,255,255,.5);
+        padding: 0 0 40px 32px;
+        margin-left: 8px;
+    }
+    .zenorix-svcpage__timeline .zenorix-svcpage__step:last-child {
+        padding-bottom: 0;
+        border-left-color: transparent;
+    }
+    .zenorix-svcpage__timeline .zenorix-svcpage__step::before {
+        top: 4px;
+        left: -8px;
+    }
+}
+
+/* Dedicated contact page */
+.zenorix-contact { background: #000; color: #fff; }
+.zenorix-contact__hero { padding: clamp(160px, 15vw, 220px) 0 90px; background: radial-gradient(ellipse at 80% 20%, #372048 0%, #160c23 44%, #08050d 85%); }
+.zenorix-contact__hero h1 { font-size: clamp(48px, 7vw, 96px); line-height: 1.02; letter-spacing: -.055em; margin: 24px 0; font-weight: 600; }
+.zenorix-contact__hero h1 span { color: #dfbdff; }
+.zenorix-contact__hero > div > p:last-child { color: #c1b8ca; max-width: 620px; font-size: 18px; }
+.zenorix-contact__content { padding: clamp(64px, 8vw, 112px) 0; }
+.zenorix-contact__layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 7vw, 100px); align-items: start; }
+.zenorix-contact__eyebrow { color: #c99aef; font-size: 12px; letter-spacing: .15em; font-weight: 700; }
+.zenorix-contact__layout h2 { color: #fff; font-size: clamp(32px, 3.5vw, 48px); letter-spacing: -.04em; line-height: 1.12; }
+.zenorix-contact__intro { color: #a9a2b1; margin: 24px 0 36px; max-width: 440px; }
+.zenorix-contact__channel { display: flex; gap: 18px; align-items: center; padding: 24px 0; border-bottom: 1px solid #28232f; color: #fff; text-decoration: none; overflow-wrap: anywhere; }
+.zenorix-contact__channel > i { color: #c99aef; font-size: 25px; }
+.zenorix-contact__channel span { flex: 1; min-width: 0; }
+.zenorix-contact__channel small { display: block; color: #a9a2b1; font-size: 13px; }
+.zenorix-contact__channel:hover { color: #dfbdff; }
+.zenorix-contact__form { background: #0e0b13; border: 1px solid #2b2334; border-radius: 24px; padding: clamp(24px, 3vw, 44px); }
+.zenorix-contact__form h2 { font-size: 30px; }
+.zenorix-contact__form p { color: #a9a2b1; margin: 12px 0 28px; }
+.zenorix-contact__form label { display: block; font-size: 14px; margin: 18px 0 8px; }
+.zenorix-contact__form input, .zenorix-contact__form select, .zenorix-contact__form textarea { display: block; width: 100%; padding: 13px 16px; background: #17121f; color: #fff; border: 1px solid #3b3047; border-radius: 10px; font: inherit; }
+.zenorix-contact__form textarea { resize: vertical; }
+.zenorix-contact__form input:focus, .zenorix-contact__form select:focus, .zenorix-contact__form textarea:focus { outline: 2px solid #9343d7; outline-offset: 2px; }
+.zenorix-contact__form button { width: 100%; margin-top: 24px; padding: 15px 20px; border-radius: 999px; background: #fff; color: #111; display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+.zenorix-contact__form button:hover { background: #dfbdff; }
+.zenorix-contact__form button:focus-visible { outline: 2px solid #c99aef; outline-offset: 4px; }
+.zenorix-contact__form > small { display: block; color: #a9a2b1; font-size: 12px; margin-top: 12px; line-height: 1.5; }
+@media (max-width: 767px) { .zenorix-contact__layout { grid-template-columns: 1fr; } .zenorix-contact__hero { padding-bottom: 56px; } }
+
+/* Light contact section. */
+.zenorix-contact__content { background: #fff; color: #17121f; }
+.zenorix-contact__content h2 { color: #17121f; }
+.zenorix-contact__eyebrow { color: #8434c8; }
+.zenorix-contact__intro,
+.zenorix-contact__channel small,
+.zenorix-contact__form p,
+.zenorix-contact__form > small { color: #655d6e; }
+.zenorix-contact__channel { color: #17121f; border-color: #e6e0eb; }
+.zenorix-contact__channel > i { color: #9343d7; }
+.zenorix-contact__channel:hover { color: #8434c8; }
+.zenorix-contact__form { background: #faf8fc; border-color: #e6e0eb; }
+.zenorix-contact__form input,
+.zenorix-contact__form select,
+.zenorix-contact__form textarea { background: #fff; color: #17121f; border-color: #d8d0df; }
+.zenorix-contact__form input::placeholder,
+.zenorix-contact__form textarea::placeholder { color: #81768c; opacity: 1; }
+.zenorix-contact__form button { background: #9343d7; color: #fff; }
+.zenorix-contact__form button:hover { background: #7931b5; }
+
+/* WhatsApp contact available across all routes. */
+.zenorix-whatsapp-float {
+    position: fixed;
+    left: auto;
+    right: max(24px, env(safe-area-inset-right));
+    bottom: calc(24px + env(safe-area-inset-bottom));
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,.25);
+    transition: background .2s ease;
+}
+.zenorix-whatsapp-float:hover { background: #128c4b; color: #fff; }
+.zenorix-whatsapp-float:focus-visible { outline: 3px solid #9343d7; outline-offset: 4px; }
+@media (max-width: 767px) {
+    .zenorix-whatsapp-float { left: auto; right: max(16px, env(safe-area-inset-right)); bottom: calc(16px + env(safe-area-inset-bottom)); width: 52px; height: 52px; }
+}
+
+.zenorix-aboutpage__hero {
+    position: relative;
+    overflow: hidden;
+    background: #160b25;
+}
+.zenorix-aboutpage__hero > .zenorix-aboutpage__inner {
+    position: relative;
+    z-index: 1;
+}
+/* Leave room for WhatsApp below the back-to-top control. */
+.progress-wrap { bottom: calc(96px + env(safe-area-inset-bottom)); }
+
+/* Expand left while keeping the WhatsApp icon anchored on the right. */
+.zenorix-whatsapp-float {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    border-radius: 999px;
+    transition: width .25s ease, background .2s ease;
+}
+.zenorix-whatsapp-float > i {
+    flex: 0 0 56px;
+    text-align: center;
+}
+.zenorix-whatsapp-float__label {
+    position: absolute;
+    right: 56px;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity .2s ease, transform .25s ease;
+}
+.zenorix-whatsapp-float:hover,
+.zenorix-whatsapp-float:focus-visible { width: 152px; }
+.zenorix-whatsapp-float:hover .zenorix-whatsapp-float__label,
+.zenorix-whatsapp-float:focus-visible .zenorix-whatsapp-float__label {
+    opacity: 1;
+    transform: translateX(0);
+}
+@media (max-width: 767px) {
+    .zenorix-whatsapp-float > i { flex-basis: 52px; }
+    .zenorix-whatsapp-float__label { right: 52px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .zenorix-whatsapp-float,
+    .zenorix-whatsapp-float__label { transition: none; }
+}
+
+.zenorix-aboutpage__card:not(.zenorix-aboutpage__card--dark) {
+    border: 1px solid rgba(147, 67, 215, .28);
+}
+
+.zenorix-aboutpage__journey-next {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.zenorix-aboutpage__card:not(.zenorix-aboutpage__card--dark) {
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+}
+@media (hover: hover) {
+    .zenorix-aboutpage__card:not(.zenorix-aboutpage__card--dark):hover {
+        transform: translateY(-6px);
+        border-color: #9343d7;
+        background: #f5effb;
+        box-shadow: 0 16px 32px -12px rgba(147, 67, 215, .25);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .zenorix-aboutpage__card:not(.zenorix-aboutpage__card--dark) { transition: none; }
+    .zenorix-aboutpage__card:not(.zenorix-aboutpage__card--dark):hover { transform: none; }
+}
+
+/* Vision and mission share a row; values span the section below. */
+.zenorix-aboutpage__vm {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(36px, 5vw, 64px);
+}
+.zenorix-aboutpage__vm > h2 {
+    max-width: 100%;
+    font-size: clamp(30px, 4vw, 58px);
+}
+.zenorix-aboutpage__vm-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 64px;
+}
+.zenorix-aboutpage__vm-list > div:last-child {
+    grid-column: 1 / -1;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,.18);
+}
+@media (max-width: 767px) {
+    .zenorix-aboutpage__vm-list { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.zenorix-aboutpage__vm-list > div:last-child {
+    text-align: left;
+}
+
+.zenorix-aboutpage__vm > h2 {
+    text-align: left;
+}
+
+.zenorix-aboutpage__vm-list > div:last-child {
+    position: relative;
+    border-top: 0;
+}
+.zenorix-aboutpage__vm-list > div:last-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,.18);
+}
+
+/* Divider between Vision and Mission. */
+.zenorix-aboutpage__vm-list > div:nth-child(2) {
+    position: relative;
+}
+.zenorix-aboutpage__vm-list > div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,.18);
+}
+@media (max-width: 767px) {
+    .zenorix-aboutpage__vm-list > div:nth-child(2)::before {
+        left: 0;
+        right: 0;
+        top: -16px;
+        bottom: auto;
+        width: 100%;
+        height: 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    .zenorix-aboutpage__vm-list > div:nth-child(2)::before {
+        top: 50%;
+        bottom: auto;
+        height: 80%;
+        transform: translateY(-50%);
+    }
+}
+
+.zenorix-aboutpage__vm-list > div:nth-child(2)::before {
+    content: none;
+}
+
+.zenorix-reviews__clients img[src='/images/company-logo/indian-national-league.png'] {
+    filter: brightness(0) saturate(100%) invert(39%) sepia(87%) saturate(749%) hue-rotate(103deg) brightness(91%) contrast(91%) drop-shadow(0 1px 1px rgba(0, 0, 0, .3));
+}
+
+.zenorix-aboutpage__team-slider {
+    padding: 8px 0 60px;
+    --swiper-navigation-color: #9343d7;
+    --swiper-navigation-size: 18px;
+}
+.zenorix-aboutpage__team-slider .swiper-slide { height: auto; }
+.zenorix-aboutpage__team-slider .zenorix-aboutpage__person { height: 100%; }
+.zenorix-aboutpage__team-slider .swiper-button-prev,
+.zenorix-aboutpage__team-slider .swiper-button-next {
+    top: auto;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(147,67,215,.3);
+    border-radius: 50%;
+    background: #fff;
+}
+.zenorix-aboutpage__team-slider .swiper-button-prev { left: auto; right: 52px; }
+.zenorix-aboutpage__team-slider .swiper-button-next { right: 0; }
+
+.zenorix-aboutpage__team-slider .swiper-button-prev,
+.zenorix-aboutpage__team-slider .swiper-button-next {
+    position: absolute;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    color: #9343d7;
+}
+.zenorix-aboutpage__team-slider .swiper-button-prev::after { content: "←"; }
+.zenorix-aboutpage__team-slider .swiper-button-next::after { content: "→"; }
+.zenorix-aboutpage__team-slider .swiper-button-disabled { opacity: .4; }
+
+/* Keep service offer cards neutral on hover. */
+.zenorix-svcpage__offers .zenorix-svcpage__card:hover {
+    background: #faf9fc;
+    border-color: #e7e2ed;
+    box-shadow: none;
+    transform: none;
+}
+.zenorix-svcpage__offers .zenorix-svcpage__card:hover .zenorix-svcpage__card-icon {
+    background: rgba(147, 67, 215, .14);
+    border-color: rgba(147, 67, 215, .32);
+    color: #8434c8;
+    transform: none;
+}

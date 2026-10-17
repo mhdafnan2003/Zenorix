@@ -46,6 +46,8 @@ const ServicePage = () => {
 
   return (
     <main className="zenorix-svcpage">
+      <div className="hero-about-stack">
+      <div className="hero-about-stack__hero">
       {/* 1. HERO */}
       <section className="zenorix-svcpage__hero" aria-labelledby="svc-hero-title">
         <MeshGradient
@@ -82,8 +84,10 @@ const ServicePage = () => {
         </div>
       </section>
 
+      </div>
+
       {/* 2. SERVICES WE OFFER */}
-      <section className="zenorix-svcpage__section" aria-labelledby="svc-offer-title">
+      <section className="zenorix-svcpage__section zenorix-svcpage__offers" aria-labelledby="svc-offer-title">
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head">
             <p className="zenorix-svcpage__pill">
@@ -105,8 +109,10 @@ const ServicePage = () => {
         </div>
       </section>
 
+      </div>
+
       {/* 3. PROCESS */}
-      <section className="zenorix-svcpage__section zenorix-svcpage__section--dark" aria-labelledby="svc-process-title">
+      <section className="zenorix-svcpage__section zenorix-svcpage__section--dark zenorix-svcpage__timeline" aria-labelledby="svc-process-title">
         <div className="zenorix-svcpage__inner">
           <div className="zenorix-svcpage__head">
             <p className="zenorix-svcpage__pill">
@@ -126,20 +132,6 @@ const ServicePage = () => {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      {/* 4. STATS */}
-      <section className="zenorix-svcpage__section zenorix-svcpage__stats-section" aria-label="Service highlights">
-        <div className="zenorix-svcpage__inner">
-          <dl className="zenorix-svcpage__stats">
-            {data.stats.map(({ value, label }) => (
-              <div key={label} className="zenorix-svcpage__stat">
-                <dt className="zenorix-svcpage__stat-value">{value}</dt>
-                <dd className="zenorix-svcpage__stat-label">{label}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
@@ -203,35 +195,6 @@ const ServicePage = () => {
         </div>
       </section>
 
-      {/* 7. READY TO CONNECT CTA */}
-      <section className="zenorix-svcpage__cta" aria-labelledby="svc-cta-title">
-        <div className="zenorix-svcpage__inner zenorix-svcpage__cta-inner">
-          <div className="zenorix-svcpage__cta-text">
-            <h2 id="svc-cta-title">Ready to Start Your Project?</h2>
-            <p>
-              Share your idea with us and we'll get back to you with a clear plan, timeline, and quote — no obligation.
-            </p>
-            <div className="zenorix-svcpage__cta-actions">
-              <a href="tel:+916282878105" className="zenorix-svcpage__btn zenorix-svcpage__btn--primary">
-                <i className="ri-phone-line" aria-hidden="true" /> Call +91 62828 78105
-              </a>
-              <a
-                href="https://wa.me/916282878105?text=I%20want%20to%20know%20more%20about%20your%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="zenorix-svcpage__btn zenorix-svcpage__btn--secondary"
-              >
-                <i className="ri-whatsapp-line" aria-hidden="true" /> WhatsApp
-              </a>
-              <a href="mailto:zenorix.group@gmail.com" className="zenorix-svcpage__btn zenorix-svcpage__btn--secondary">
-                <i className="ri-mail-line" aria-hidden="true" /> Email Us
-              </a>
-            </div>
-          </div>
-          <div className="zenorix-svcpage__cta-arrow" aria-hidden="true">↗</div>
-        </div>
-      </section>
-
       {/* 8. FAQ */}
       <section className="zenorix-svcpage__section zenorix-svcpage__faq-section" id={`faq-${slug}`} aria-labelledby="svc-faq-title">
         <div className="zenorix-svcpage__inner">
@@ -279,6 +242,28 @@ const ServicePage = () => {
                 })}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="zenorix-aboutpage__cta">
+        <div className="zenorix-aboutpage__inner">
+          <h2>Ready to start your project?</h2>
+          <p>Call us or send a message and our team will get back to you shortly.</p>
+          <div className="zenorix-aboutpage__cta-actions">
+            <a href="tel:+916282878105" className="zenorix-aboutpage__btn zenorix-aboutpage__btn--light">
+              <i className="ri-phone-line" aria-hidden="true" /> Call +91 62828 78105
+            </a>
+            <a
+              href="https://wa.me/916282878105?text=I%20want%20to%20know%20more%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="zenorix-aboutpage__btn"
+            >
+              <i className="ri-whatsapp-line" aria-hidden="true" /> Message on WhatsApp
+            </a>
+            <a href="mailto:zenorix.group@gmail.com" className="zenorix-aboutpage__btn">
+              <i className="ri-mail-line" aria-hidden="true" /> Email us
+            </a>
           </div>
         </div>
       </section>

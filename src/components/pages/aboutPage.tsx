@@ -1,3 +1,8 @@
+import { Swiper, SwiperSlide } from "swiper/react"
+import { A11y, Autoplay, Keyboard, Navigation } from "swiper/modules"
+import { useReducedMotion } from "framer-motion"
+import "swiper/css"
+import { MeshGradient } from "@paper-design/shaders-react"
 import { featuresData } from "@utils/fackData/featuresData"
 
 const stats = [
@@ -33,17 +38,34 @@ const journey = [
 ]
 
 const team = [
-  { name: "Mohammed Afnan", role: "Website Development", photo: "/images/about/person1.png" },
-  { name: "Team Member", role: "Software Development", photo: "/images/about/person2.png" },
-  { name: "Team Member", role: "Mobile Development", photo: "/images/about/person3.png" },
-  { name: "Team Member", role: "UI / UX Design", photo: "/images/about/person4.png" },
+  { name: "Mohamed Afnan", role: "Co-founder", photo: "/images/about/person3.png" },
+  { name: "Shamil Shan", role: "Co-founder, UI/UX Designer", photo: "/images/about/person4.png" },
+  { name: "Nihad Hasni", role: "Digital Marketer, Co-founder", photo: "/images/about/team-black-suit.png" },
+  { name: "Aswin KP", role: "Video Editor, Co-founder", photo: "/images/about/aswin-coat.png" },
+  { name: "Aman Husain", role: "Fullstack Developer", photo: "/images/about/person2.png" },
+  { name: "Ajmal PT", role: "Fullstack Developer", photo: "/images/about/person1.png" },
+  { name: "Jinto Raj", role: "Fullstack Developer", photo: "/images/about/jinto-raj-color.png" },
 ]
 
 const AboutPage = () => {
+  const reducedMotion = useReducedMotion()
   return (
     <main className="zenorix-aboutpage">
       {/* 1. Intro */}
       <section className="zenorix-aboutpage__hero">
+        <MeshGradient
+          className="absolute inset-0 h-full w-full pointer-events-none"
+          colors={["#07050d", "#160b25", "#2a183f", "#39234f", "#0d0718", "#241138", "#080510"]}
+          speed={0.35}
+        />
+        <MeshGradient
+          className="absolute inset-0 h-full w-full opacity-45 mix-blend-screen pointer-events-none"
+          colors={["#090510", "#201035", "#3b1e59", "#4d3067", "#11081d", "#562b73", "#170b29"]}
+          speed={0.28}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(5,3,10,.35)_0%,rgba(5,3,10,.25)_52%,rgba(4,2,8,.45)_100%)]" />
+
+
         <div className="zenorix-aboutpage__inner">
           <p className="zenorix-about__label zenorix-aboutpage__pill">
             <i className="ri-arrow-right-up-line" aria-hidden="true" />About us
@@ -121,7 +143,7 @@ const AboutPage = () => {
       {/* 4. Vision, mission & value */}
       <section className="zenorix-aboutpage__section zenorix-aboutpage__section--dark">
         <div className="zenorix-aboutpage__inner zenorix-aboutpage__vm">
-          <h2>Empowering Businesses to Grow Through Technology</h2>
+          <h2>Empowering Businesses to Grow<br />Through Technology</h2>
           <div className="zenorix-aboutpage__vm-list">
             <div>
               <h3>Our Vision</h3>
@@ -181,17 +203,31 @@ const AboutPage = () => {
             </p>
             <h2>The people behind Zenorix</h2>
           </div>
-          <div className="zenorix-aboutpage__team">
+          <Swiper
+            className="zenorix-aboutpage__team-slider"
+            modules={[A11y, Autoplay, Keyboard, Navigation]}
+            slidesPerView={1.15}
+            spaceBetween={20}
+            breakpoints={{ 480: { slidesPerView: 2 }, 900: { slidesPerView: 3 }, 1200: { slidesPerView: 4 } }}
+            navigation
+            keyboard={{ enabled: true, onlyInViewport: true }}
+            autoplay={reducedMotion ? false : { delay: 3500, pauseOnMouseEnter: true, disableOnInteraction: true }}
+            rewind
+            speed={reducedMotion ? 0 : 600}
+            aria-label="Zenorix team"
+          >
             {team.map(({ name, role, photo }) => (
-              <article className="zenorix-aboutpage__person" key={name + photo}>
-                <div className="zenorix-aboutpage__person-photo">
-                  <img src={photo} alt={name} loading="lazy" />
-                </div>
-                <h3>{name}</h3>
-                <p>{role}</p>
-              </article>
+              <SwiperSlide key={photo}>
+                <article className="zenorix-aboutpage__person">
+                  <div className="zenorix-aboutpage__person-photo">
+                    <img src={photo} alt={name} loading="lazy" />
+                  </div>
+                  <h3>{name}</h3>
+                  <p>{role}</p>
+                </article>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </section>
 
