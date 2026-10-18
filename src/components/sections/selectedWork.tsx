@@ -1,3 +1,4 @@
+import LazyVideo from '@components/ui/lazyVideo'
 type Work = {
   title: string
   tagline: string
@@ -123,18 +124,9 @@ const SelectedWork = () => {
             </div>
             <div className="zenorix-work__media">
               {work.video ? (
-                <video
-                  src={work.video}
-                  poster={work.image}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  aria-label={work.title}
-                />
+                <LazyVideo src={work.video} poster={work.image} label={work.title} />
               ) : (
-                <img src={work.image} alt={work.title} loading="lazy" />
+                <img src={work.image} alt={work.title} loading="lazy" decoding="async" />
               )}
             </div>
           </article>
