@@ -67,7 +67,7 @@ const Card = ({ img, id, title, description, index, icon }: PropsType) => {
                 </div>
                 <div className="content-box">
                     <div className="title-box">
-                        <h3><a href="#">{title}</a></h3>
+                        <h3>{title}</h3>
                     </div>
                     <div className="text-box">
                         <p>{description}</p>

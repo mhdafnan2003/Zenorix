@@ -39,7 +39,7 @@ const Card = ({ id, title, description, icon }: PropsType) => {
         <div className="col-lg-4 col-md-6">
             <SlideUp delay={id} className="service-item">
                 <div className="content"><i className={icon} />
-                    <h4>{title}</h4>
+                    <h3>{title}</h3>
                     <p>{description}</p>
                 </div>
             </SlideUp>

@@ -12,11 +12,11 @@ const Footer = () => {
                     <div className="row mb-3">
                         <div className="col-12 d-flex justify-content-center ">
                             <div className="footer-social d-flex gap-3 flex-wrap justify-content-center">
-                                <a href="https://www.facebook.com/profile.php?id=61578273194668"><FaFacebookF /></a>
-                                <a href="https://x.com/zenorix_group?s=11"><FaXTwitter /></a>
-                                <a href="https://www.instagram.com/zenorix.in?igsh=bDVzNGNjbG5xMGp1&utm_source=qr"><FaInstagram /></a>
-                                <a href="https://www.linkedin.com/company/zenorixgroup/"><FaLinkedinIn /></a>
-                                <a href="#"><SiFiverr /></a>
+                                <a href="https://www.facebook.com/profile.php?id=61578273194668" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><FaFacebookF aria-hidden="true" /></a>
+                                <a href="https://x.com/zenorix_group?s=11" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><FaXTwitter aria-hidden="true" /></a>
+                                <a href="https://www.instagram.com/zenorix.in?igsh=bDVzNGNjbG5xMGp1&utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram aria-hidden="true" /></a>
+                                <a href="https://www.linkedin.com/company/zenorixgroup/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedinIn aria-hidden="true" /></a>
+                                <a href="https://www.fiverr.com/" aria-label="Fiverr" target="_blank" rel="noopener noreferrer"><SiFiverr aria-hidden="true" /></a>
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ const Footer = () => {
                                     <li><a href="/#service">Service</a></li>
                                     <li><a href="/contact">Contact</a></li>
                                     <li><a href="https://drive.google.com/file/d/11OrnRBHDaRJVYpH9S8tKf62Mj9IGihcW/view?usp=drive_link">Privacy Policy</a></li>
-                                    <li><a href="#">Terms &amp; Conditions</a></li>
+                                    <li>Terms &amp; Conditions</li>
                                 </ul>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                         <div className="col-12 text-center">
                             <div className="copyright-text">
                                 <p>
-                                  Copyright <a href="#">zenorix.in</a> All Rights Reserved.
+                                  Copyright <a href="/">zenorix.in</a> All Rights Reserved.
                                 </p>
                             </div>
                         </div>
