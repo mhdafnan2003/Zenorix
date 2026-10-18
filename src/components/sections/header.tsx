@@ -75,7 +75,7 @@ const Header = () => {
 
   return (
     <header className={`zenorix-header ${isFixed ? "is-scrolled" : ""} ${isMenuOpen ? "is-menu-open" : ""}`}>
-      <a className="zenorix-header__brand" href="/" aria-label="Zenorix home"><img src="/images/logos/logo.png" alt="Zenorix — Design. Build. Deploy." /></a>
+      <a className="zenorix-header__brand" href="/" aria-label="Zenorix home"><img src="/images/logos/logo.png" width="393" height="119" alt="Zenorix — Design. Build. Deploy." /></a>
       <nav id="site-navigation" className="zenorix-header__nav" aria-label="Main navigation">
         <RouterLink to="/about" className="zenorix-header__link" onClick={closeMenu}>About</RouterLink>
         <div className={`zenorix-header__dropdown ${isServicesOpen ? "is-open" : ""}`} onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)}>

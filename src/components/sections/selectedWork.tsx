@@ -18,7 +18,7 @@ const works: Work[] = [
     tagline: "Premium skin care, made simple to shop",
     description:
       "A full online store for a premium skin care brand, with a bold homepage, clear product range and easy ordering.",
-    image: "/images/projects/bm-aesthetique.png",
+    image: "/images/projects/bm-aesthetique.jpg",
     video: "/videos/bm-aesthetique.mp4",
     year: "2026",
     service: "Web Design, Development",
@@ -31,7 +31,7 @@ const works: Work[] = [
     tagline: "Beyond walls, beyond expectations",
     description:
       "A clean, image-led website for an architecture and interiors firm that puts their finished projects first.",
-    image: "/images/projects/nivo-concepts.png",
+    image: "/images/projects/nivo-concepts.jpg",
     video: "/videos/nivo-concepts.mp4",
     year: "2026",
     service: "Web Design, Development",
@@ -44,7 +44,7 @@ const works: Work[] = [
     tagline: "Printing press & branding solutions, Abu Dhabi",
     description:
       "A bold, colourful website for an Abu Dhabi printing press, with clear categories and quick quote requests.",
-    image: "/images/projects/3dots-advertising.png",
+    image: "/images/projects/3dots-advertising.jpg",
     video: "/videos/3dots-advertising.mp4",
     year: "2026",
     service: "Web Design, Development",
@@ -57,7 +57,7 @@ const works: Work[] = [
     tagline: "Curated vintage & archival streetwear",
     description:
       "A bold, editorial storefront for curated vintage streetwear, built to make every one-of-one piece the hero.",
-    image: "/images/projects/3riiift.png",
+    image: "/images/projects/3riiift.jpg",
     video: "/videos/3riiift.mp4",
     year: "2025",
     service: "Web Design, Development",
@@ -70,7 +70,7 @@ const works: Work[] = [
     tagline: "Holiday, travel and visa solutions",
     description:
       "A warm, trustworthy website for holiday packages and visa services that makes it simple to enquire.",
-    image: "/images/projects/timbala-tourism.png",
+    image: "/images/projects/timbala-tourism.jpg",
     video: "/videos/timbala-tourism.mp4",
     year: "2026",
     service: "Web Design, Development",
