@@ -55,7 +55,7 @@ const Card = ({ img, id, title, description, index, icon }: PropsType) => {
                     <div className="working-process-one__shape4">
                         <img
                             src={img}
-                            alt="shapes"
+                            alt="" loading="lazy"
                             style={{ filter: "invert(1)" }} // ✅ Inverted here
                         />
                     </div>

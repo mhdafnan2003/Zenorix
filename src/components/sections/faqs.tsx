@@ -28,7 +28,7 @@ const Faqs = () => {
                 <div className="row">
                     <div className="col-lg-4 col-md-6">
                         <div className="book-call-intro text-center">
-                            <img src="/images/about/logo1.png" alt="founder" title="founder" />
+                            <img src="/images/about/logo1.png" alt="founder" title="founder" loading="lazy" />
                             <h2>Questions? We're just one quick call away!</h2>
                             <a href="tel:6282878105" className="theme-btn">
                                 Call now <i className="ri-phone-line" />

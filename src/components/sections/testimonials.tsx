@@ -45,7 +45,7 @@ const Testimonials = () => {
           <p>Real brands. Real trust. Real results.</p>
           <Marquee gradient={false} speed={40}>
             {clientLogoData.map(({ id, img }) => (
-              <img key={id} src={img} alt="Client logo" />
+              <img key={id} src={img} alt="Client logo" loading="lazy" decoding="async" />
             ))}
           </Marquee>
         </div>

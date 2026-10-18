@@ -16,7 +16,7 @@ const Partners = () => {
                                             <img
                                                 key={id}
                                                 src={img}
-                                                alt="company logo"
+                                                alt="company logo" loading="lazy" decoding="async"
                                                 style={{
                                                     filter: "brightness(0) invert(1)",
                                                 //     margin: "0 30px",
