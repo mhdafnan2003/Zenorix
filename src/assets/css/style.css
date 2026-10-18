@@ -1887,7 +1887,8 @@ body.zenorix-menu-open { overflow: hidden; }
     font-weight: 500;
 }
 
-.service-item .content h4 {
+.service-item .content h4,
+.service-item .content h3 {
     margin: 12px 0px;
     color: var(--main-color);
     font-size: 30px;
@@ -4424,6 +4425,7 @@ ul.blog_pagination li a:hover {
 }
 
 #features .service-item .content h4,
+#features .service-item .content h3,
 #features .service-item .content p {
     color: #101010;
 }
@@ -4577,7 +4579,8 @@ ul.blog_pagination li a:hover {
     display: none;
 }
 
-#features .service-item .content h4 {
+#features .service-item .content h4,
+#features .service-item .content h3 {
     margin: 0 0 14px;
     color: #fff;
     font-size: clamp(26px, 2.4vw, 36px);
@@ -4603,7 +4606,8 @@ ul.blog_pagination li a:hover {
     background: #fff;
 }
 
-#features .service-item .content h4 {
+#features .service-item .content h4,
+#features .service-item .content h3 {
     color: #101010;
 }
 
