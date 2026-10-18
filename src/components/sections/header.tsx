@@ -31,7 +31,7 @@ const Link = ({ to, smooth: _smooth, offset: _offset, children, className, onCli
     return <RouterLink to="/contact" className={className} onClick={onClick}>{children}</RouterLink>
   }
   if (pathname === "/") {
-    return <ScrollLink to={to} smooth offset={-88} className={className} onClick={onClick}>{children}</ScrollLink>
+    return <ScrollLink to={to} href={`/#${to}`} smooth offset={-88} className={className} onClick={onClick}>{children}</ScrollLink>
   }
   return <RouterLink to={`/#${to}`} className={className} onClick={onClick}>{children}</RouterLink>
 }
@@ -91,8 +91,8 @@ const Header = () => {
               {products.map(({ label: productLabel, href }) => <a key={productLabel} href={href} target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="zenorix-header__dropdown-link">{productLabel}</a>)}
             </div>
           </div>
-        ) : <Link key={path} to={path} href={`/#${path}`} smooth offset={-88} className="zenorix-header__link" onClick={closeMenu}>{label}</Link>)}
-        <Link to="book" href="/#book" smooth offset={-88} className="zenorix-header__talk zenorix-header__drawer-talk" onClick={closeMenu}>Let’s Talk</Link>
+        ) : <Link key={path} to={path} smooth offset={-88} className="zenorix-header__link" onClick={closeMenu}>{label}</Link>)}
+        <Link to="book" smooth offset={-88} className="zenorix-header__talk zenorix-header__drawer-talk" onClick={closeMenu}>Let’s Talk</Link>
         <div className="zenorix-header__mobile-extras">
           <div className="zenorix-header__mobile-contact">
             <a href="mailto:zenorix.group@gmail.com">zenorix.group@gmail.com</a>
@@ -108,7 +108,7 @@ const Header = () => {
         </div>
       </nav>
       <div className="zenorix-header__actions">
-        <Link to="book" href="/#book" smooth offset={-88} className="zenorix-header__talk">Let’s Talk</Link>
+        <Link to="book" smooth offset={-88} className="zenorix-header__talk">Let’s Talk</Link>
       </div>
       <button type="button" className="zenorix-header__menu-toggle" aria-controls="site-navigation" aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen((open) => !open)}>
         <span>{isMenuOpen ? "Close" : "Menu"}</span>
