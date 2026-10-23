@@ -1,8 +1,6 @@
-import { useEffect } from "react"
 import type { FormEvent } from "react"
 
 const ContactPage = () => {
-  useEffect(() => { document.title = "Contact Us | Zenorix" }, [])
   const composeWhatsApp = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const fields = new FormData(event.currentTarget)

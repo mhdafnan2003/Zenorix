@@ -37,12 +37,17 @@ export default function ShaderShowcase() {
           <motion.div className="w-full max-w-2xl lg:ml-auto" initial={{ opacity: 0, x: 18 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.25 }}>
             <h2 className="mb-3 flex items-center gap-2.5 text-sm font-semibold text-white/85 sm:text-base"><span aria-hidden="true" className="text-base text-[#eaff83]">✦</span> What we do</h2>
             <ul aria-label="Zenorix services" className="mb-5">
-              {["WEB DEVELOPMENT", "CUSTOM SOFTWARE DEVELOPMENT", "MOBILE APP DEVELOPMENT", "UI/UX DESIGN & BRANDING"].map((service, index) => (
+              {[
+                { service: "WEB DEVELOPMENT", href: "/services/website-development" },
+                { service: "CUSTOM SOFTWARE DEVELOPMENT", href: "/services/custom-software-development" },
+                { service: "MOBILE APP DEVELOPMENT", href: "/services/mobile-app-development" },
+                { service: "UI/UX DESIGN & BRANDING", href: "#service" },
+              ].map(({ service, href }, index) => (
                 <li key={service} className="group flex min-w-0 items-center gap-1.5 border-b border-white/25 py-2.5 sm:gap-3 sm:py-3">
                   <span className="shrink-0 font-mono text-[11px] text-white/80 sm:text-xs">/{String(index + 1).padStart(3, "0")}</span>
                   <span aria-hidden="true" className="h-px min-w-3 flex-1 bg-white/25 transition-colors group-hover:bg-[#eaff83]/80" />
-                  <a href="#service" className="min-w-0 text-right font-mono text-[clamp(.6rem,.95vw,.82rem)] font-semibold leading-snug text-white transition-colors hover:text-[#eaff83] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eaff83]">{service}</a>
-                  <a href="#service" aria-label={`Explore ${service.toLowerCase()} services`} className="shrink-0 rounded-sm px-0.5 text-base text-white transition-colors hover:text-[#eaff83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#eaff83]">↗</a>
+                  <a href={href} className="min-w-0 text-right font-mono text-[clamp(.6rem,.95vw,.82rem)] font-semibold leading-snug text-white transition-colors hover:text-[#eaff83] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eaff83]">{service}</a>
+                  <a href={href} aria-label={`Explore ${service.toLowerCase()} services`} className="shrink-0 rounded-sm px-0.5 text-base text-white transition-colors hover:text-[#eaff83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#eaff83]">↗</a>
                 </li>
               ))}
             </ul>

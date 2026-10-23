@@ -89,7 +89,7 @@ const SelectedWork = () => {
             <i className="ri-arrow-right-up-line" aria-hidden="true" />Projects
           </p>
           <h2 id="work-title" className="zenorix-work__heading">Featured Projects</h2>
-          <a className="zenorix-work__more" href="https://portfolio.zenorix.in" target="_blank" rel="noreferrer">
+          <a className="zenorix-work__more" href="https://portfolio.zenorix.in" target="_blank" rel="noopener noreferrer">
             More works
           </a>
         </div>
@@ -117,7 +117,7 @@ const SelectedWork = () => {
                 <div>
                   <dt>{work.linkLabel}</dt>
                   <dd>
-                    <a href={work.link} target="_blank" rel="noreferrer">{work.linkText} ↗</a>
+                    <a href={work.link} target="_blank" rel="noopener noreferrer">{work.linkText} ↗</a>
                   </dd>
                 </div>
               </dl>

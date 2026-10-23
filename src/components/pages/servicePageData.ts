@@ -48,9 +48,9 @@ export const servicePages: ServicePageData[] = [
     heroTitle: "Website Development",
     heroSubtitle:
       "We design and build modern, fast, and conversion-focused websites that help your business grow online — crafted for every screen, search engine, and customer.",
-    metaTitle: "Website Development Services in Kozhikode | Zenorix",
+    metaTitle: "Website Development Company in Kerala | Kozhikode | Zenorix",
     metaDescription:
-      "Zenorix builds modern, responsive, SEO-ready websites for businesses, startups, and service providers in Kerala and beyond. Get a high-performing website tailored to your goals.",
+      "Zenorix is a website development company in Kozhikode, Kerala, building fast, responsive, SEO-ready business websites, landing pages and WordPress sites.",
     subServices: [
       {
         title: "Business Websites",
@@ -187,7 +187,7 @@ export const servicePages: ServicePageData[] = [
     heroTitle: "E-commerce Development",
     heroSubtitle:
       "We build fast, secure, and scalable online stores that make buying easy for your customers and managing orders simple for you — from product listings to payment and delivery.",
-    metaTitle: "E-commerce Website Development in Kerala | Zenorix",
+    metaTitle: "E-commerce Website Development Company in Kerala | Zenorix",
     metaDescription:
       "Zenorix builds powerful e-commerce websites with product catalogues, secure payment gateways, and order management for businesses in Kerala and across India.",
     subServices: [
@@ -326,9 +326,9 @@ export const servicePages: ServicePageData[] = [
     heroTitle: "Custom Software Development",
     heroSubtitle:
       "We build purpose-built software tailored to your business workflows — from dashboards and internal tools to complex web applications that replace manual processes and scale with your growth.",
-    metaTitle: "Custom Software Development in Kerala | Zenorix",
+    metaTitle: "Custom Software Development Company in Kerala | Zenorix",
     metaDescription:
-      "Zenorix develops custom software, dashboards, and internal business tools for startups and growing businesses in Kerala and across India. Scalable, practical, and built around your workflow.",
+      "Zenorix develops custom software, dashboards and internal business tools for startups and growing businesses in Kerala and across India, built around your workflow.",
     subServices: [
       {
         title: "Business Dashboards",
@@ -465,9 +465,9 @@ export const servicePages: ServicePageData[] = [
     heroTitle: "Mobile App Development",
     heroSubtitle:
       "We design and build smooth, practical mobile applications for Android and iOS that put your product in your customers' hands — from idea to App Store launch.",
-    metaTitle: "Mobile App Development in Kerala | Zenorix",
+    metaTitle: "Mobile App Development Company in Kerala | Zenorix",
     metaDescription:
-      "Zenorix builds custom Android and iOS mobile apps for startups and businesses in Kerala and across India. From UI/UX design to app store launch — end-to-end mobile development.",
+      "Zenorix builds custom Android and iOS apps for startups and businesses in Kerala and across India, from UI/UX design to app store launch.",
     subServices: [
       {
         title: "Custom Mobile App Development",

@@ -18,6 +18,7 @@ import Booking from '@components/sections/booking'
 import Footer from '@components/sections/footer'
 
 import Preloader from '@components/ui/preloader'
+import { useSeo } from '@/lib/useSeo'
 
 const Home = () => (
   <main>
@@ -41,6 +42,7 @@ const Home = () => (
 
 const App = () => {
   const { pathname, hash } = useLocation()
+  useSeo()
 
   // scroll to a #section after navigating, or to the top on a new page
   useEffect(() => {
