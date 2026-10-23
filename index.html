@@ -9,6 +9,21 @@
     <meta name="geo.region" content="IN-KL" />
     <meta name="geo.placename" content="Kozhikode, Kerala" />
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EM6LWLQ8BY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EM6LWLQ8BY');
+      // Count WhatsApp, phone and email clicks as leads (works for links added later by React)
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var h = a.getAttribute('href') || '', m = h.indexOf('https://wa.me/') === 0 ? 'whatsapp' : h.indexOf('tel:') === 0 ? 'phone' : h.indexOf('mailto:') === 0 ? 'email' : '';
+        if (m) gtag('event', 'generate_lead', { method: m, link_url: h, page_path: location.pathname });
+      });
+    </script>
     <!-- seo:start -->
     <!-- filled per route by seoPlugin in vite.config.ts -->
     <!-- seo:end -->
@@ -18,7 +33,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Manrope:wght@200..800&display=swap" /></noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!-- root:start --><!-- root:end --></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

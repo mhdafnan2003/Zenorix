@@ -12,6 +12,8 @@ export type RouteSeo = {
   path: string
   title: string
   description: string
+  h1: string
+  intro: string
   image?: string
   changefreq: "weekly" | "monthly"
   priority: number
@@ -100,6 +102,9 @@ const faqPage = (faqs: { question: string; answer: string }[]) => ({
 export const routes: RouteSeo[] = [
   {
     path: "/",
+    h1: "Digital Solutions. Built for Growth.",
+    intro:
+      "Zenorix is a digital solutions company in Kozhikode (Calicut), Kerala, helping startups and growing businesses with website development, e-commerce, custom software and mobile app development.",
     title: "Zenorix | Website & App Development Company in Kerala",
     description:
       "Zenorix is a website, e-commerce, custom software and mobile app development company in Kozhikode (Calicut), Kerala, building fast, SEO-ready digital products.",
@@ -113,6 +118,9 @@ export const routes: RouteSeo[] = [
   },
   {
     path: "/about",
+    h1: "About Us",
+    intro:
+      "Zenorix is a Kozhikode-based team of web designers and developers building websites, software and mobile apps for businesses across Kerala since 2022.",
     title: "About Zenorix | Web & Software Developers in Kozhikode, Kerala",
     description:
       "Meet Zenorix, a Kozhikode-based team of web designers and developers building websites, software and mobile apps for businesses across Kerala since 2022.",
@@ -125,6 +133,9 @@ export const routes: RouteSeo[] = [
   },
   {
     path: "/contact",
+    h1: "Great ideas start with a conversation.",
+    intro:
+      "Tell us what you are building. Call +91 62828 78105 or visit Zenorix at First Floor, Space11, Koodathai, Kozhikode (Calicut), Kerala 673573.",
     title: "Contact Zenorix | Website Developers in Calicut, Kerala",
     description:
       "Talk to Zenorix about your website, e-commerce store, software or mobile app. Call +91 62828 78105 or visit us at Koodathai, Kozhikode (Calicut), Kerala.",
@@ -141,6 +152,8 @@ export const routes: RouteSeo[] = [
       path,
       title: page.metaTitle,
       description: page.metaDescription,
+      h1: page.heroTitle,
+      intro: page.heroSubtitle,
       changefreq: "monthly",
       priority: 0.9,
       jsonLd: [
@@ -168,5 +181,7 @@ export const routes: RouteSeo[] = [
     }
   }),
 ]
+
+export const serviceLinks = servicePages.map((p) => ({ href: `/services/${p.slug}`, label: p.heroTitle }))
 
 export const getRouteSeo = (path: string) => routes.find((r) => r.path === path)

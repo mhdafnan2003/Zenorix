@@ -2,7 +2,7 @@ import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import fs from 'fs'
 import path from 'path';
-import { DEFAULT_IMAGE, SITE_NAME, SITE_URL, getRouteSeo, routes, type RouteSeo } from './src/lib/seo'
+import { DEFAULT_IMAGE, SITE_NAME, SITE_URL, getRouteSeo, routes, serviceLinks, type RouteSeo } from './src/lib/seo'
 
 const escapeAttr = (value: string) =>
   value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -37,9 +37,21 @@ const renderSeoHead = (route: RouteSeo) => {
   ].join('\n    ')
 }
 
+// Static copy inside #root so crawlers that don't run JavaScript still see the
+// page's H1, intro and internal links. React replaces it on mount.
+const renderRootFallback = (route: RouteSeo) =>
+  `<main style="max-width:760px;margin:0 auto;padding:96px 24px;background:#07050d;color:#f7f2ff;font-family:sans-serif">` +
+  `<h1>${escapeAttr(route.h1)}</h1><p>${escapeAttr(route.intro)}</p>` +
+  `<nav aria-label="Main"><a href="/">Home</a> <a href="/about">About</a> <a href="/contact">Contact</a> ` +
+  serviceLinks.map((l) => `<a href="${l.href}">${escapeAttr(l.label)}</a>`).join(' ') +
+  `</nav></main>`
+
+const ROOT_BLOCK = /<!-- root:start -->[\s\S]*<!-- root:end -->/
 const SEO_BLOCK = /<!-- seo:start -->[\s\S]*<!-- seo:end -->/
 const withSeo = (html: string, route: RouteSeo) =>
-  html.replace(SEO_BLOCK, `<!-- seo:start -->\n    ${renderSeoHead(route)}\n    <!-- seo:end -->`)
+  html
+    .replace(SEO_BLOCK, () => `<!-- seo:start -->\n    ${renderSeoHead(route)}\n    <!-- seo:end -->`)
+    .replace(ROOT_BLOCK, () => `<!-- root:start -->${renderRootFallback(route)}<!-- root:end -->`)
 
 // Gives every route its own crawlable HTML file (title, description, canonical,
 // Open Graph, JSON-LD) and writes sitemap.xml. Vercel serves /about from about.html.
