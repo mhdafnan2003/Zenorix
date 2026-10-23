@@ -6542,3 +6542,15 @@ ul.blog_pagination li a:hover {
 .zenorix-legal ul { padding-left: 22px; margin: 8px 0 0; }
 .zenorix-legal li { margin-bottom: 8px; }
 .zenorix-legal a { color: #8434c8; }
+
+/* Blog */
+.zenorix-blog__list { list-style: none; padding: 0; margin: 0; }
+.zenorix-blog__list li { padding: 32px 0; border-bottom: 1px solid #e6e0eb; }
+.zenorix-blog__list h2 { margin: 8px 0 12px; }
+.zenorix-blog__list h2 a { color: #17121f; text-decoration: none; }
+.zenorix-blog__list h2 a:hover { color: #8434c8; }
+.zenorix-blog__meta { color: #655d6e; font-size: 14px; margin: 0; }
+.zenorix-blog__more { font-weight: 600; text-decoration: none; }
+.zenorix-contact__hero h1 { overflow-wrap: anywhere; }
+.zenorix-legal ol { padding-left: 22px; margin: 8px 0 0; }
+.zenorix-contact__hero h1.zenorix-blog__title { font-size: clamp(32px, 4.6vw, 60px); line-height: 1.1; max-width: 960px; }

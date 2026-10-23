@@ -43,7 +43,7 @@ export default function ShaderShowcase() {
                 { service: "WEB DEVELOPMENT", href: "/services/website-development" },
                 { service: "CUSTOM SOFTWARE DEVELOPMENT", href: "/services/custom-software-development" },
                 { service: "MOBILE APP DEVELOPMENT", href: "/services/mobile-app-development" },
-                { service: "UI/UX DESIGN & BRANDING", href: "#service" },
+                { service: "UI/UX DESIGN & BRANDING", href: "/services/ui-ux-design-branding" },
               ].map(({ service, href }, index) => (
                 <li key={service} className="group flex min-w-0 items-center gap-1.5 border-b border-white/25 py-2.5 sm:gap-3 sm:py-3">
                   <span className="shrink-0 font-mono text-[11px] text-white/80 sm:text-xs">/{String(index + 1).padStart(3, "0")}</span>

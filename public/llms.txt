@@ -13,6 +13,9 @@
 - [E-commerce Development](https://www.zenorix.in/services/ecommerce-development): online stores with product catalogues, payment gateways and order management
 - [Custom Software Development](https://www.zenorix.in/services/custom-software-development): dashboards, internal tools and business software
 - [Mobile App Development](https://www.zenorix.in/services/mobile-app-development): Android and iOS apps from UI/UX design to app store launch
+- [UI/UX Design & Branding](https://www.zenorix.in/services/ui-ux-design-branding): website and app UI/UX design, wireframes and prototypes, logo and brand identity
+
+- [Blog](https://www.zenorix.in/blog): guides on website and e-commerce cost, apps, software, Google Maps and more for Kerala businesses
 
 ## Company
 

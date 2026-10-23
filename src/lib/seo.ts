@@ -2,6 +2,7 @@
 // build time (vite.config.ts writes a static HTML file + sitemap per route).
 import { servicePages } from "../components/pages/servicePageData"
 import { faqCategories } from "../utils/fackData/faqData"
+import { blogPosts } from "../utils/fackData/blogData"
 
 export const SITE_URL = "https://www.zenorix.in"
 export const SITE_NAME = "Zenorix"
@@ -158,6 +159,46 @@ export const routes: RouteSeo[] = [
     priority: 0.3,
     jsonLd: [breadcrumbs([{ name: "Privacy Policy", path: "/privacy-policy" }])],
   },
+  {
+    path: "/blog",
+    h1: "Insights on websites, apps & growth",
+    intro:
+      "Practical guides from the Zenorix team on website development, e-commerce, software and mobile apps for businesses in Kerala.",
+    title: "Blog | Website & App Development Guides for Kerala | Zenorix",
+    description:
+      "Practical guides on website cost, choosing a developer, e-commerce and mobile apps for businesses in Kerala, from the Zenorix team in Kozhikode.",
+    changefreq: "weekly",
+    priority: 0.6,
+    jsonLd: [breadcrumbs([{ name: "Blog", path: "/blog" }])],
+  },
+  ...blogPosts.map((post): RouteSeo => {
+    const path = `/blog/${post.slug}`
+    return {
+      path,
+      h1: post.title,
+      intro: post.description,
+      title: `${post.title} | Zenorix`,
+      description: post.description,
+      changefreq: "monthly",
+      priority: 0.6,
+      jsonLd: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.description,
+          datePublished: post.datePublished,
+          dateModified: post.datePublished,
+          author: { "@type": "Organization", name: post.author, url: `${SITE_URL}/` },
+          publisher: { "@id": ORG_ID },
+          mainEntityOfPage: `${SITE_URL}${path}`,
+          image: DEFAULT_IMAGE,
+          inLanguage: "en-IN",
+        },
+        breadcrumbs([{ name: "Blog", path: "/blog" }, { name: post.title, path }]),
+      ],
+    }
+  }),
   ...servicePages.map((page): RouteSeo => {
     const path = `/services/${page.slug}`
     return {

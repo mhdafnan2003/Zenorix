@@ -645,4 +645,136 @@ export const servicePages: ServicePageData[] = [
       },
     ],
   },
+  // ─── UI/UX DESIGN & BRANDING ────────────────────────────────────
+  {
+    slug: "ui-ux-design-branding",
+    heroTitle: "UI/UX Design & Branding",
+    heroSubtitle:
+      "Zenorix is a UI/UX design and branding company in Kozhikode (Calicut), Kerala. We design clear, user-friendly interfaces for websites and apps, and brand identities that make your business easy to recognise and trust.",
+    metaTitle: "UI/UX Design & Branding Company in Kerala | Zenorix",
+    metaDescription:
+      "Zenorix is a UI/UX design and branding company in Kozhikode, Kerala, creating website and app designs, logos and brand identities for startups and businesses.",
+    subServices: [
+      {
+        title: "Website UI/UX Design",
+        description:
+          "Clear layouts, navigation and page flows designed around how your customers actually browse, so visitors find what they need and take action.",
+        icon: "ri-layout-line",
+      },
+      {
+        title: "Mobile App UI/UX Design",
+        description:
+          "Intuitive screens and journeys for Android and iOS apps, designed and tested as prototypes before development begins.",
+        icon: "ri-device-line",
+      },
+      {
+        title: "Wireframes & Prototypes",
+        description:
+          "Interactive prototypes that let you click through your product and approve the experience before a line of code is written.",
+        icon: "ri-pencil-ruler-2-line",
+      },
+      {
+        title: "Logo & Brand Identity",
+        description:
+          "Logo design, colour palettes, typography and visual assets that give your business a consistent, memorable identity.",
+        icon: "ri-palette-line",
+      },
+      {
+        title: "Brand Guidelines",
+        description:
+          "A simple guide to using your logo, colours and fonts correctly across your website, social media, print and packaging.",
+        icon: "ri-gallery-line",
+      },
+      {
+        title: "Website & App Redesign",
+        description:
+          "We review your existing website or app and improve its look, usability and responsiveness while keeping what already works.",
+        icon: "ri-global-line",
+      },
+    ],
+    processTitle: "Our UI/UX Design & Branding Process",
+    processSubtitle:
+      "A clear, collaborative process that takes you from first conversation to finished designs and brand assets.",
+    process: [
+      {
+        step: "01",
+        title: "Discovery & Research",
+        description:
+          "We learn about your business, customers and competitors, and agree on goals, audience and the look and feel you want.",
+      },
+      {
+        step: "02",
+        title: "Structure & Wireframes",
+        description:
+          "We map the pages, screens and user journeys, then sketch wireframes so the structure is right before visual design starts.",
+      },
+      {
+        step: "03",
+        title: "Visual Design",
+        description:
+          "We create the interface designs or brand identity, with your colours, typography and imagery, and refine them with your feedback.",
+      },
+      {
+        step: "04",
+        title: "Prototype & Review",
+        description:
+          "You click through an interactive prototype or review the brand assets in use, and we adjust until you are happy.",
+      },
+      {
+        step: "05",
+        title: "Handover",
+        description:
+          "You receive final design files and brand assets, and if you want, our team builds the website or app straight from the approved designs.",
+      },
+    ],
+    stats: [
+      { value: "50+", label: "Websites Launched" },
+      { value: "4+", label: "Years of Experience" },
+      { value: "70+", label: "Happy Clients" },
+      { value: "100%", label: "Mobile Responsive" },
+    ],
+    industriesTitle: "Design & Branding Across Diverse Industries",
+    industries: [
+      { name: "Retail & E-commerce" },
+      { name: "Healthcare & Wellness" },
+      { name: "Architecture & Interiors" },
+      { name: "Tourism & Hospitality" },
+      { name: "Education & Training" },
+      { name: "Startups & SaaS" },
+      { name: "Fashion & Lifestyle" },
+      { name: "Professional Services" },
+    ],
+    faqs: [
+      {
+        id: "ux-faq-cost",
+        question: "How much does UI/UX design or branding cost in Kerala?",
+        answer:
+          "The cost depends on how many screens or pages you need and whether you want a logo only or a full brand identity. After a free consultation we send a clear, fixed quote so you know the full cost before we start.",
+      },
+      {
+        id: "ux-faq-1",
+        question: "What is the difference between UI and UX design?",
+        answer:
+          "UX (user experience) is how easy and logical your website or app is to use: the structure, flow and navigation. UI (user interface) is how it looks: colours, typography, buttons and layout. Good products need both.",
+      },
+      {
+        id: "ux-faq-2",
+        question: "Can you create a complete brand identity for my business?",
+        answer:
+          "Yes. We can create a logo, colour palette, typography, visual assets and brand guidelines, depending on what your business needs.",
+      },
+      {
+        id: "ux-faq-3",
+        question: "Can you redesign my existing website or app?",
+        answer:
+          "Yes. We review what you have, discuss what to improve in design, usability and responsiveness, and agree the scope before starting.",
+      },
+      {
+        id: "ux-faq-4",
+        question: "Can you also build the website or app after designing it?",
+        answer:
+          "Yes. Our design and development teams work together, so approved designs are built exactly as planned. You can also take the finished design files to another developer if you prefer.",
+      },
+    ],
+  },
 ]

@@ -27,6 +27,7 @@ const Footer = () => {
                                     <li><a href="/">Home</a></li>
                                     <li><a href="/about">About Us</a></li>
                                     <li><a href="/#service">Service</a></li>
+                                    <li><a href="/blog">Blog</a></li>
                                     <li><a href="/contact">Contact</a></li>
                                     <li><a href="/privacy-policy">Privacy Policy</a></li>
                                     <li>Terms &amp; Conditions</li>
@@ -44,6 +45,7 @@ const Footer = () => {
                                     <li><a href="/services/ecommerce-development">E-commerce Development</a></li>
                                     <li><a href="/services/custom-software-development">Custom Software Development</a></li>
                                     <li><a href="/services/mobile-app-development">Mobile App Development</a></li>
+                                    <li><a href="/services/ui-ux-design-branding">UI/UX Design &amp; Branding</a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -17,6 +17,7 @@ const services = [
   { label: "E-commerce", slug: "/services/ecommerce-development" },
   { label: "Custom Software", slug: "/services/custom-software-development" },
   { label: "Mobile Applications", slug: "/services/mobile-app-development" },
+  { label: "UI/UX & Branding", slug: "/services/ui-ux-design-branding" },
 ]
 
 const products = [
@@ -91,7 +92,7 @@ const Header = () => {
               {products.map(({ label: productLabel, href }) => <a key={productLabel} href={href} target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="zenorix-header__dropdown-link">{productLabel}</a>)}
             </div>
           </div>
-        ) : <Link key={path} to={path} smooth offset={-88} className="zenorix-header__link" onClick={closeMenu}>{label}</Link>)}
+        ) : path === "blogs" ? <RouterLink key={path} to="/blog" className="zenorix-header__link" onClick={closeMenu}>{label}</RouterLink> : <Link key={path} to={path} smooth offset={-88} className="zenorix-header__link" onClick={closeMenu}>{label}</Link>)}
         <Link to="book" smooth offset={-88} className="zenorix-header__talk zenorix-header__drawer-talk" onClick={closeMenu}>Let’s Talk</Link>
         <div className="zenorix-header__mobile-extras">
           <div className="zenorix-header__mobile-contact">
