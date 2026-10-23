@@ -47,7 +47,7 @@ export const servicePages: ServicePageData[] = [
     slug: "website-development",
     heroTitle: "Website Development",
     heroSubtitle:
-      "We design and build modern, fast, and conversion-focused websites that help your business grow online — crafted for every screen, search engine, and customer.",
+      "Zenorix is a website development company in Kozhikode (Calicut), Kerala. We design and build modern, fast, conversion-focused websites for businesses across Kerala and India — crafted for every screen, search engine, and customer.",
     metaTitle: "Website Development Company in Kerala | Kozhikode | Zenorix",
     metaDescription:
       "Zenorix is a website development company in Kozhikode, Kerala, building fast, responsive, SEO-ready business websites, landing pages and WordPress sites.",
@@ -143,6 +143,18 @@ export const servicePages: ServicePageData[] = [
     ],
     faqs: [
       {
+        id: "web-faq-cost",
+        question: "How much does a website cost in Kerala?",
+        answer:
+          "The cost depends on the number of pages, design complexity, and features such as booking, payments or a CMS. After a free consultation we send a clear, fixed quote with no hidden charges, so you know the full cost before we start.",
+      },
+      {
+        id: "web-faq-kerala",
+        question: "Do you build websites for businesses outside Kozhikode?",
+        answer:
+          "Yes. Zenorix is based in Kozhikode (Calicut) and builds websites for businesses across Kerala, including Kochi, Thiruvananthapuram, Thrissur, Kannur and Malappuram, as well as clients across India. We work in person or remotely over calls and WhatsApp.",
+      },
+      {
         id: "web-faq-1",
         question: "How long does it take to build a website?",
         answer:
@@ -186,7 +198,7 @@ export const servicePages: ServicePageData[] = [
     slug: "ecommerce-development",
     heroTitle: "E-commerce Development",
     heroSubtitle:
-      "We build fast, secure, and scalable online stores that make buying easy for your customers and managing orders simple for you — from product listings to payment and delivery.",
+      "We are an e-commerce website development company in Kerala. We build fast, secure, scalable online stores for businesses in Kozhikode, Kochi and across India — from product listings to payment and delivery.",
     metaTitle: "E-commerce Website Development Company in Kerala | Zenorix",
     metaDescription:
       "Zenorix builds powerful e-commerce websites with product catalogues, secure payment gateways, and order management for businesses in Kerala and across India.",
@@ -282,6 +294,18 @@ export const servicePages: ServicePageData[] = [
     ],
     faqs: [
       {
+        id: "ecom-faq-cost",
+        question: "How much does an e-commerce website cost in Kerala?",
+        answer:
+          "It depends on the platform (Shopify, WooCommerce or a custom store), the number of products, and integrations such as payment gateways, shipping and inventory. We share a fixed quote after a free consultation so you can plan your budget.",
+      },
+      {
+        id: "ecom-faq-kerala",
+        question: "Do you build online stores for businesses across Kerala?",
+        answer:
+          "Yes. We build online stores for retailers, boutiques, food brands and service businesses in Kozhikode, Kochi, Thrissur and across Kerala, with Razorpay and other Indian payment gateways, GST-ready invoices and delivery integrations.",
+      },
+      {
         id: "ecom-faq-1",
         question: "Which e-commerce platforms do you work with?",
         answer:
@@ -325,7 +349,7 @@ export const servicePages: ServicePageData[] = [
     slug: "custom-software-development",
     heroTitle: "Custom Software Development",
     heroSubtitle:
-      "We build purpose-built software tailored to your business workflows — from dashboards and internal tools to complex web applications that replace manual processes and scale with your growth.",
+      "We are a custom software development company in Kozhikode, Kerala. We build software around your business workflows — from dashboards, billing and CRM tools to web applications that replace manual processes and scale with you.",
     metaTitle: "Custom Software Development Company in Kerala | Zenorix",
     metaDescription:
       "Zenorix develops custom software, dashboards and internal business tools for startups and growing businesses in Kerala and across India, built around your workflow.",
@@ -421,6 +445,18 @@ export const servicePages: ServicePageData[] = [
     ],
     faqs: [
       {
+        id: "soft-faq-kerala",
+        question: "Can you build billing, ERP or CRM software for my business?",
+        answer:
+          "Yes. We build billing and inventory software, CRM systems, booking platforms and internal dashboards for retail shops, clinics, schools and service companies in Kerala, designed around how your team already works.",
+      },
+      {
+        id: "soft-faq-cost",
+        question: "How much does custom software development cost?",
+        answer:
+          "Cost depends on the features, the number of user roles and integrations. We start with a free consultation to define the scope, then send a fixed quote, and we can build in phases so you start using the essential features early.",
+      },
+      {
         id: "soft-faq-1",
         question: "What kind of custom software does Zenorix build?",
         answer:
@@ -464,7 +500,7 @@ export const servicePages: ServicePageData[] = [
     slug: "mobile-app-development",
     heroTitle: "Mobile App Development",
     heroSubtitle:
-      "We design and build smooth, practical mobile applications for Android and iOS that put your product in your customers' hands — from idea to App Store launch.",
+      "We are a mobile app development company in Kerala. We design and build smooth Android and iOS apps, including Flutter cross-platform apps, for startups and businesses in Kozhikode and across India — from idea to App Store launch.",
     metaTitle: "Mobile App Development Company in Kerala | Zenorix",
     metaDescription:
       "Zenorix builds custom Android and iOS apps for startups and businesses in Kerala and across India, from UI/UX design to app store launch.",
@@ -559,6 +595,18 @@ export const servicePages: ServicePageData[] = [
       { name: "Enterprise & B2B" },
     ],
     faqs: [
+      {
+        id: "app-faq-flutter",
+        question: "Do you build Flutter apps for businesses in Kerala?",
+        answer:
+          "Yes. We build cross-platform apps with Flutter that run on both Android and iOS from one codebase, which lowers cost and speeds up launch, as well as native apps when performance demands it.",
+      },
+      {
+        id: "app-faq-cost",
+        question: "How much does it cost to build a mobile app?",
+        answer:
+          "Cost depends on the features, number of screens, backend needs and whether you need Android, iOS or both. After a free consultation we provide a fixed quote and a milestone-based plan for the app.",
+      },
       {
         id: "app-faq-1",
         question: "Do you build apps for both Android and iOS?",

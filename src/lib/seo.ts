@@ -146,6 +146,18 @@ export const routes: RouteSeo[] = [
       breadcrumbs([{ name: "Contact", path: "/contact" }]),
     ],
   },
+  {
+    path: "/privacy-policy",
+    h1: "Privacy Policy",
+    intro:
+      "How Zenorix collects, uses, shares and protects your personal information, and the rights you have over your data.",
+    title: "Privacy Policy | Zenorix",
+    description:
+      "Read how Zenorix collects, uses and protects your personal data, including cookies and analytics, and how to exercise your rights.",
+    changefreq: "monthly",
+    priority: 0.3,
+    jsonLd: [breadcrumbs([{ name: "Privacy Policy", path: "/privacy-policy" }])],
+  },
   ...servicePages.map((page): RouteSeo => {
     const path = `/services/${page.slug}`
     return {

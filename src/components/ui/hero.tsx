@@ -19,6 +19,8 @@ export default function ShaderShowcase() {
             <span className="block whitespace-nowrap text-[#dfbdff]" style={{ color: "#dfbdff", WebkitTextFillColor: "#dfbdff" }}>Built for Growth.</span>
           </motion.h1>
 
+          <p className="mb-8 max-w-xl text-base font-medium leading-relaxed text-white/90 sm:text-lg">Website, e-commerce, software and mobile app development company in Kozhikode (Calicut), Kerala.</p>
+
           <a href="#book" aria-label="Start a Project — go to the project enquiry section" className="hero-project-cta inline-flex min-h-0 w-max self-start items-center gap-3 rounded-full bg-white px-6 py-3 text-base font-semibold leading-tight text-[#111] transition-colors hover:bg-[#eaff83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eaff83] sm:gap-3.5 sm:px-7 sm:py-3.5 sm:text-lg" style={{ display: "inline-flex", width: "max-content", minWidth: 0, alignSelf: "flex-start", color: "#111111", fontSize: "18px", fontWeight: 700, lineHeight: 1.25, whiteSpace: "nowrap", opacity: 1, visibility: "visible" }}>
             <span style={{ display: "inline-block", color: "#111111", opacity: 1, visibility: "visible" }}>Start a Project</span>
             <svg aria-hidden="true" style={{ display: "block", width: 22, height: 22, flexShrink: 0, color: "#111111", opacity: 1, visibility: "visible" }} viewBox="0 0 24 24" fill="none" stroke="#111111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M7 7h10v10" /></svg>
@@ -51,7 +53,7 @@ export default function ShaderShowcase() {
                 </li>
               ))}
             </ul>
-            <p className="max-w-2xl text-sm font-normal leading-relaxed text-white/90 sm:text-base sm:leading-[1.65] lg:mt-7 lg:text-[clamp(.9rem,1.05vw,1.05rem)]">Zenorix is a digital solutions company helping startups and businesses grow through website development, custom software, mobile app development, UI/UX design, and branding.</p>
+            <p className="max-w-2xl text-sm font-normal leading-relaxed text-white/90 sm:text-base sm:leading-[1.65] lg:mt-7 lg:text-[clamp(.9rem,1.05vw,1.05rem)]">Zenorix is a digital solutions company in Kozhikode, Kerala, helping startups and businesses grow through website development, custom software, mobile app development, UI/UX design, and branding.</p>
           </motion.div>
         </div>
 

@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 const ContactPage = lazy(() => import('@components/pages/contactPage'))
 const AboutPage = lazy(() => import('@components/pages/aboutPage'))
 const ServicePage = lazy(() => import('@components/pages/servicePage'))
+const PrivacyPage = lazy(() => import('@components/pages/privacyPage'))
 import Header from '@components/sections/header'
 import About from '@components/sections/about'
 import Hero from '@components/sections/hero'
@@ -65,6 +66,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPage />} />
         <Route path="/services/:slug" element={<ServicePage />} />
       </Routes>
       </Suspense>

@@ -1,6 +1,5 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiFiverr } from "react-icons/si";
 
 const Footer = () => {
     return (
@@ -16,7 +15,6 @@ const Footer = () => {
                                 <a href="https://x.com/zenorix_group?s=11" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"><FaXTwitter aria-hidden="true" /></a>
                                 <a href="https://www.instagram.com/zenorix.in?igsh=bDVzNGNjbG5xMGp1&utm_source=qr" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram aria-hidden="true" /></a>
                                 <a href="https://www.linkedin.com/company/zenorixgroup/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><FaLinkedinIn aria-hidden="true" /></a>
-                                <a href="https://www.fiverr.com/" aria-label="Fiverr" target="_blank" rel="noopener noreferrer"><SiFiverr aria-hidden="true" /></a>
                             </div>
                         </div>
                     </div>
@@ -30,7 +28,7 @@ const Footer = () => {
                                     <li><a href="/about">About Us</a></li>
                                     <li><a href="/#service">Service</a></li>
                                     <li><a href="/contact">Contact</a></li>
-                                    <li><a href="https://drive.google.com/file/d/11OrnRBHDaRJVYpH9S8tKf62Mj9IGihcW/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                                    <li><a href="/privacy-policy">Privacy Policy</a></li>
                                     <li>Terms &amp; Conditions</li>
                                 </ul>
                             </div>
