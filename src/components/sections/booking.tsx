@@ -15,7 +15,7 @@ const Booking = () => {
 
                             </div>
                             {/* <a href="#">
-                                <img src="/images/logos/logo.png" alt="Logo" title="Logo" />
+                                <img src="/images/logos/logo.png" width="393" height="119" alt="Logo" title="Logo" loading="lazy" />
                             </a> */}
                         </SlideUp>
                     </div>

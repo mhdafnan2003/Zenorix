@@ -47,10 +47,10 @@ export const servicePages: ServicePageData[] = [
     slug: "website-development",
     heroTitle: "Website Development",
     heroSubtitle:
-      "We design and build modern, fast, and conversion-focused websites that help your business grow online — crafted for every screen, search engine, and customer.",
-    metaTitle: "Website Development Services in Kozhikode | Zenorix",
+      "Zenorix is a website development company in Kozhikode (Calicut), Kerala. We design and build modern, fast, conversion-focused websites for businesses across Kerala and India — crafted for every screen, search engine, and customer.",
+    metaTitle: "Website Development Company in Kerala | Kozhikode | Zenorix",
     metaDescription:
-      "Zenorix builds modern, responsive, SEO-ready websites for businesses, startups, and service providers in Kerala and beyond. Get a high-performing website tailored to your goals.",
+      "Zenorix is a website development company in Kozhikode, Kerala, building fast, responsive, SEO-ready business websites, landing pages and WordPress sites.",
     subServices: [
       {
         title: "Business Websites",
@@ -143,6 +143,18 @@ export const servicePages: ServicePageData[] = [
     ],
     faqs: [
       {
+        id: "web-faq-cost",
+        question: "How much does a website cost in Kerala?",
+        answer:
+          "The cost depends on the number of pages, design complexity, and features such as booking, payments or a CMS. After a free consultation we send a clear, fixed quote with no hidden charges, so you know the full cost before we start.",
+      },
+      {
+        id: "web-faq-kerala",
+        question: "Do you build websites for businesses outside Kozhikode?",
+        answer:
+          "Yes. Zenorix is based in Kozhikode (Calicut) and builds websites for businesses across Kerala, including Kochi, Thiruvananthapuram, Thrissur, Kannur and Malappuram, as well as clients across India. We work in person or remotely over calls and WhatsApp.",
+      },
+      {
         id: "web-faq-1",
         question: "How long does it take to build a website?",
         answer:
@@ -186,8 +198,8 @@ export const servicePages: ServicePageData[] = [
     slug: "ecommerce-development",
     heroTitle: "E-commerce Development",
     heroSubtitle:
-      "We build fast, secure, and scalable online stores that make buying easy for your customers and managing orders simple for you — from product listings to payment and delivery.",
-    metaTitle: "E-commerce Website Development in Kerala | Zenorix",
+      "We are an e-commerce website development company in Kerala. We build fast, secure, scalable online stores for businesses in Kozhikode, Kochi and across India — from product listings to payment and delivery.",
+    metaTitle: "E-commerce Website Development Company in Kerala | Zenorix",
     metaDescription:
       "Zenorix builds powerful e-commerce websites with product catalogues, secure payment gateways, and order management for businesses in Kerala and across India.",
     subServices: [
@@ -282,6 +294,18 @@ export const servicePages: ServicePageData[] = [
     ],
     faqs: [
       {
+        id: "ecom-faq-cost",
+        question: "How much does an e-commerce website cost in Kerala?",
+        answer:
+          "It depends on the platform (Shopify, WooCommerce or a custom store), the number of products, and integrations such as payment gateways, shipping and inventory. We share a fixed quote after a free consultation so you can plan your budget.",
+      },
+      {
+        id: "ecom-faq-kerala",
+        question: "Do you build online stores for businesses across Kerala?",
+        answer:
+          "Yes. We build online stores for retailers, boutiques, food brands and service businesses in Kozhikode, Kochi, Thrissur and across Kerala, with Razorpay and other Indian payment gateways, GST-ready invoices and delivery integrations.",
+      },
+      {
         id: "ecom-faq-1",
         question: "Which e-commerce platforms do you work with?",
         answer:
@@ -325,10 +349,10 @@ export const servicePages: ServicePageData[] = [
     slug: "custom-software-development",
     heroTitle: "Custom Software Development",
     heroSubtitle:
-      "We build purpose-built software tailored to your business workflows — from dashboards and internal tools to complex web applications that replace manual processes and scale with your growth.",
-    metaTitle: "Custom Software Development in Kerala | Zenorix",
+      "We are a custom software development company in Kozhikode, Kerala. We build software around your business workflows — from dashboards, billing and CRM tools to web applications that replace manual processes and scale with you.",
+    metaTitle: "Custom Software Development Company in Kerala | Zenorix",
     metaDescription:
-      "Zenorix develops custom software, dashboards, and internal business tools for startups and growing businesses in Kerala and across India. Scalable, practical, and built around your workflow.",
+      "Zenorix develops custom software, dashboards and internal business tools for startups and growing businesses in Kerala and across India, built around your workflow.",
     subServices: [
       {
         title: "Business Dashboards",
@@ -421,6 +445,18 @@ export const servicePages: ServicePageData[] = [
     ],
     faqs: [
       {
+        id: "soft-faq-kerala",
+        question: "Can you build billing, ERP or CRM software for my business?",
+        answer:
+          "Yes. We build billing and inventory software, CRM systems, booking platforms and internal dashboards for retail shops, clinics, schools and service companies in Kerala, designed around how your team already works.",
+      },
+      {
+        id: "soft-faq-cost",
+        question: "How much does custom software development cost?",
+        answer:
+          "Cost depends on the features, the number of user roles and integrations. We start with a free consultation to define the scope, then send a fixed quote, and we can build in phases so you start using the essential features early.",
+      },
+      {
         id: "soft-faq-1",
         question: "What kind of custom software does Zenorix build?",
         answer:
@@ -464,10 +500,10 @@ export const servicePages: ServicePageData[] = [
     slug: "mobile-app-development",
     heroTitle: "Mobile App Development",
     heroSubtitle:
-      "We design and build smooth, practical mobile applications for Android and iOS that put your product in your customers' hands — from idea to App Store launch.",
-    metaTitle: "Mobile App Development in Kerala | Zenorix",
+      "We are a mobile app development company in Kerala. We design and build smooth Android and iOS apps, including Flutter cross-platform apps, for startups and businesses in Kozhikode and across India — from idea to App Store launch.",
+    metaTitle: "Mobile App Development Company in Kerala | Zenorix",
     metaDescription:
-      "Zenorix builds custom Android and iOS mobile apps for startups and businesses in Kerala and across India. From UI/UX design to app store launch — end-to-end mobile development.",
+      "Zenorix builds custom Android and iOS apps for startups and businesses in Kerala and across India, from UI/UX design to app store launch.",
     subServices: [
       {
         title: "Custom Mobile App Development",
@@ -560,6 +596,18 @@ export const servicePages: ServicePageData[] = [
     ],
     faqs: [
       {
+        id: "app-faq-flutter",
+        question: "Do you build Flutter apps for businesses in Kerala?",
+        answer:
+          "Yes. We build cross-platform apps with Flutter that run on both Android and iOS from one codebase, which lowers cost and speeds up launch, as well as native apps when performance demands it.",
+      },
+      {
+        id: "app-faq-cost",
+        question: "How much does it cost to build a mobile app?",
+        answer:
+          "Cost depends on the features, number of screens, backend needs and whether you need Android, iOS or both. After a free consultation we provide a fixed quote and a milestone-based plan for the app.",
+      },
+      {
         id: "app-faq-1",
         question: "Do you build apps for both Android and iOS?",
         answer:
@@ -594,6 +642,138 @@ export const servicePages: ServicePageData[] = [
         question: "Do you provide post-launch updates and support?",
         answer:
           "Yes. We offer post-launch maintenance, bug fixes, OS compatibility updates, and feature additions. Support scope and duration are agreed upon during the project proposal.",
+      },
+    ],
+  },
+  // ─── UI/UX DESIGN & BRANDING ────────────────────────────────────
+  {
+    slug: "ui-ux-design-branding",
+    heroTitle: "UI/UX Design & Branding",
+    heroSubtitle:
+      "Zenorix is a UI/UX design and branding company in Kozhikode (Calicut), Kerala. We design clear, user-friendly interfaces for websites and apps, and brand identities that make your business easy to recognise and trust.",
+    metaTitle: "UI/UX Design & Branding Company in Kerala | Zenorix",
+    metaDescription:
+      "Zenorix is a UI/UX design and branding company in Kozhikode, Kerala, creating website and app designs, logos and brand identities for startups and businesses.",
+    subServices: [
+      {
+        title: "Website UI/UX Design",
+        description:
+          "Clear layouts, navigation and page flows designed around how your customers actually browse, so visitors find what they need and take action.",
+        icon: "ri-layout-line",
+      },
+      {
+        title: "Mobile App UI/UX Design",
+        description:
+          "Intuitive screens and journeys for Android and iOS apps, designed and tested as prototypes before development begins.",
+        icon: "ri-device-line",
+      },
+      {
+        title: "Wireframes & Prototypes",
+        description:
+          "Interactive prototypes that let you click through your product and approve the experience before a line of code is written.",
+        icon: "ri-pencil-ruler-2-line",
+      },
+      {
+        title: "Logo & Brand Identity",
+        description:
+          "Logo design, colour palettes, typography and visual assets that give your business a consistent, memorable identity.",
+        icon: "ri-palette-line",
+      },
+      {
+        title: "Brand Guidelines",
+        description:
+          "A simple guide to using your logo, colours and fonts correctly across your website, social media, print and packaging.",
+        icon: "ri-gallery-line",
+      },
+      {
+        title: "Website & App Redesign",
+        description:
+          "We review your existing website or app and improve its look, usability and responsiveness while keeping what already works.",
+        icon: "ri-global-line",
+      },
+    ],
+    processTitle: "Our UI/UX Design & Branding Process",
+    processSubtitle:
+      "A clear, collaborative process that takes you from first conversation to finished designs and brand assets.",
+    process: [
+      {
+        step: "01",
+        title: "Discovery & Research",
+        description:
+          "We learn about your business, customers and competitors, and agree on goals, audience and the look and feel you want.",
+      },
+      {
+        step: "02",
+        title: "Structure & Wireframes",
+        description:
+          "We map the pages, screens and user journeys, then sketch wireframes so the structure is right before visual design starts.",
+      },
+      {
+        step: "03",
+        title: "Visual Design",
+        description:
+          "We create the interface designs or brand identity, with your colours, typography and imagery, and refine them with your feedback.",
+      },
+      {
+        step: "04",
+        title: "Prototype & Review",
+        description:
+          "You click through an interactive prototype or review the brand assets in use, and we adjust until you are happy.",
+      },
+      {
+        step: "05",
+        title: "Handover",
+        description:
+          "You receive final design files and brand assets, and if you want, our team builds the website or app straight from the approved designs.",
+      },
+    ],
+    stats: [
+      { value: "50+", label: "Websites Launched" },
+      { value: "4+", label: "Years of Experience" },
+      { value: "70+", label: "Happy Clients" },
+      { value: "100%", label: "Mobile Responsive" },
+    ],
+    industriesTitle: "Design & Branding Across Diverse Industries",
+    industries: [
+      { name: "Retail & E-commerce" },
+      { name: "Healthcare & Wellness" },
+      { name: "Architecture & Interiors" },
+      { name: "Tourism & Hospitality" },
+      { name: "Education & Training" },
+      { name: "Startups & SaaS" },
+      { name: "Fashion & Lifestyle" },
+      { name: "Professional Services" },
+    ],
+    faqs: [
+      {
+        id: "ux-faq-cost",
+        question: "How much does UI/UX design or branding cost in Kerala?",
+        answer:
+          "The cost depends on how many screens or pages you need and whether you want a logo only or a full brand identity. After a free consultation we send a clear, fixed quote so you know the full cost before we start.",
+      },
+      {
+        id: "ux-faq-1",
+        question: "What is the difference between UI and UX design?",
+        answer:
+          "UX (user experience) is how easy and logical your website or app is to use: the structure, flow and navigation. UI (user interface) is how it looks: colours, typography, buttons and layout. Good products need both.",
+      },
+      {
+        id: "ux-faq-2",
+        question: "Can you create a complete brand identity for my business?",
+        answer:
+          "Yes. We can create a logo, colour palette, typography, visual assets and brand guidelines, depending on what your business needs.",
+      },
+      {
+        id: "ux-faq-3",
+        question: "Can you redesign my existing website or app?",
+        answer:
+          "Yes. We review what you have, discuss what to improve in design, usability and responsiveness, and agree the scope before starting.",
+      },
+      {
+        id: "ux-faq-4",
+        question: "Can you also build the website or app after designing it?",
+        answer:
+          "Yes. Our design and development teams work together, so approved designs are built exactly as planned. You can also take the finished design files to another developer if you prefer.",
       },
     ],
   },

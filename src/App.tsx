@@ -1,8 +1,11 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import ContactPage from '@components/pages/contactPage'
-import AboutPage from '@components/pages/aboutPage'
-import ServicePage from '@components/pages/servicePage'
+const ContactPage = lazy(() => import('@components/pages/contactPage'))
+const AboutPage = lazy(() => import('@components/pages/aboutPage'))
+const ServicePage = lazy(() => import('@components/pages/servicePage'))
+const PrivacyPage = lazy(() => import('@components/pages/privacyPage'))
+const BlogPage = lazy(() => import('@components/pages/blogPage'))
+const BlogPostPage = lazy(() => import('@components/pages/blogPostPage'))
 import Header from '@components/sections/header'
 import About from '@components/sections/about'
 import Hero from '@components/sections/hero'
@@ -18,6 +21,7 @@ import Booking from '@components/sections/booking'
 import Footer from '@components/sections/footer'
 
 import Preloader from '@components/ui/preloader'
+import { useSeo } from '@/lib/useSeo'
 
 const Home = () => (
   <main>
@@ -41,6 +45,7 @@ const Home = () => (
 
 const App = () => {
   const { pathname, hash } = useLocation()
+  useSeo()
 
   // scroll to a #section after navigating, or to the top on a new page
   useEffect(() => {
@@ -58,12 +63,17 @@ const App = () => {
     <>
       <Preloader />
       <Header />
+      <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/services/:slug" element={<ServicePage />} />
       </Routes>
+      </Suspense>
       <Footer />
       <a
         className="zenorix-whatsapp-float"

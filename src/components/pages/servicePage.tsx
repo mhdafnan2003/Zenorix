@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useParams, Navigate } from "react-router-dom"
 import { MeshGradient } from "@paper-design/shaders-react"
 import { servicePages } from "./servicePageData"
@@ -7,12 +7,6 @@ const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>()
   const data = servicePages.find((p) => p.slug === slug)
   const [openFaq, setOpenFaq] = useState<string | null>(data?.faqs[0].id ?? null)
-
-  useEffect(() => {
-    if (data?.metaTitle) {
-      document.title = data.metaTitle
-    }
-  }, [data])
 
   if (!data) return <Navigate to="/" replace />
 

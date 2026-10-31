@@ -1,0 +1,24 @@
+# Zenorix
+
+> Zenorix is a website, e-commerce, custom software and mobile app development company based in Kozhikode (Calicut), Kerala, India. Since 2022 it has helped startups and growing businesses across Kerala and India build websites, online stores, business software and Android/iOS apps.
+
+- Location: First Floor, Space11, Koodathai, Kozhikode (Calicut), Kerala 673573, India
+- Phone: +91 62828 78105, +91 70129 77575
+- Email: zenorix.group@gmail.com
+- Serves: all of Kerala (Kozhikode, Kochi, Thiruvananthapuram, Thrissur, Kannur, Malappuram and more), India and international clients
+
+## Services
+
+- [Website Development](https://www.zenorix.in/services/website-development): business websites, landing pages, WordPress/CMS sites, portfolio sites, SEO-ready responsive builds
+- [E-commerce Development](https://www.zenorix.in/services/ecommerce-development): online stores with product catalogues, payment gateways and order management
+- [Custom Software Development](https://www.zenorix.in/services/custom-software-development): dashboards, internal tools and business software
+- [Mobile App Development](https://www.zenorix.in/services/mobile-app-development): Android and iOS apps from UI/UX design to app store launch
+- [UI/UX Design & Branding](https://www.zenorix.in/services/ui-ux-design-branding): website and app UI/UX design, wireframes and prototypes, logo and brand identity
+
+- [Blog](https://www.zenorix.in/blog): guides on website and e-commerce cost, apps, software, Google Maps and more for Kerala businesses
+
+## Company
+
+- [About Zenorix](https://www.zenorix.in/about)
+- [Contact](https://www.zenorix.in/contact)
+- [Portfolio](https://portfolio.zenorix.in)

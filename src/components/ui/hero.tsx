@@ -19,6 +19,8 @@ export default function ShaderShowcase() {
             <span className="block whitespace-nowrap text-[#dfbdff]" style={{ color: "#dfbdff", WebkitTextFillColor: "#dfbdff" }}>Built for Growth.</span>
           </motion.h1>
 
+          <p className="mb-8 max-w-xl text-base font-medium leading-relaxed text-white/90 sm:text-lg">Website, e-commerce, software and mobile app development company in Kozhikode (Calicut), Kerala.</p>
+
           <a href="#book" aria-label="Start a Project — go to the project enquiry section" className="hero-project-cta inline-flex min-h-0 w-max self-start items-center gap-3 rounded-full bg-white px-6 py-3 text-base font-semibold leading-tight text-[#111] transition-colors hover:bg-[#eaff83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eaff83] sm:gap-3.5 sm:px-7 sm:py-3.5 sm:text-lg" style={{ display: "inline-flex", width: "max-content", minWidth: 0, alignSelf: "flex-start", color: "#111111", fontSize: "18px", fontWeight: 700, lineHeight: 1.25, whiteSpace: "nowrap", opacity: 1, visibility: "visible" }}>
             <span style={{ display: "inline-block", color: "#111111", opacity: 1, visibility: "visible" }}>Start a Project</span>
             <svg aria-hidden="true" style={{ display: "block", width: 22, height: 22, flexShrink: 0, color: "#111111", opacity: 1, visibility: "visible" }} viewBox="0 0 24 24" fill="none" stroke="#111111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M7 7h10v10" /></svg>
@@ -37,16 +39,21 @@ export default function ShaderShowcase() {
           <motion.div className="w-full max-w-2xl lg:ml-auto" initial={{ opacity: 0, x: 18 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.25 }}>
             <h2 className="mb-3 flex items-center gap-2.5 text-sm font-semibold text-white/85 sm:text-base"><span aria-hidden="true" className="text-base text-[#eaff83]">✦</span> What we do</h2>
             <ul aria-label="Zenorix services" className="mb-5">
-              {["WEB DEVELOPMENT", "CUSTOM SOFTWARE DEVELOPMENT", "MOBILE APP DEVELOPMENT", "UI/UX DESIGN & BRANDING"].map((service, index) => (
+              {[
+                { service: "WEB DEVELOPMENT", href: "/services/website-development" },
+                { service: "CUSTOM SOFTWARE DEVELOPMENT", href: "/services/custom-software-development" },
+                { service: "MOBILE APP DEVELOPMENT", href: "/services/mobile-app-development" },
+                { service: "UI/UX DESIGN & BRANDING", href: "/services/ui-ux-design-branding" },
+              ].map(({ service, href }, index) => (
                 <li key={service} className="group flex min-w-0 items-center gap-1.5 border-b border-white/25 py-2.5 sm:gap-3 sm:py-3">
                   <span className="shrink-0 font-mono text-[11px] text-white/80 sm:text-xs">/{String(index + 1).padStart(3, "0")}</span>
                   <span aria-hidden="true" className="h-px min-w-3 flex-1 bg-white/25 transition-colors group-hover:bg-[#eaff83]/80" />
-                  <a href="#service" className="min-w-0 text-right font-mono text-[clamp(.6rem,.95vw,.82rem)] font-semibold leading-snug text-white transition-colors hover:text-[#eaff83] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eaff83]">{service}</a>
-                  <a href="#service" aria-label={`Explore ${service.toLowerCase()} services`} className="shrink-0 rounded-sm px-0.5 text-base text-white transition-colors hover:text-[#eaff83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#eaff83]">↗</a>
+                  <a href={href} className="min-w-0 text-right font-mono text-[clamp(.6rem,.95vw,.82rem)] font-semibold leading-snug text-white transition-colors hover:text-[#eaff83] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eaff83]">{service}</a>
+                  <a href={href} aria-label={`Explore ${service.toLowerCase()} services`} className="shrink-0 rounded-sm px-0.5 text-base text-white transition-colors hover:text-[#eaff83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#eaff83]">↗</a>
                 </li>
               ))}
             </ul>
-            <p className="max-w-2xl text-sm font-normal leading-relaxed text-white/90 sm:text-base sm:leading-[1.65] lg:mt-7 lg:text-[clamp(.9rem,1.05vw,1.05rem)]">Zenorix is a digital solutions company helping startups and businesses grow through website development, custom software, mobile app development, UI/UX design, and branding.</p>
+            <p className="max-w-2xl text-sm font-normal leading-relaxed text-white/90 sm:text-base sm:leading-[1.65] lg:mt-7 lg:text-[clamp(.9rem,1.05vw,1.05rem)]">Zenorix is a digital solutions company in Kozhikode, Kerala, helping startups and businesses grow through website development, custom software, mobile app development, UI/UX design, and branding.</p>
           </motion.div>
         </div>
 

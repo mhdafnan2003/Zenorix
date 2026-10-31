@@ -17,6 +17,7 @@ const services = [
   { label: "E-commerce", slug: "/services/ecommerce-development" },
   { label: "Custom Software", slug: "/services/custom-software-development" },
   { label: "Mobile Applications", slug: "/services/mobile-app-development" },
+  { label: "UI/UX & Branding", slug: "/services/ui-ux-design-branding" },
 ]
 
 const products = [
@@ -31,7 +32,7 @@ const Link = ({ to, smooth: _smooth, offset: _offset, children, className, onCli
     return <RouterLink to="/contact" className={className} onClick={onClick}>{children}</RouterLink>
   }
   if (pathname === "/") {
-    return <ScrollLink to={to} smooth offset={-88} className={className} onClick={onClick}>{children}</ScrollLink>
+    return <ScrollLink to={to} href={`/#${to}`} smooth offset={-88} className={className} onClick={onClick}>{children}</ScrollLink>
   }
   return <RouterLink to={`/#${to}`} className={className} onClick={onClick}>{children}</RouterLink>
 }
@@ -75,7 +76,7 @@ const Header = () => {
 
   return (
     <header className={`zenorix-header ${isFixed ? "is-scrolled" : ""} ${isMenuOpen ? "is-menu-open" : ""}`}>
-      <a className="zenorix-header__brand" href="/" aria-label="Zenorix home"><img src="/images/logos/logo.png" alt="Zenorix — Design. Build. Deploy." /></a>
+      <a className="zenorix-header__brand" href="/" aria-label="Zenorix home"><img src="/images/logos/logo.png" width="393" height="119" alt="Zenorix — Design. Build. Deploy." /></a>
       <nav id="site-navigation" className="zenorix-header__nav" aria-label="Main navigation">
         <RouterLink to="/about" className="zenorix-header__link" onClick={closeMenu}>About</RouterLink>
         <div className={`zenorix-header__dropdown ${isServicesOpen ? "is-open" : ""}`} onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)}>
@@ -91,7 +92,7 @@ const Header = () => {
               {products.map(({ label: productLabel, href }) => <a key={productLabel} href={href} target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="zenorix-header__dropdown-link">{productLabel}</a>)}
             </div>
           </div>
-        ) : <Link key={path} to={path} smooth offset={-88} className="zenorix-header__link" onClick={closeMenu}>{label}</Link>)}
+        ) : path === "blogs" ? <RouterLink key={path} to="/blog" className="zenorix-header__link" onClick={closeMenu}>{label}</RouterLink> : <Link key={path} to={path} smooth offset={-88} className="zenorix-header__link" onClick={closeMenu}>{label}</Link>)}
         <Link to="book" smooth offset={-88} className="zenorix-header__talk zenorix-header__drawer-talk" onClick={closeMenu}>Let’s Talk</Link>
         <div className="zenorix-header__mobile-extras">
           <div className="zenorix-header__mobile-contact">

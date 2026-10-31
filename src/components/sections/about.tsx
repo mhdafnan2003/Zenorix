@@ -1,7 +1,6 @@
 import { useRef } from "react"
 import { motion, MotionValue, useReducedMotion, useScroll, useTransform } from "framer-motion"
 
-const aboutHeadline = "Zenorix is a digital solutions company helping startups and growing businesses build a strong digital presence. We develop high-performing websites, custom software, and mobile applications, combining creative design with modern technology to deliver practical, scalable solutions. Our goal is simple: help businesses grow through technology."
 const aboutHeadlineLines = [
   "Zenorix is a digital solutions company",
   "helping startups and growing businesses",
@@ -32,14 +31,15 @@ const AboutHeadlineLine = ({
   )
 
   return (
-    <span className="zenorix-about__headline-line" aria-hidden="true">
+    <span className="zenorix-about__headline-line">
       <span>{children}</span>
+      {/* fill text comes from data-text via CSS so the copy isn't duplicated for crawlers */}
       <motion.span
         className="zenorix-about__headline-line-fill"
+        data-text={children}
+        aria-hidden="true"
         style={{ clipPath: reduceMotion ? "inset(0 0% 0 0)" : lineReveal }}
-      >
-        {children}
-      </motion.span>
+      />
     </span>
   )
 }
@@ -73,9 +73,9 @@ const About = () => {
       <div className="zenorix-about__inner">
         <div className="zenorix-about__content">
           <motion.div className="zenorix-about__intro" {...reveal}>
-            <h3 className="zenorix-about__label"><i className="ri-arrow-right-up-line" aria-hidden="true" />About us</h3>
+            <h2 className="zenorix-about__label"><i className="ri-arrow-right-up-line" aria-hidden="true" />About us</h2>
             <div ref={headlineRef} className="zenorix-about__headline">
-              <h2 id="about-title" aria-label={aboutHeadline}>
+              <p id="about-title" className="zenorix-about__headline-text">
                 {aboutHeadlineLines.map((line, index) => (
                   <AboutHeadlineLine
                     key={line}
@@ -86,7 +86,7 @@ const About = () => {
                     {line}
                   </AboutHeadlineLine>
                 ))}
-              </h2>
+              </p>
             </div>
             <a className="zenorix-about__cta" href="/about" aria-label="Learn more about Zenorix">
               <span>Learn About Us</span>
