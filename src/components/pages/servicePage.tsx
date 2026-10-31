@@ -29,9 +29,6 @@ const ServicePage = () => {
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(5,3,10,.35)_0%,rgba(5,3,10,.25)_52%,rgba(4,2,8,.45)_100%)]" />
 
         <div className="zenorix-svcpage__inner">
-          <p className="zenorix-svcpage__pill">
-            <i className="ri-arrow-right-up-line" aria-hidden="true" />Services
-          </p>
           <h1 id="svc-hero-title">{data.heroTitle}</h1>
           <p className="zenorix-svcpage__lead">{data.heroSubtitle}</p>
           <div className="zenorix-svcpage__hero-actions">
@@ -130,8 +127,8 @@ const ServicePage = () => {
                 <i className="ri-arrow-right-up-line" aria-hidden="true" />FAQs
               </p>
               <h2 id="svc-faq-title">Have more questions?<br />We've got answers</h2>
-              <a href="mailto:zenorix.group@gmail.com" className="zenorix-svcpage__faq-contact">
-                zenorix.group@gmail.com ↗
+              <a href="mailto:zenorix.digitals@gmail.com" className="zenorix-svcpage__faq-contact">
+                zenorix.digitals@gmail.com ↗
               </a>
             </div>
             <div className="zenorix-svcpage__faq-right">
@@ -187,7 +184,7 @@ const ServicePage = () => {
             >
               <i className="ri-whatsapp-line" aria-hidden="true" /> Message on WhatsApp
             </a>
-            <a href="mailto:zenorix.group@gmail.com" className="zenorix-aboutpage__btn">
+            <a href="mailto:zenorix.digitals@gmail.com" className="zenorix-aboutpage__btn">
               <i className="ri-mail-line" aria-hidden="true" /> Email us
             </a>
           </div>

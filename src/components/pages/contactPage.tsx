@@ -24,11 +24,11 @@ const ContactPage = () => {
             <p className="zenorix-contact__intro">From your first website to your next big product, we’re ready to hear your ideas.</p>
             <a className="zenorix-contact__channel" href="tel:+916282878105"><i className="ri-phone-line" aria-hidden="true" /><span><small>Give us a call</small>+91 62828 78105</span><b aria-hidden="true">↗</b></a>
             <a className="zenorix-contact__channel" href="tel:+917012977575"><i className="ri-phone-line" aria-hidden="true" /><span><small>Make an enquiry</small>+91 70129 77575</span><b aria-hidden="true">↗</b></a>
-            <a className="zenorix-contact__channel" href="mailto:zenorix.group@gmail.com"><i className="ri-mail-line" aria-hidden="true" /><span><small>Drop us an email</small>zenorix.group@gmail.com</span><b aria-hidden="true">↗</b></a>
+            <a className="zenorix-contact__channel" href="mailto:zenorix.digitals@gmail.com"><i className="ri-mail-line" aria-hidden="true" /><span><small>Drop us an email</small>zenorix.digitals@gmail.com</span><b aria-hidden="true">↗</b></a>
             <a className="zenorix-contact__channel" href="https://www.google.com/maps/search/?api=1&amp;query=First%20Floor%2C%20Space11%2C%20Koodathai%2C%20Calicut%2C%20Kerala%2C%20673573" target="_blank" rel="noopener noreferrer"><i className="ri-map-pin-line" aria-hidden="true" /><span><small>Our address</small>First Floor, Space11, Koodathai, Calicut, Kerala, 673573</span><b aria-hidden="true">↗</b></a>
           </div>
           <form className="zenorix-contact__form" onSubmit={composeWhatsApp}>
-            <h2>Tell us about your project</h2>
+            <h2 id="contact-dialog-title">Tell us about your project</h2>
             <p>A few details are all we need to get started.</p>
             <label htmlFor="contact-name">Your name</label>
             <input id="contact-name" name="name" autoComplete="name" placeholder="Your name" required maxLength={120} />

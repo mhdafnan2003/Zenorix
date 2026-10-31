@@ -44,7 +44,7 @@ const sections = [
       ["", "Ask for deletion of your data (subject to retention policies)"],
       ["", "Withdraw consent or opt-out of non-essential communications"],
     ],
-    outro: "To exercise your rights, contact us at zenorix.group@gmail.com.",
+    outro: "To exercise your rights, contact us at zenorix.digitals@gmail.com.",
   },
   {
     title: "6. Cookies & Tracking Technologies",
@@ -99,7 +99,7 @@ const PrivacyPage = () => (
           <h2>9. Contact Us</h2>
           <p>If you have questions, concerns, or requests regarding this Privacy Policy, please reach out:</p>
           <ul>
-            <li>Email: <a href="mailto:zenorix.group@gmail.com">zenorix.group@gmail.com</a></li>
+            <li>Email: <a href="mailto:zenorix.digitals@gmail.com">zenorix.digitals@gmail.com</a></li>
             <li>Website: <a href="https://www.zenorix.in">www.zenorix.in</a></li>
           </ul>
         </section>

@@ -38,7 +38,7 @@ const organization = {
   logo: `${SITE_URL}/images/logo1.png`,
   image: DEFAULT_IMAGE,
   telephone: "+91-6282878105",
-  email: "zenorix.group@gmail.com",
+  email: "zenorix.digitals@gmail.com",
   foundingDate: "2022",
   address: {
     "@type": "PostalAddress",

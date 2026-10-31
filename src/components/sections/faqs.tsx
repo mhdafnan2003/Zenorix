@@ -33,7 +33,7 @@ const Faqs = () => {
                             <a href="tel:6282878105" className="theme-btn">
                                 Call now <i className="ri-phone-line" />
                             </a>
-                            <p>Prefer to email? <a href="mailto:zenorix.group@gmail.com">zenorix.group@gmail.com</a></p>
+                            <p>Prefer to email? <a href="mailto:zenorix.digitals@gmail.com">zenorix.digitals@gmail.com</a></p>
                         </div>
                     </div>
 

@@ -248,7 +248,7 @@ const AboutPage = () => {
             >
               <i className="ri-whatsapp-line" aria-hidden="true" /> Message on WhatsApp
             </a>
-            <a href="mailto:zenorix.group@gmail.com" className="zenorix-aboutpage__btn">
+            <a href="mailto:zenorix.digitals@gmail.com" className="zenorix-aboutpage__btn">
               <i className="ri-mail-line" aria-hidden="true" /> Email us
             </a>
           </div>

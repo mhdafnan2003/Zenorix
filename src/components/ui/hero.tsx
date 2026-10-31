@@ -46,7 +46,7 @@ export default function ShaderShowcase() {
                 { service: "UI/UX DESIGN & BRANDING", href: "/services/ui-ux-design-branding" },
               ].map(({ service, href }, index) => (
                 <li key={service} className="group flex min-w-0 items-center gap-1.5 border-b border-white/25 py-2.5 sm:gap-3 sm:py-3">
-                  <span className="shrink-0 font-mono text-[11px] text-white/80 sm:text-xs">/{String(index + 1).padStart(3, "0")}</span>
+                  <span className="shrink-0 font-mono text-[11px] text-white/80 sm:text-xs">{String(index + 1).padStart(3, "0")}</span>
                   <span aria-hidden="true" className="h-px min-w-3 flex-1 bg-white/25 transition-colors group-hover:bg-[#eaff83]/80" />
                   <a href={href} className="min-w-0 text-right font-mono text-[clamp(.6rem,.95vw,.82rem)] font-semibold leading-snug text-white transition-colors hover:text-[#eaff83] focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#eaff83]">{service}</a>
                   <a href={href} aria-label={`Explore ${service.toLowerCase()} services`} className="shrink-0 rounded-sm px-0.5 text-base text-white transition-colors hover:text-[#eaff83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#eaff83]">↗</a>

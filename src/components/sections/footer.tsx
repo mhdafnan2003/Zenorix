@@ -57,7 +57,7 @@ const Footer = () => {
                             <address className="mb-0">
                                 Zenorix, First Floor, Space11, Koodathai, Kozhikode (Calicut), Kerala 673573 ·{" "}
                                 <a href="tel:+916282878105">+91 62828 78105</a> ·{" "}
-                                <a href="mailto:zenorix.group@gmail.com">zenorix.group@gmail.com</a>
+                                <a href="mailto:zenorix.digitals@gmail.com">zenorix.digitals@gmail.com</a>
                             </address>
                         </div>
                     </div>

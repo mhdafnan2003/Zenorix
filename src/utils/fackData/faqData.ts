@@ -148,7 +148,7 @@ export const faqCategories: FaqCategory[] = [
       {
         id: "faq-21",
         question: "How can I get a quotation from Zenorix?",
-        ans: "Contact Zenorix through the website or email us at zenorix.group@gmail.com. Share your business goals, required features, budget range, and expected timeline. We'll review your requirements and discuss the next steps.",
+        ans: "Contact Zenorix through the website or email us at zenorix.digitals@gmail.com. Share your business goals, required features, budget range, and expected timeline. We'll review your requirements and discuss the next steps.",
       },
     ],
   },
