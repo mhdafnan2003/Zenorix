@@ -105,8 +105,8 @@ const PrivacyPolicy: FC = () => {
       </ul>
       <p>
         To exercise these rights, contact us at{" "}
-        <a href="mailto:zenorix.group@gmail.com" style={{ color: "#7a3cff" }}>
-          zenorix.group@gmail.com
+        <a href="mailto:zenorix.digitals@gmail.com" style={{ color: "#7a3cff" }}>
+          zenorix.digitals@gmail.com
         </a>
         .
       </p>
@@ -141,8 +141,8 @@ const PrivacyPolicy: FC = () => {
       </h2>
       <p>
         For questions or requests regarding this policy, email us at{" "}
-        <a href="mailto:zenorix.group@gmail.com" style={{ color: "#7a3cff" }}>
-          zenorix.group@gmail.com
+        <a href="mailto:zenorix.digitals@gmail.com" style={{ color: "#7a3cff" }}>
+          zenorix.digitals@gmail.com
         </a>
         .
       </p>

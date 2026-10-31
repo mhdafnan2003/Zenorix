@@ -78,6 +78,18 @@ const Header = () => {
     <header className={`zenorix-header ${isFixed ? "is-scrolled" : ""} ${isMenuOpen ? "is-menu-open" : ""}`}>
       <a className="zenorix-header__brand" href="/" aria-label="Zenorix home"><img src="/images/logos/logo.png" width="393" height="119" alt="Zenorix — Design. Build. Deploy." /></a>
       <nav id="site-navigation" className="zenorix-header__nav" aria-label="Main navigation">
+        <RouterLink
+          to="/"
+          className="zenorix-header__link"
+          onClick={() => {
+            closeMenu()
+            if (window.location.pathname === "/") {
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }
+          }}
+        >
+          Home
+        </RouterLink>
         <RouterLink to="/about" className="zenorix-header__link" onClick={closeMenu}>About</RouterLink>
         <div className={`zenorix-header__dropdown ${isServicesOpen ? "is-open" : ""}`} onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)}>
           <button type="button" className="zenorix-header__link zenorix-header__services-toggle" aria-expanded={isServicesOpen} aria-haspopup="true" onClick={() => setIsServicesOpen((open) => !open)} onKeyDown={(event) => { if (event.key === "Escape") setIsServicesOpen(false) }}>Services<i className="ri-arrow-down-s-line" aria-hidden="true" /></button>
@@ -96,7 +108,7 @@ const Header = () => {
         <Link to="book" smooth offset={-88} className="zenorix-header__talk zenorix-header__drawer-talk" onClick={closeMenu}>Let’s Talk</Link>
         <div className="zenorix-header__mobile-extras">
           <div className="zenorix-header__mobile-contact">
-            <a href="mailto:zenorix.group@gmail.com">zenorix.group@gmail.com</a>
+            <a href="mailto:zenorix.digitals@gmail.com">zenorix.digitals@gmail.com</a>
             <a href="tel:+916282878105">+91 62828 78105</a>
           </div>
           <div className="zenorix-header__mobile-social" role="group" aria-label="Social media">
